@@ -468,6 +468,15 @@
             </select>
             
             <textarea rows="5" name="mensagem" placeholder="Conte-nos mais detalhes..." required></textarea>
+
+
+<div style="margin: 20px 0; display: flex; align-items: start; gap: 10px;">
+    <input type="checkbox" id="rgpd_check" name="rgpd_check" required style="margin-top: 5px;">
+    <label for="rgpd_check" style="font-size: 0.85em; color: #fff;">
+        Li e concordo com a <a href="#" onclick="openModal(); return false;" style="color: #d4a373; text-decoration: underline;">Política de Privacidade</a> e autorizo o tratamento dos meus dados para efeitos de contacto.
+    </label>
+</div>
+
             
             <button id="my-form-button" type="submit" class="btn" style="background:white; color:var(--cor-verde); border-color:white; width:100%; cursor:pointer; margin-top: 10px;">Solicitar Cotação</button>
             
@@ -519,6 +528,102 @@
             </div>
         </div>
     </footer>
+
+<footer style="background-color: #1a1a1a; color: #fff; padding: 40px 20px; font-family: sans-serif; margin-top: 50px;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px;">
+        
+        <div style="flex: 1; min-width: 250px;">
+            <h3 style="color: #d4a373; margin-bottom: 15px;">AESTUS NÓMADA</h3>
+            <p style="font-size: 0.9em; line-height: 1.6; color: #ccc;">
+                Artesanato. Chama Viva. Café.<br>
+                Levamos a experiência gastronómica até onde estiver.
+            </p>
+        </div>
+
+        <div style="flex: 1; min-width: 250px;">
+            <h4 style="color: #fff; margin-bottom: 15px; border-bottom: 1px solid #444; padding-bottom: 10px; display: inline-block;">Contactos</h4>
+            <p style="font-size: 0.9em; line-height: 1.6; color: #ccc;">
+                📍 Base Operacional: Região Oeste / Lisboa<br>
+                📧 <a href="mailto:ola@aestus.pt" style="color: #d4a373; text-decoration: none;">ola@aestus.pt</a><br>
+                📞 +351 [O TEU NÚMERO AQUI]
+            </p>
+        </div>
+
+        <div style="flex: 1; min-width: 250px;">
+            <h4 style="color: #fff; margin-bottom: 15px; border-bottom: 1px solid #444; padding-bottom: 10px; display: inline-block;">Informação Legal</h4>
+            <ul style="list-style: none; padding: 0; font-size: 0.9em;">
+                <li style="margin-bottom: 8px;">
+                    <a href="#" onclick="openModal()" style="color: #ccc; text-decoration: none; transition: 0.3s;">🔒 Política de Privacidade</a>
+                </li>
+                <li style="margin-bottom: 8px;">
+                    <a href="https://www.livroreclamacoes.pt" target="_blank" style="color: #ccc; text-decoration: none;">📖 Livro de Reclamações</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #333; font-size: 0.8em; color: #666;">
+        &copy; 2026 Aestus Nómada. Todos os direitos reservados.
+    </div>
+</footer>
+
+<div id="privacyModal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8);">
+    <div style="background-color: #fefefe; margin: 10% auto; padding: 30px; border: 1px solid #888; width: 80%; max-width: 800px; border-radius: 8px; position: relative; color: #333; font-family: sans-serif;">
+        <span onclick="closeModal()" style="color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+        
+        <h2 style="color: #333;">Política de Privacidade e Tratamento de Dados</h2>
+        <p style="font-size: 0.8em; color: #666;">Última atualização: Fevereiro 2026</p>
+        <hr style="margin: 15px 0;">
+        
+        <div style="max-height: 400px; overflow-y: auto; line-height: 1.6;">
+            <h3>1. Compromisso</h3>
+            <p>A <strong>Aestus Nómada</strong> compromete-se a proteger a sua privacidade e a tratar os seus dados pessoais de forma transparente e segura, em conformidade com o Regulamento Geral de Proteção de Dados (RGPD).</p>
+
+            <h3>2. Recolha de Dados</h3>
+            <p>Recolhemos apenas os dados estritamente necessários para a prestação do serviço solicitado (Nome, Email, Telefone, Local do Evento) através do nosso formulário de contacto.</p>
+
+            <h3>3. Finalidade</h3>
+            <p>Os dados recolhidos destinam-se exclusivamente a:</p>
+            <ul>
+                <li>Responder a pedidos de orçamento;</li>
+                <li>Gestão da relação contratual e prestação do serviço de catering;</li>
+                <li>Faturação.</li>
+            </ul>
+
+            <h3>4. Partilha de Dados</h3>
+            <p>Os seus dados pessoais nunca serão vendidos ou cedidos a terceiros para fins de marketing. Apenas serão partilhados se exigido por lei (ex: Autoridade Tributária).</p>
+
+            <h3>5. Segurança</h3>
+            <p>Utilizamos medidas técnicas adequadas (incluindo certificado SSL no site) para proteger os seus dados contra perda ou acesso não autorizado.</p>
+            
+            <h3>6. Os seus Direitos</h3>
+            <p>Pode, a qualquer momento, solicitar o acesso, retificação ou eliminação dos seus dados enviando um e-mail para <strong>ola@aestus.pt</strong>.</p>
+        </div>
+        
+        <div style="margin-top: 20px; text-align: right;">
+            <button onclick="closeModal()" style="background-color: #d4a373; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Fechar</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Função para abrir o Modal
+    function openModal() {
+        document.getElementById("privacyModal").style.display = "block";
+    }
+
+    // Função para fechar o Modal
+    function closeModal() {
+        document.getElementById("privacyModal").style.display = "none";
+    }
+
+    // Fechar se clicar fora da janela branca
+    window.onclick = function(event) {
+        if (event.target == document.getElementById("privacyModal")) {
+            closeModal();
+        }
+    }
+</script>
 
 </body>
 </html>
