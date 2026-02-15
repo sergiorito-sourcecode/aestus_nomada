@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AESTUS NÓMADA | Pizza & Coffee Catering</title>
+
+
     <style>
         /* --- CONFIGURAÇÕES GERAIS --- */
         :root {
@@ -12,7 +19,7 @@
             --cor-destaque: #c6a87c; /* Cobre/Bronze */
             --cor-verde: #2f3e30;
             --fonte-titulos: 'Playfair Display', serif;
-            --fonte-texto: 'Helvetica Neue', sans-serif;
+            --fonte-texto: 'Inter', sans-serif;
         }
 
         body {
@@ -109,13 +116,13 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             color: white;
             margin-bottom: 20px;
         }
 
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.0rem;
             color: #ddd;
             margin-bottom: 30px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
@@ -170,7 +177,7 @@
 
         .destaque-texto {
             color: var(--cor-destaque);
-            font-size: 0.9rem;
+            font-size: 1.2rem;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -205,7 +212,7 @@
 
         .menu-cat-title {
             color: var(--cor-destaque);
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin-top: 80px;
             margin-bottom: 40px;
             text-transform: uppercase;
@@ -413,13 +420,21 @@
         </div>
     </section>
 
+
     <section class="menu-section">
+
         <div class="content-wrapper">
-            <span class="destaque-texto">Menu de Eventos (Exemplo)</span>
+            <span class="destaque-texto">Menu de Eventos</span>
             <h2>Padaria de Fogo & Pizzas</h2>
+            <p style="margin-top: 20px; font-style: italic; color: #888;">"Ingredientes locais. Inspiração global. Alma nómada."</p>
         </div>
 
-        <h3 class="menu-cat-title">Entradas & Tradição</h3>
+
+	<div class="content-wrapper" style="margin-top: 80px;">
+            <h3 class="menu-cat-title" style="margin-top: 0;">Entradas & Tradição <span style="font-size: 0.6em; display: block; color: #666; letter-spacing: 1px; margin-top: 5px;">Para partilhar & iniciar</span></h3>
+        </div>	
+
+
         <div class="menu-grid">
             <div class="menu-item">
                 <h3>Focaccia de Alecrim</h3>
@@ -433,13 +448,23 @@
                 <h3>Cesto de Broas</h3>
                 <p>Seleção de pequenas broas de Milho e Centeio artesanais. Sabores densos e tradicionais.</p>
             </div>
-	    <div class="menu-item">
+            <div class="menu-item">
                 <h3>Queijos & Ouro Líquido</h3>
                 <p>Seleção de queijos regionais e o ritual do pão quente mergulhado em azeite, balsâmico e ervas aromáticas.</p>
             </div>
+            <div class="menu-item">
+                <h3>Azeitonas Marinadas</h3>
+                <p>Mistura de azeitonas galegas e picual temperadas com alho, laranja, orégãos e um toque de piripiri.</p>
+            </div>
         </div>
 
-        <h3 class="menu-cat-title">Pizzas de Assinatura & Café</h3>
+
+
+
+        <div class="content-wrapper" style="margin-top: 10px;">
+            <h3 class="menu-cat-title">Pizzas de Assinatura <span style="font-size: 0.6em; display: block; color: #666; letter-spacing: 1px; margin-top: 5px;">Fermentação lenta (48h) & Fogo Vivo</span></h3>
+        </div>
+
         <div class="menu-grid">
             <div class="menu-item">
                 <h3>Margherita D.O.P.</h3>
@@ -453,18 +478,107 @@
                 <h3>Ortolana (Veggie)</h3>
                 <p>Base branca de Mozzarella, Legumes da época grelhados no forno, Pesto de Manjericão.</p>
             </div>
-            
             <div class="menu-item">
                 <h3 style="color: var(--cor-destaque);">A Sua Criação</h3>
-                <p>Pizzas desenhadas à medida para o seu evento (pedido sob consulta).</p>
+                <p>Pizzas desenhadas à medida para o seu evento (ingredientes sob consulta).</p>
+            </div>
+            <div class="menu-item" style="border-bottom: none;">
+                <h3>Aestus (Assinatura)</h3>
+                <p>Base branca, Mozzarella, Queijo de Cabra, Figos (época) ou Pêra, Nozes e Presunto crocante.</p>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <section class="menu-section" style="background-color: #161616; padding-top: 60px; padding-bottom: 60px; border-top: 1px solid #222;">
+
+	<section>
+        <div class="content-wrapper">
+            <span class="destaque-texto"; margin-top: 5px>  </span>
+	</section>
+
+        <div class="content-wrapper">
+            <h3 class="menu-cat-title" style="margin-top: 0;">Fire & Ice <span style="font-size: 0.6em; display: block; color: #666; letter-spacing: 1px; margin-top: 5px;">O contraste final</span></h3>
+        </div>
+
+        <div class="menu-grid">
+            <div style="grid-column: span 1;">
+                <h4 style="color: var(--cor-destaque); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 30px; border-left: 3px solid var(--cor-destaque); padding-left: 15px;">
+                    🍦 Sorvetes "Aestus"<br><span style="color: #888; font-size: 0.7em; text-transform: none;">Fruta 100% natural, triturada na hora</span>
+                </h4>
+
+                <div class="menu-item">
+                    <h3>O Clássico (Limão & Manjericão)</h3>
+                    <p>A acidez vibrante do limão, a frescura do manjericão e um fio de <strong>Limoncello</strong>. O derradeiro limpa-palato.</p>
+                </div>
+                <div class="menu-item">
+                    <h3>O Lusitano (Pêra Rocha & Porto)</h3>
+                    <p>A doçura da Pêra Rocha do Oeste, um toque de canela e a alma do <strong>Vinho do Porto Branco</strong>.</p>
+                </div>
+                <div class="menu-item" style="border-bottom: none;">
+                    <h3>O Exótico (Abacaxi & Hortelã)</h3>
+                    <p>Abacaxi sumarento, hortelã fresca e um "cheirinho" de <strong>Rum Envelhecido</strong>. Tropical e sofisticado.</p>
+                </div>
             </div>
 
-             <div class="menu-item" style="border-bottom: none;">
-                <h3>Expresso Manual</h3>
-                <p>Lote de Especialidade (Brasil/Colômbia), extraído manualmente na Flair 58+ 2.</p>
+            <div style="grid-column: span 1;">
+                <h4 style="color: var(--cor-destaque); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 30px; border-left: 3px solid var(--cor-destaque); padding-left: 15px;">
+                    ☕ Biscoitos de Autor<br><span style="color: #888; font-size: 0.7em; text-transform: none;">Crocantes, rústicos & para mergulhar</span>
+                </h4>
+
+                <div class="menu-item">
+                    <h3>Cantuccini (Amêndoa & Laranja)</h3>
+                    <p>A receita tradicional da Toscânia. Secos, duros e perfumados com raspa de laranja.</p>
+                </div>
+                <div class="menu-item">
+                    <h3>O "Negro" (Chocolate & Flor de Sal)</h3>
+                    <p>Cacau intenso, pedaços de avelã torrada e o contraste salgado que realça o sabor.</p>
+                </div>
+                <div class="menu-item" style="border-bottom: none;">
+                    <h3>O "Rubi" (Pistáchio & Cranberry)</h3>
+                    <p>O verde do pistáchio e o vermelho dos arandos secos. Um biscoito que se come com os olhos.</p>
+                </div>
             </div>
         </div>
     </section>
+
+    <section class="menu-section" style="background-color: #0f0f0f; border-top: 1px solid #333;">
+        <div class="content-wrapper">
+            <h3 class="menu-cat-title" style="margin-top: 0;">The Coffee Ritual <span style="font-size: 0.6em; display: block; color: #666; letter-spacing: 1px; margin-top: 5px;">Moagem fresca & Extração manual</span></h3>
+            
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 40px auto; color: #aaa; font-style: italic;">
+                "O café não é apenas o fim da refeição, é o último ato. Sem botões automáticos. 
+                Apenas água, grão de especialidade e a pressão manual da nossa <strong>Flair</strong>. 
+                Sente o aroma da moagem e ouve o silêncio da extração."
+            </p>
+        </div>
+
+        <div class="menu-grid">
+            <div style="grid-column: span 1;">
+                <h4 style="color: var(--cor-destaque); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px;">
+                    ☕ O Grão (Specialty Grade)
+                </h4>
+                <div class="menu-item" style="border-bottom: none;">
+                    <h3>Lote de Especialidade (Brasil / Colômbia)</h3>
+                    <p>Grãos 100% Arábica selecionados. Torra média para realçar notas de chocolate, caramelo e frutos secos. Moído no momento — expresso a expresso — para preservar os óleos essenciais e o aroma.</p>
+                </div>
+            </div>
+
+            <div style="grid-column: span 1;">
+                <h4 style="color: var(--cor-destaque); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px;">
+                    ⚙️ O Método (Manual Lever)
+                </h4>
+                <div class="menu-item" style="border-bottom: none;">
+                    <h3>Flair Experience</h3>
+                    <p>Não somos baristas de competição, somos artesãos do momento. Utilizamos a icónica prensa manual <strong>Flair</strong> para controlar a pressão e o fluxo em tempo real, garantindo um espresso com corpo aveludado e alma intensa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 <section id="contact" class="contact-section">
         <div class="content-wrapper">
