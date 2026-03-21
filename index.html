@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+<meta name="description" content="Aestus Nómada: Serviço premium de catering com firecooking e café de especialidade. Pizzas de fermentação lenta e café artesanal para eventos privados e corporativos.">
+<link rel="icon" type="image/png" href="images/selo-aestus 5cm220px.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aestus Nómada: Serviço premium de catering com firecooking e café de especialidade. Pizzas de fermentação lenta e café artesanal para eventos privados e corporativos.">
-    <link rel="icon" type="image/png" href="images/selo-aestus 5cm220px.png">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-
     <title>AESTUS NÓMADA | Pizza & Coffee Catering</title>
+
 
     <style>
         /* --- CONFIGURAÇÕES GERAIS --- */
@@ -84,7 +84,7 @@
         .logo {
             font-size: 1.3rem;
             font-weight: bold;
-            color: var(--cor-destaque);
+            color: var(--cor-destaque); /* LOGO EM COBRE */
             letter-spacing: 2px;
             text-transform: uppercase;
         }
@@ -92,6 +92,7 @@
         /* --- HERO SECTION --- */
         .hero {
             height: 100vh;
+            /* Imagem de Capa: Pizza Napolitana (Borda Alta e Artesanal) */
             background-image: url('images/pizza_two.avif?q=160&w=3840&auto=format&fit=crop');
             background-size: cover;
             background-position: center 65%;
@@ -147,13 +148,20 @@
             background-position: center;
         }
 
+            /* Imagem do café: delicioso */
         .coffee-bg { background-image: url('images/coffee_four_redux.jpg?q=80&w=1920&auto=format&fit=crop'); }
+        
+            /* Imagem da massa fresca: sourdough artesanal */
         .pizza-bg { background-image: url('images/sourdough_one_redux.jpeg?q=80&w=1920&auto=format&fit=crop'); }
+
+        /* setup externo: viatura e fornos na natureza */
         .setup-bg { background-image: url('images/Setup Exterior 2.jpg'); }
+
 
         /* --- VIBE SECTION --- */
         .vibe-section {
             min-height: 70vh;
+        /* setup ode jardim (provisório): mesa posta */
             background-image: url('images/Bancada Closeup.png?q=80&w=1920&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
@@ -227,30 +235,58 @@
         .menu-item { border-bottom: 1px solid #2a2a2a; padding-bottom: 25px; }
         .menu-item h3 { color: white; margin-bottom: 10px; }
 
-        /* --- INSTAGRAM SECTION --- */
-        .insta-section {
-            padding: 80px 20px;
+        /* --- CONTACTO --- */
+        .contact-section {
+            padding: 120px 20px;
             text-align: center;
-            background-color: #0a0a0a;
-            border-top: 1px solid #222;
+            background-color: var(--cor-verde);
         }
 
-        .insta-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
+        form {
+            max-width: 500px;
+            margin: 50px auto 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea, select {
+            padding: 15px;
+            background: rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.1);
             color: white;
-            font-family: var(--fonte-titulos);
-            font-size: 1.5rem;
-            text-decoration: none;
-            transition: 0.3s;
+            font-family: inherit; font-size: 1rem;
+        }
+        input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.5); }
+        input:focus, textarea:focus, select:focus { outline: none; border-color: var(--cor-destaque); }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 50px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+            background: #0a0a0a;
         }
 
-        .insta-btn:hover {
-            color: var(--cor-destaque);
+        .footer-contacts {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 1rem;
         }
+
+        .contact-pill {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-pill a { color: #e0e0e0; }
 
         /* --- MOBILE --- */
+/* --- MOBILE --- */
         @media (max-width: 768px) {
             .grid-section { grid-template-columns: 1fr; min-height: auto; }
             .hero h1 { font-size: 2.2rem; }
@@ -261,14 +297,15 @@
             .grid-img { height: 350px; }
             .vibe-section { min-height: 40vh; background-attachment: scroll; }
             .footer-contacts { flex-direction: column; gap: 20px; }
-            .btn { padding: 18px 30px; margin-top: 20px; display: block; }
-        }
+            .btn { padding: 18px 30px; /* Botão maior para o dedo */ margin-top: 20px; display: block; }
+                }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Helvetica+Neue:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <a href="#" class="logo">AESTUS NÓMADA</a>
+<header>
+        <a href="#" class="logo" style="text-decoration: none; color: var(--cor-destaque);">AESTUS NÓMADA</a>
         <nav>
             <a href="#contacto" class="btn" style="border:none; padding: 0; margin:0; color: white; font-size: 0.8rem;">Reservar</a>
         </nav>
@@ -276,33 +313,59 @@
 
     <section class="hero">
         <div class="hero-content">
+            
             <div class="content-wrapper">
                 <h1>Artesanato Nómada</h1>
                 <p>Pizza de fermentação lenta & Café de especialidade<br>O fogo e a arte, onde quer que esteja</p>
                 <a href="#contacto" class="btn">Pedir Orçamento</a>
             </div>
         </div>
-    </section>
+ </section>
 
-    <section style="padding: 100px 20px; background-color: #000; color: #fff; text-align: center; font-family: var(--fonte-titulos);">
-        <div style="max-width: 900px; margin: 0 auto;">
-            <h2 style="color: #d4a373; letter-spacing: 4px; font-size: 1.5em; margin-bottom: 10px; font-weight: 300; text-transform: uppercase;">Aestus Nómada</h2>
-            <p style="color: #888; font-size: 1.0em; font-style: italic; letter-spacing: 1px; margin-bottom: 40px;">[aes·tus] do latim: o calor intenso, a chama, a maré, a paixão.</p>
-            <p style="font-size: 2.2em; line-height: 1.2; margin-bottom: 50px; color: #fff; font-style: italic; font-weight: 300;">"Não servimos apenas comida. Servimos o tempo."</p>
-            <div style="font-size: 1.15em; line-height: 2; color: #ccc; font-weight: 300;">
-                <p style="margin-bottom: 30px;">
-                    Servimos o tempo da fermentação lenta da nossa massa madre.<br>
-                    Servimos o tempo que a pedra leva a atingir a temperatura perfeita.<br>
-                    Servimos o tempo dos aromas de um café acabado de moer!
-                </p>
-                <p style="color: #d4a373; font-weight: 400; margin-bottom: 50px; text-transform: uppercase; letter-spacing: 1px;">E acima de tudo, honramos o tempo que ganha <br>para desfrutar dos seus convidados.</p>
-                <p>A Aestus Nómada traz a pizzaria artesanal e a cafetaria de especialidade até ao seu jardim ou empresa. Sem pressas, com alma.</p>
-                <div style="margin-top: 40px;">
-                    <img src="images/selo-aestus 5cm220px.png" alt="Selo Aestus Nómada" style="width: 140px; opacity: 0.85; border-radius: 50%;">
-                </div>
-            </div>
+<section style="padding: 100px 20px; background-color: #000; color: #fff; text-align: center; font-family: var(--fonte-titulos);">
+    <div style="max-width: 900px; margin: 0 auto;">
+        <h2 style="color: #d4a373; letter-spacing: 4px; font-size: 1.5em; margin-bottom: 10px; font-weight: 300; text-transform: uppercase;">
+		    Aestus Nómada
+		</h2>
+		<p style="color: #888; font-size: 1.0em; font-style: italic; letter-spacing: 1px; margin-bottom: 40px;">
+		    [aes·tus] do latim: o calor intenso, a chama, a maré, a paixão.
+		</p>
+        
+        <p style="font-size: 2.2em; line-height: 1.2; margin-bottom: 50px; color: #fff; font-style: italic; font-weight: 300;">
+            "Não servimos apenas comida. Servimos o tempo."
+        </p>
+
+        <div style="font-size: 1.15em; line-height: 2; color: #ccc; font-weight: 300;">
+            <p style="margin-bottom: 30px;">
+                Servimos o tempo da fermentação lenta da nossa massa madre.<br>
+                Servimos o tempo que a pedra leva a atingir a temperatura perfeita.<br>
+                Servimos o tempo dos aromas de um café acabado de moer!
+            </p>
+            
+            <p style="color: #d4a373; font-weight: 400; margin-bottom: 50px; text-transform: uppercase; letter-spacing: 1px;">
+                E acima de tudo, honramos o tempo que ganha <br>para desfrutar dos seus convidados.
+            </p>
+
+            <p style="max-width: 700px; margin: 0 auto 30px auto;">
+                A <strong>Aestus Nómada</strong> traz a pizzaria artesanal e a cafetaria de especialidade <br>até ao seu jardim, quinta ou empresa. <br>Sem pressas, sem fumo, apenas com alma.
+            </p>
+
+            <p style="max-width: 700px; margin: 0 auto 50px auto;">
+                Combinamos a tradição da pizza artesanal napolitana <br>com a chama moderna e os aromas do café de especialidade. <br>Tudo preparado diante dos seus sentidos, com transparência e hospitalidade.
+            </p>
+
+            <p style="font-size: 1.3em; color: #fff; letter-spacing: 2px; border-top: 1px solid #333; display: inline-block; padding-top: 20px; margin-top: 20px;">
+                Onde o fogo encontra a arte.
+            </p>
+			
+			<div style="margin-top: 40px;">
+                <img src="images/selo-aestus 5cm220px.png" alt="Selo Aestus Nómada" style="width: 140px; opacity: 0.85; border-radius: 50%;">
+            </div>			
         </div>
-    </section>
+    </div>
+</section>
+
+
 
     <section class="grid-section">
         <div class="grid-content">
@@ -310,7 +373,7 @@
                 <span class="destaque-texto">O Nosso Processo</span>
                 <h2>Fermentação Selvagem</h2>
                 <p>Não aceleramos o tempo. A nossa massa de fermentação natural descansa entre <strong>48 a 72 horas</strong>, desenvolvendo a sua estrutura em caixas de madeira ("madia") para uma leveza e sabor inconfundíveis.</p>
-                <p>Cozidas a 450ºC no nosso forno <strong>Gozney Dome</strong>, garantimos o choque térmico perfeito.</p>
+                <p>Cozidas a 450ºC no nosso forno <strong>Gozney Dome</strong>, diretamente na pedra refratária, garantimos o choque térmico perfeito e o sabor autêntico.</p>
             </div>
         </div>
         <div class="grid-img pizza-bg"></div>
@@ -322,20 +385,22 @@
             <div class="content-wrapper">
                 <span class="destaque-texto">O Ritual</span>
                 <h2>Café de Autor</h2>
-                <p>Esqueça o café de botão. Trabalhamos exclusivamente com a <strong>Flair 58+ 2</strong>, uma prensa manual de precisão.</p>
-                <p>Servimos grãos de "Specialty Coffee" moídos na hora, resultando num expresso doce, complexo e encorpado.</p>
+                <p>Esqueça o café automático de botão. Encaramos o café como uma experiência gastronómica.</p>
+                <p>Trabalhamos exclusivamente com a <strong>Flair 58+ 2</strong>, uma prensa manual de precisão. Servimos grãos de "Specialty Coffee" moídos na hora, resultando num expresso doce, complexo e encorpado.</p>
             </div>
         </div>
     </section>
 
-    <section class="vibe-section"></section>
+    <section class="vibe-section">
+        </section>
 
     <section class="grid-section" style="background-color: #1a1a1a;">
         <div class="grid-content">
             <div class="content-wrapper">
                 <span class="destaque-texto">O Nosso Palco</span>
                 <h2>Setup Nómada</h2>
-                <p>O nosso conceito é "Slide & Roll": a cozinha desliza para fora. O forno, a bancada e a estação de café criam um teatro culinário ao ar livre, iluminado por luzes quentes.</p>
+                <p>Não somos um food truck tradicional onde a ação acontece escondida.</p>
+                <p>O nosso conceito é "Slide & Roll": a cozinha desliza para fora. O forno, a bancada e a estação de café criam um teatro culinário ao ar livre, iluminado por candeeiros vintage e luzes quentes.</p>
             </div>
         </div>
         <div class="grid-img setup-bg"></div>
@@ -343,116 +408,310 @@
 
     <section class="services-section">
         <div class="content-wrapper">
-            <span class="destaque-texto">A sua experiência</span>
+            <span class="destaque-texto">A sua experiência Aestus Nómada</span>
             <h2>O Que Fazemos</h2>
+            <p>Levamos o nosso cenário móvel e gastronomia artesanal<br>para eventos que exigem distinção.</p>
         </div>
         <div class="services-grid">
-            <div class="service-item"><div class="service-icon">🎉</div><h3>Eventos Privados</h3><p>Aniversários e festas particulares no seu jardim.</p></div>
-            <div class="service-item"><div class="service-icon">🤝</div><h3>Team Building</h3><p>Dinâmicas de grupo onde a equipa mete a mão na massa.</p></div>
-            <div class="service-item"><div class="service-icon">🚚</div><h3>Pop-ups</h3><p>Ativações de marca com estética cuidada.</p></div>
+            <div class="service-item">
+                <div class="service-icon">🎉</div>
+                <h3>Eventos Privados</h3>
+                <p>Aniversários, casamentos,<br>batizados e festas particulares.<br>Levamos a pizzaria e a padaria artesanal<br>até ao seu jardim.<br>Eleve a sua celebração a outro nível.</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">🤝</div>
+                <h3>Team Building</h3>
+                <p>Mais do que uma experiência gastronómica, uma dinâmica de grupo. A equipa colabora para abrir a massa, escolher ingredientes e gerir o forno. O resultado? Cooperação real e uma recompensa deliciosa.</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">🚚</div>
+                <h3>Pop-ups Exclusivos</h3>
+                <p>Ativações de marca e eventos de nicho com<br>o nosso setup nómada e estética cuidada.<br>Associe o charme artesanal ao seu evento!</p>
+            </div>
         </div>
     </section>
 
     <section class="menu-section">
+
         <div class="content-wrapper">
             <span class="destaque-texto">Menu de Eventos</span>
             <h2>Padaria de Fogo & Pizzas</h2>
-            <p style="font-style: italic; color: #888;">"Ingredientes locais. Alma nómada."</p>
+            <p style="margin-top: 20px; font-style: italic; color: #888;">"Ingredientes locais. Inspiração global. Alma nómada."</p>
         </div>
 
-        <div class="content-wrapper">
-            <h3 class="menu-cat-title">Entradas & Tradição</h3>
-        </div>
+	<div class="content-wrapper" style="margin-top: 80px;">
+            <h3 class="menu-cat-title" style="margin-top: 0;">Entradas & Tradição <span style="font-size: 0.6em; display: block; color: #666; letter-spacing: 1px; margin-top: 5px;">Para partilhar & iniciar</span></h3>
+        </div>	
+
         <div class="menu-grid">
-            <div class="menu-item"><h3>Focaccia de Alecrim</h3><p>Alta hidratação, Flor de Sal e Alecrim fresco.</p></div>
-            <div class="menu-item"><h3>Pão com Chouriço à Antiga</h3><p>Massa rústica com chouriço de porco preto.</p></div>
-            <div class="menu-item"><h3>Queijos & Ouro Líquido</h3><p>Queijos regionais com pão quente e azeite virgem.</p></div>
+            <div class="menu-item">
+                <h3>Focaccia de Alecrim</h3>
+                <p>Massa de fermentação lenta alta hidratação, Flor de Sal, Alecrim fresco e Azeite Virgem Extra.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Pão com Chouriço à Antiga</h3>
+                <p>Um clássico nacional. Massa de pão rústica enrolada com chouriço de porco preto e cozida no calor intenso da pedra.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Cesto de Broas</h3>
+                <p>Seleção de pequenas broas de Milho e Centeio artesanais. Sabores densos e tradicionais.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Queijos & Ouro Líquido</h3>
+                <p>Seleção de queijos regionais e o ritual do pão quente mergulhado em azeite, balsâmico e ervas aromáticas.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Azeitonas Marinadas</h3>
+                <p>Mistura de azeitonas galegas e picual temperadas com alho, laranja, orégãos e um toque de piripiri.</p>
+            </div>
         </div>
 
-        <div class="content-wrapper">
-            <h3 class="menu-cat-title">Pizzas de Assinatura</h3>
-        </div>
-        <div class="menu-grid">
-            <div class="menu-item"><h3>Margherita D.O.P.</h3><p>Tomate San Marzano, Mozzarella Fior di Latte, Manjericão.</p></div>
-            <div class="menu-item"><h3>Spicy Honey</h3><p>Salame Picante, Mel infusionado com Chili e Queijo de Cabra.</p></div>
-            <div class="menu-item"><h3>Aestus (Assinatura)</h3><p>Base branca, Mozzarella, Queijo de Cabra, Figos ou Pêra, Nozes e Presunto.</p></div>
+        <div class="content-wrapper" style="margin-top: 10px;">
+            <h3 class="menu-cat-title">Pizzas de Assinatura <span style="font-size: 0.6em; display: block; color: #666; letter-spacing: 1px; margin-top: 5px;">Fermentação lenta (48h) & Fogo Vivo</span></h3>
         </div>
 
-        <div class="content-wrapper">
-            <h3 class="menu-cat-title">Fire & Ice</h3>
-        </div>
         <div class="menu-grid">
-            <div class="menu-item"><h3>Limão & Manjericão</h3><p>Sorvete 100% natural com um fio de Limoncello.</p></div>
-            <div class="menu-item"><h3>Cantuccini de Autor</h3><p>Biscoitos rústicos de Amêndoa & Laranja para mergulhar no café.</p></div>
+            <div class="menu-item">
+                <h3>Margherita D.O.P.</h3>
+                <p>Tomate San Marzano, Mozzarella Fior di Latte, Manjericão Fresco, Fio de Azeite Virgem Extra.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Spicy Honey</h3>
+                <p>Salame Picante, Mel infusionado com Chili (caseiro), Queijo de Cabra curado.</p>
+            </div>
+            <div class="menu-item">
+                <h3>Ortolana (Veggie)</h3>
+                <p>Base branca de Mozzarella, Legumes da época grelhados no forno, Pesto de Manjericão.</p>
+            </div>
+            <div class="menu-item">
+                <h3 style="color: var(--cor-destaque);">A Sua Criação</h3>
+                <p>Pizzas desenhadas à medida para o seu evento (ingredientes sob consulta).</p>
+            </div>
+            <div class="menu-item" style="border-bottom: none;">
+                <h3>Aestus (Assinatura)</h3>
+                <p>Base branca, Mozzarella, Queijo de Cabra, Figos (época) ou Pêra, Nozes e Presunto crocante.</p>
+            </div>
         </div>
 
+    </section>
+
+    <section class="menu-section" style="background-color: #161616; padding-top: 60px; padding-bottom: 60px; border-top: 1px solid #222;">
+
+	<section>
         <div class="content-wrapper">
-            <h3 class="menu-cat-title">The Coffee Ritual</h3>
+            <span class="destaque-texto"; margin-top: 5px>  </span>
+	</section>
+
+        <div class="content-wrapper">
+            <h3 class="menu-cat-title" style="margin-top: 0;">Fire & Ice <span style="font-size: 0.6em; display: block; color: #666; letter-spacing: 1px; margin-top: 5px;">O contraste final</span></h3>
         </div>
+
         <div class="menu-grid">
-            <div class="menu-item" style="grid-column: 1 / -1; border-bottom: none; text-align: center;">
-                <p>O café não é apenas o fim, é o último ato. Extração manual na nossa <strong>Flair</strong> com grãos de especialidade moídos na hora.</p>
+            <div style="grid-column: span 1;">
+                <h4 style="color: var(--cor-destaque); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 30px; border-left: 3px solid var(--cor-destaque); padding-left: 15px;">
+                    🍦 Sorvetes "Aestus"<br><span style="color: #888; font-size: 0.7em; text-transform: none;">Fruta 100% natural, triturada na hora</span>
+                </h4>
+
+                <div class="menu-item">
+                    <h3>O Clássico (Limão & Manjericão)</h3>
+                    <p>A acidez vibrante do limão, a frescura do manjericão e um fio de <strong>Limoncello</strong>. O derradeiro limpa-palato.</p>
+                </div>
+                <div class="menu-item">
+                    <h3>O Lusitano (Pêra Rocha & Porto)</h3>
+                    <p>A doçura da Pêra Rocha do Oeste, um toque de canela e a alma do <strong>Vinho do Porto Branco</strong>.</p>
+                </div>
+                <div class="menu-item" style="border-bottom: none;">
+                    <h3>O Exótico (Abacaxi & Hortelã)</h3>
+                    <p>Abacaxi sumarento, hortelã fresca e um "cheirinho" de <strong>Rum Envelhecido</strong>. Tropical e sofisticado.</p>
+                </div>
+            </div>
+
+            <div style="grid-column: span 1;">
+                <h4 style="color: var(--cor-destaque); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 30px; border-left: 3px solid var(--cor-destaque); padding-left: 15px;">
+                    ☕ Biscoitos de Autor<br><span style="color: #888; font-size: 0.7em; text-transform: none;">Crocantes, rústicos & para mergulhar</span>
+                </h4>
+
+                <div class="menu-item">
+                    <h3>Cantuccini (Amêndoa & Laranja)</h3>
+                    <p>A receita tradicional da Toscânia. Secos, duros e perfumados com raspa de laranja.</p>
+                </div>
+                <div class="menu-item">
+                    <h3>O "Negro" (Chocolate & Flor de Sal)</h3>
+                    <p>Cacau intenso, pedaços de avelã torrada e o contraste salgado que realça o sabor.</p>
+                </div>
+                <div class="menu-item" style="border-bottom: none;">
+                    <h3>O "Rubi" (Pistáchio & Cranberry)</h3>
+                    <p>O verde do pistáchio e o vermelho dos arandos secos. Um biscoito que se come com os olhos.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contacto" style="padding: 120px 20px; text-align: center; background-color: #2f3e30;">
-        <h2 style="font-family: var(--fonte-titulos); color: var(--cor-destaque); font-size: 2.5rem; margin-bottom: 20px;">Solicite o Seu Orçamento</h2>
-        <div style="margin-top: 50px;">
-            <iframe data-tally-src="https://tally.so/embed/jaB0P4?transparentBackground=1&dynamicHeight=1&hideTitle=1" loading="lazy" width="100%" height="800" frameborder="0" title="Aestus Nómada"></iframe>
-        </div>
-    </section>
-
-    <section class="insta-section">
+    <section class="menu-section" style="background-color: #0f0f0f; border-top: 1px solid #333;">
         <div class="content-wrapper">
-            <span class="destaque-texto">Siga a Jornada</span>
-            <a href="https://www.instagram.com/aestus.nomada/" target="_blank" class="insta-btn">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                @aestus.nomada
-            </a>
+            <h3 class="menu-cat-title" style="margin-top: 0;">The Coffee Ritual <span style="font-size: 0.6em; display: block; color: #666; letter-spacing: 1px; margin-top: 5px;">Moagem fresca & Extração manual</span></h3>
+            
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 40px auto; color: #aaa; font-style: italic;">
+                "O café não é apenas o fim da refeição, é o último ato. Sem botões automáticos. 
+                Apenas água, grão de especialidade e a pressão manual da nossa <strong>Flair</strong>. 
+                Sente o aroma da moagem e ouve o silêncio da extração."
+            </p>
+        </div>
+
+        <div class="menu-grid">
+            <div style="grid-column: span 1;">
+                <h4 style="color: var(--cor-destaque); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px;">
+                    ☕ O Grão (Specialty Grade)
+                </h4>
+                <div class="menu-item" style="border-bottom: none;">
+                    <h3>Lote de Especialidade (Brasil / Colômbia)</h3>
+                    <p>Grãos 100% Arábica selecionados. Torra média para realçar notas de chocolate, caramelo e frutos secos. Moído no momento — expresso a expresso — para preservar os óleos essenciais e o aroma.</p>
+                </div>
+            </div>
+
+            <div style="grid-column: span 1;">
+                <h4 style="color: var(--cor-destaque); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px;">
+                    ⚙️ O Método (Manual Lever)
+                </h4>
+                <div class="menu-item" style="border-bottom: none;">
+                    <h3>Flair Experience</h3>
+                    <p>Não somos baristas de competição, somos artesãos do momento. Utilizamos a icónica prensa manual <strong>Flair</strong> para controlar a pressão e o fluxo em tempo real, garantindo um espresso com corpo aveludado e alma intensa.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer style="background-color: #0a0a0a; color: #fff; padding: 60px 20px; font-family: var(--fonte-texto); border-top: 1px solid #222;">
-        <div style="max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; text-align: center;">
-            <div style="flex: 1; min-width: 250px;">
-                <h3 style="color: var(--cor-destaque); font-family: var(--fonte-titulos); margin-bottom: 20px;">Aestus Nómada</h3>
-                <p style="font-size: 0.95em; color: #aaa;">Artesanato. Chama Viva. Café.</p>
-            </div>
-            <div style="flex: 1; min-width: 250px;">
-                <h4 style="color: #fff; font-family: var(--fonte-titulos); margin-bottom: 20px;">Contactos</h4>
-                <p style="font-size: 0.95em; color: #aaa;">
-                    📧 <a href="mailto:info@aestus.pt" style="color: var(--cor-destaque);">info@aestus.pt</a><br>
-                    📞 +351 918 645 042<br>
-                    📸 <a href="https://www.instagram.com/aestus.nomada/" target="_blank">Instagram</a>
-                </p>
-            </div>
-            <div style="flex: 1; min-width: 250px;">
-                <h4 style="color: #fff; font-family: var(--fonte-titulos); margin-bottom: 20px;">Informação Legal</h4>
-                <ul style="list-style: none; padding: 0; font-size: 0.95em;">
-                    <li style="margin-bottom: 12px;"><a href="#" onclick="openModal(); return false;" style="color: #aaa;">🔒 Política de Privacidade</a></li>
-                    <li><a href="https://www.livroreclamacoes.pt" target="_blank" style="color: #aaa;">📖 Livro de Reclamações</a></li>
-                </ul>
-            </div>
-        </div>
-        <div style="text-align: center; margin-top: 60px; color: #555; font-size: 0.8em;">&copy; 2026 Aestus Nómada.</div>
-    </footer>
+<section id="contacto" style="padding: 120px 20px 20px 20px ; text-align: center; background-color: #2f3e30;">
+    <h2 style="font-family: var(--fonte-titulos); color: var(--cor-destaque); font-size: 2.5rem; margin-bottom: 20px;">
+        Solicite o Seu Orçamento
+    </h2>
+    <p style="font-family: var(--fonte-texto); max-width: 600px; margin: 0 auto 0px auto; font-size: 1.1rem; color: #b0b0b0; font-weight: 300;">
+        Conte-nos mais sobre o seu evento. A nossa equipa desenhará uma experiência gastronómica exclusiva para os seus convidados.
+    </p>
 
-    <div id="privacyModal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8);">
-        <div style="background-color: #fefefe; margin: 10% auto; padding: 30px; width: 80%; max-width: 800px; border-radius: 8px; color: #333; position: relative;">
-            <span onclick="closeModal()" style="float: right; font-size: 28px; cursor: pointer;">&times;</span>
-            <h2>Política de Privacidade</h2>
-            <div style="max-height: 300px; overflow-y: auto;">
-                <p>A Aestus Nómada trata os seus dados de acordo com o RGPD para fins de orçamento e faturação. Nunca vendemos os seus dados a terceiros.</p>
-            </div>
-            <button onclick="closeModal()" style="background-color: #d4a373; color: white; padding: 10px 20px; border: none; cursor: pointer; margin-top: 20px;">Fechar</button>
-        </div>
-    </div>
+	<div style="margin-top: 50px;">
+    	<iframe 
+		    data-tally-src="https://tally.so/embed/jaB0P4?transparentBackground=1&dynamicHeight=1&hideTitle=1" 
+		    loading="lazy" 
+		    width="100%" 
+		    height="1600" 
+		    frameborder="0" 
+		    marginheight="0" 
+		    marginwidth="0" 
+		    title="Aestus Nómada"
+		    style="background-color: transparent;">
+		</iframe>
+		<p style="text-align: center; font-size: 0.8em; margin-top: 10px; margin-bottom: 20px">
+    		<a href="#" onclick="openModal(); return false;" style="color: #d4a373; text-decoration: none;">Ler Política de Privacidade completa</a>
+		</p>
+	</div>
 
     <script>
         var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s)}
-        function openModal() { document.getElementById("privacyModal").style.display = "block"; }
-        function closeModal() { document.getElementById("privacyModal").style.display = "none"; }
     </script>
+</section>
+
+<footer style="background-color: var(--cor-fundo); color: #fff; padding: 60px 20px; font-family: var(--fonte-texto); border-top: 1px solid #222;">
+    <div style="max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; text-align: center;">
+        
+        <div style="flex: 1; min-width: 250px; display: flex; flex-direction: column; align-items: center;">
+            <h3 style="color: var(--cor-destaque); font-family: var(--fonte-titulos); margin-bottom: 20px; letter-spacing: 2px; text-transform: uppercase;">Aestus Nómada</h3>
+            <p style="font-size: 0.95em; line-height: 1.6; color: #aaa; margin: 0;">
+                Artesanato. Chama Viva. Café.<br>
+                Levamos a experiência gastronómica até onde estiver.
+            </p>
+        </div>
+
+        <div style="flex: 1; min-width: 250px; display: flex; flex-direction: column; align-items: center;">
+            <h4 style="color: #fff; font-family: var(--fonte-titulos); margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 10px; display: inline-block; font-size: 1.1em;">Contactos</h4>
+            <p style="font-size: 0.95em; line-height: 1.8; color: #aaa; margin: 0;">
+                📍 Base Operacional: Região Oeste / Lisboa<br>
+                📧 <a href="mailto:info@aestus.pt" style="color: var(--cor-destaque); text-decoration: none;">info@aestus.pt</a><br>
+                📞 <a href="tel:+351918645042" style="color: inherit; text-decoration: none;">+351 918 645 042</a>
+            </p>
+        </div>
+
+        <div style="flex: 1; min-width: 250px; display: flex; flex-direction: column; align-items: center;">
+            <h4 style="color: #fff; font-family: var(--fonte-titulos); margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 10px; display: inline-block; font-size: 1.1em;">Informação Legal</h4>
+            <ul style="list-style: none; padding: 0; font-size: 0.95em; margin: 0;">
+                <li style="margin-bottom: 12px;">
+                    <a href="#" onclick="openModal(); return false;" style="color: #aaa; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                        <span>🔒</span> Política de Privacidade
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.livroreclamacoes.pt" target="_blank" style="color: #aaa; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                        <span>📖</span> Livro de Reclamações
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 60px; padding-top: 20px; border-top: 1px solid #222; font-size: 0.85em; color: #555; letter-spacing: 1px;">
+        &copy; 2026 Aestus Nómada. Todos os direitos reservados.
+    </div>
+</footer>
+
+
+
+<div id="privacyModal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8);">
+    <div style="background-color: #fefefe; margin: 10% auto; padding: 30px; border: 1px solid #888; width: 80%; max-width: 800px; border-radius: 8px; position: relative; color: #333; font-family: sans-serif;">
+        <span onclick="closeModal()" style="color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+        
+        <h2 style="color: #333;">Política de Privacidade e Tratamento de Dados</h2>
+        <p style="font-size: 0.8em; color: #666;">Última atualização: Fevereiro 2026</p>
+        <hr style="margin: 15px 0;">
+        
+        <div style="max-height: 400px; overflow-y: auto; line-height: 1.6;">
+            <h3>1. Compromisso</h3>
+            <p>A <strong>Aestus Nómada</strong> compromete-se a proteger a sua privacidade e a tratar os seus dados pessoais de forma transparente e segura, em conformidade com o Regulamento Geral de Proteção de Dados (RGPD).</p>
+
+            <h3>2. Recolha de Dados</h3>
+            <p>Recolhemos apenas os dados estritamente necessários para a prestação do serviço solicitado (Nome, Email, Telefone, Local do Evento) através do nosso formulário de contacto.</p>
+
+            <h3>3. Finalidade</h3>
+            <p>Os dados recolhidos destinam-se exclusivamente a:</p>
+            <ul>
+                <li>Responder a pedidos de orçamento;</li>
+                <li>Gestão da relação contratual e prestação do serviço de catering;</li>
+                <li>Faturação.</li>
+            </ul>
+
+            <h3>4. Partilha de Dados</h3>
+            <p>Os seus dados pessoais nunca serão vendidos ou cedidos a terceiros para fins de marketing. Apenas serão partilhados se exigido por lei (ex: Autoridade Tributária).</p>
+
+            <h3>5. Segurança</h3>
+            <p>Utilizamos medidas técnicas adequadas (incluindo certificado SSL no site) para proteger os seus dados contra perda ou acesso não autorizado.</p>
+            
+            <h3>6. Os seus Direitos</h3>
+            <p>Pode, a qualquer momento, solicitar o acesso, retificação ou eliminação dos seus dados enviando um e-mail para <strong>info@aestus.pt</strong>.</p>
+        </div>
+        
+        <div style="margin-top: 20px; text-align: right;">
+            <button onclick="closeModal()" style="background-color: #d4a373; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Fechar</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Função para abrir o Modal
+    function openModal() {
+        document.getElementById("privacyModal").style.display = "block";
+    }
+
+    // Função para fechar o Modal
+    function closeModal() {
+        document.getElementById("privacyModal").style.display = "none";
+    }
+
+    // Fechar se clicar fora da janela branca
+    window.onclick = function(event) {
+        if (event.target == document.getElementById("privacyModal")) {
+            closeModal();
+        }
+    }
+</script>
+
 </body>
 </html>
