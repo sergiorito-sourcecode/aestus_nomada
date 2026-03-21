@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Aestus Nómada: Serviço premium de catering com firecooking e café de especialidade. Pizzas de fermentação lenta e café artesanal para eventos privados e corporativos.">
     <link rel="icon" type="image/png" href="images/selo-aestus 5cm220px.png">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AESTUS NÓMADA | Pizza & Coffee Catering</title>
 
     <style>
@@ -226,7 +227,7 @@
         .menu-item { border-bottom: 1px solid #2a2a2a; padding-bottom: 25px; }
         .menu-item h3 { color: white; margin-bottom: 10px; }
 
-        /* --- INSTAGRAM MINI SECTION --- */
+        /* --- INSTAGRAM SECTION (ESTILO NOVO) --- */
         .insta-section {
             padding: 80px 20px;
             text-align: center;
@@ -247,37 +248,6 @@
 
         .insta-btn:hover {
             color: var(--cor-destaque);
-        }
-
-        /* --- CONTACTO --- */
-        .contact-section {
-            padding: 120px 20px;
-            text-align: center;
-            background-color: var(--cor-verde);
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            padding: 50px 20px;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #888;
-            background: #0a0a0a;
-        }
-
-        .footer-contacts {
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-            font-size: 1rem;
-        }
-
-        .contact-pill {
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
 
         /* --- MOBILE --- */
@@ -325,9 +295,7 @@
                     Servimos o tempo que a pedra leva a atingir a temperatura perfeita.<br>
                     Servimos o tempo dos aromas de um café acabado de moer!
                 </p>
-                <p style="color: #d4a373; font-weight: 400; margin-bottom: 50px; text-transform: uppercase; letter-spacing: 1px;">
-                    E acima de tudo, honramos o tempo que ganha <br>para desfrutar dos seus convidados.
-                </p>
+                <p style="color: #d4a373; font-weight: 400; margin-bottom: 50px; text-transform: uppercase; letter-spacing: 1px;">E acima de tudo, honramos o tempo que ganha <br>para desfrutar dos seus convidados.</p>
                 <div style="margin-top: 40px;">
                     <img src="images/selo-aestus 5cm220px.png" alt="Selo Aestus Nómada" style="width: 140px; opacity: 0.85; border-radius: 50%;">
                 </div>
@@ -361,53 +329,90 @@
 
     <section class="vibe-section"></section>
 
+    <section class="grid-section" style="background-color: #1a1a1a;">
+        <div class="grid-content">
+            <div class="content-wrapper">
+                <span class="destaque-texto">O Nosso Palco</span>
+                <h2>Setup Nómada</h2>
+                <p>Não somos um food truck tradicional onde a ação acontece escondida.</p>
+                <p>O nosso conceito é "Slide & Roll": a cozinha desliza para fora. O forno, a bancada e a estação de café criam um teatro culinário ao ar livre.</p>
+            </div>
+        </div>
+        <div class="grid-img setup-bg"></div>
+    </section>
+
+    <section class="services-section">
+        <div class="content-wrapper">
+            <span class="destaque-texto">A sua experiência Aestus Nómada</span>
+            <h2>O Que Fazemos</h2>
+            <p>Levamos o nosso cenário móvel e gastronomia artesanal para eventos que exigem distinção.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-item"><div class="service-icon">🎉</div><h3>Eventos Privados</h3><p>Aniversários, casamentos e festas particulares.</p></div>
+            <div class="service-item"><div class="service-icon">🤝</div><h3>Team Building</h3><p>A equipa colabora para abrir a massa e gerir o forno.</p></div>
+            <div class="service-item"><div class="service-icon">🚚</div><h3>Pop-ups Exclusivos</h3><p>Ativações de marca com o nosso setup nómada.</p></div>
+        </div>
+    </section>
+
+    <section class="menu-section">
+        <div class="content-wrapper">
+            <span class="destaque-texto">Menu de Eventos</span>
+            <h2>Padaria de Fogo & Pizzas</h2>
+        </div>
+        <div class="menu-grid">
+            <div class="menu-item"><h3>Focaccia de Alecrim</h3><p>Alta hidratação, Flor de Sal e Alecrim.</p></div>
+            <div class="menu-item"><h3>Margherita D.O.P.</h3><p>Tomate San Marzano, Mozzarella Fior di Latte.</p></div>
+        </div>
+    </section>
+
+    <section id="contacto" style="padding: 120px 20px; text-align: center; background-color: #2f3e30;">
+        <h2 style="font-family: var(--fonte-titulos); color: var(--cor-destaque); font-size: 2.5rem; margin-bottom: 20px;">Solicite o Seu Orçamento</h2>
+        <div style="margin-top: 50px;">
+            <iframe data-tally-src="https://tally.so/embed/jaB0P4?transparentBackground=1&dynamicHeight=1&hideTitle=1" loading="lazy" width="100%" height="800" frameborder="0" title="Aestus Nómada"></iframe>
+        </div>
+    </section>
+
     <section class="insta-section">
         <div class="content-wrapper">
             <span class="destaque-texto">Siga a Jornada</span>
             <a href="https://www.instagram.com/aestus.nomada/" target="_blank" class="insta-btn">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                 @aestus.nomada
             </a>
-            <p style="margin-top: 15px;">Acompanhe o fogo, a massa e os momentos.</p>
         </div>
     </section>
 
-    <section id="contacto" class="contact-section">
-        <h2 style="font-family: var(--fonte-titulos); color: var(--cor-destaque); font-size: 2.5rem; margin-bottom: 20px;">Solicite o Seu Orçamento</h2>
-        <p style="max-width: 600px; margin: 0 auto; font-size: 1.1rem; color: #b0b0b0; font-weight: 300;">Conte-nos mais sobre o seu evento. A nossa equipa desenhará uma experiência gastronómica exclusiva.</p>
-        <div style="margin-top: 50px;">
-            <iframe data-tally-src="https://tally.so/embed/jaB0P4?transparentBackground=1&dynamicHeight=1&hideTitle=1" loading="lazy" width="100%" height="1000" frameborder="0" title="Aestus Nómada"></iframe>
-            <p style="text-align: center; font-size: 0.8em; margin-top: 10px;"><a href="#" onclick="openModal(); return false;" style="color: #d4a373;">Ler Política de Privacidade</a></p>
-        </div>
-    </section>
-
-    <footer>
+    <footer style="background-color: #0a0a0a; color: #fff; padding: 60px 20px; font-family: var(--fonte-texto); border-top: 1px solid #222;">
         <div style="max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; text-align: center;">
             <div style="flex: 1; min-width: 250px;">
                 <h3 style="color: var(--cor-destaque); font-family: var(--fonte-titulos); margin-bottom: 20px; text-transform: uppercase;">Aestus Nómada</h3>
-                <p style="font-size: 0.95em; color: #aaa;">Artesanato. Chama Viva. Café.<br>Levamos a experiência até onde estiver.</p>
+                <p style="font-size: 0.95em; color: #aaa;">Artesanato. Chama Viva. Café.</p>
             </div>
             <div style="flex: 1; min-width: 250px;">
-                <h4 style="color: #fff; font-family: var(--fonte-titulos); margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 10px;">Contactos</h4>
-                <div class="footer-contacts">
-                    <span class="contact-pill">📧 <a href="mailto:info@aestus.pt">info@aestus.pt</a></span>
-                    <span class="contact-pill">📞 <a href="tel:+351918645042">+351 918 645 042</a></span>
-                    <span class="contact-pill">📸 <a href="https://www.instagram.com/aestus.nomada/" target="_blank">Instagram</a></span>
-                </div>
+                <h4 style="color: #fff; font-family: var(--fonte-titulos); margin-bottom: 20px;">Contactos</h4>
+                <p style="font-size: 0.95em; color: #aaa;">
+                    📧 <a href="mailto:info@aestus.pt" style="color: var(--cor-destaque);">info@aestus.pt</a><br>
+                    📞 +351 918 645 042<br>
+                    📸 <a href="https://www.instagram.com/aestus.nomada/" target="_blank">Instagram</a>
+                </p>
+            </div>
+            <div style="flex: 1; min-width: 250px;">
+                <h4 style="color: #fff; font-family: var(--fonte-titulos); margin-bottom: 20px;">Informação Legal</h4>
+                <ul style="list-style: none; padding: 0; font-size: 0.95em;">
+                    <li style="margin-bottom: 12px;"><a href="#" onclick="openModal(); return false;" style="color: #aaa;">🔒 Política de Privacidade</a></li>
+                    <li><a href="https://www.livroreclamacoes.pt" target="_blank" style="color: #aaa;">📖 Livro de Reclamações</a></li>
+                </ul>
             </div>
         </div>
-        <div style="text-align: center; margin-top: 60px; padding-top: 20px; border-top: 1px solid #222; font-size: 0.85em; color: #555;">
-            &copy; 2026 Aestus Nómada. Todos os direitos reservados.
-        </div>
+        <div style="text-align: center; margin-top: 60px; color: #555; font-size: 0.8em;">&copy; 2026 Aestus Nómada.</div>
     </footer>
 
     <div id="privacyModal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8);">
         <div style="background-color: #fefefe; margin: 10% auto; padding: 30px; width: 80%; max-width: 800px; border-radius: 8px; color: #333;">
             <span onclick="closeModal()" style="float: right; font-size: 28px; cursor: pointer;">&times;</span>
             <h2>Política de Privacidade</h2>
-            <p>A Aestus Nómada protege os seus dados pessoais em conformidade com o RGPD.</p>
-            <button onclick="closeModal()" style="background-color: #d4a373; color: white; padding: 10px 20px; border: none; cursor: pointer; margin-top: 20px;">Fechar</button>
+            <p>Os seus dados são tratados com segurança em conformidade com o RGPD.</p>
+            <button onclick="closeModal()" style="background-color: #d4a373; color: white; padding: 10px 20px; border: none; cursor: pointer;">Fechar</button>
         </div>
     </div>
 
