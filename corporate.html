@@ -496,5 +496,64 @@
             &copy; 2026 Aestus Nómada. Todos os direitos reservados.
         </div>
     </footer>
+
+    <div id="privacyModal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8);">
+        <div style="background-color: #fefefe; margin: 10% auto; padding: 30px; border: 1px solid #888; width: 80%; max-width: 800px; border-radius: 8px; position: relative; color: #333; font-family: sans-serif;">
+            <span onclick="closeModal()" style="color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+            
+            <h2 style="color: #333;">Política de Privacidade e Tratamento de Dados</h2>
+            <p style="font-size: 0.8em; color: #666;">Última atualização: Fevereiro 2026</p>
+            <hr style="margin: 15px 0;">
+            
+            <div style="max-height: 400px; overflow-y: auto; line-height: 1.6;">
+                <h3>1. Compromisso</h3>
+                <p>A <strong>Aestus Nómada</strong> compromete-se a proteger a sua privacidade e a tratar os seus dados pessoais de forma transparente e segura, em conformidade com o Regulamento Geral de Proteção de Dados (RGPD).</p>
+    
+                <h3>2. Recolha de Dados</h3>
+                <p>Recolhemos apenas os dados estritamente necessários para a prestação do serviço solicitado (Nome, Email, Telefone, Local do Evento) através do nosso formulário de contacto.</p>
+    
+                <h3>3. Finalidade</h3>
+                <p>Os dados recolhidos destinam-se exclusivamente a:</p>
+                <ul>
+                    <li>Responder a pedidos de orçamento;</li>
+                    <li>Gestão da relação contratual e prestação do serviço de catering;</li>
+                    <li>Faturação.</li>
+                </ul>
+    
+                <h3>4. Partilha de Dados</h3>
+                <p>Os seus dados pessoais nunca serão vendidos ou cedidos a terceiros para fins de marketing. Apenas serão partilhados se exigido por lei (ex: Autoridade Tributária).</p>
+    
+                <h3>5. Segurança</h3>
+                <p>Utilizamos medidas técnicas adequadas (incluindo certificado SSL no site) para proteger os seus dados contra perda ou acesso não autorizado.</p>
+                
+                <h3>6. Os seus Direitos</h3>
+                <p>Pode, a qualquer momento, solicitar o acesso, retificação ou eliminação dos seus dados enviando um e-mail para <strong>info@aestus.pt</strong>.</p>
+            </div>
+            
+            <div style="margin-top: 20px; text-align: right;">
+                <button onclick="closeModal()" style="background-color: #d4a373; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Fechar</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Função para abrir o Modal
+        function openModal() {
+            document.getElementById("privacyModal").style.display = "block";
+        }
+    
+        // Função para fechar o Modal
+        function closeModal() {
+            document.getElementById("privacyModal").style.display = "none";
+        }
+    
+        // Fechar se clicar fora da janela branca
+        window.onclick = function(event) {
+            if (event.target == document.getElementById("privacyModal")) {
+                closeModal();
+            }
+        }
+    </script>
+    
 </body>
 </html>
