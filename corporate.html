@@ -309,10 +309,11 @@
         <nav style="display: flex; align-items: center; gap: 20px;">
             <div style="font-size: 1.2rem; display: inline-flex; align-items: center; margin-right: 15px; vertical-align: middle;">
                 <a href="corporate.html" style="opacity: 1; margin-right: 8px; text-decoration: none; line-height: 1;" title="Português">🇵🇹</a>
-                <a href="en-corporate.html" style="opacity: 0.4; filter: grayscale(100%); text-decoration: none; line-height: 1;" title="English">🇬🇧</a>
+                <a href="en.html" style="opacity: 0.4; filter: grayscale(100%); text-decoration: none; line-height: 1;" title="English">🇬🇧</a>
             </div>
-            <a href="consumer.html" style="color: #fff; font-size: 0.9rem; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='var(--cor-destaque)'" onmouseout="this.style.color='#fff'">Eventos Privados</a>
-            <a href="#contacto" class="btn" style="border:none; padding: 0; margin:0; color: white; font-size: 0.8rem;">Reservar</a>
+            <a href="index.html" style="color: #fff; font-size: 0.9rem; text-decoration: none; font-weight: normal; transition: 0.3s;" onmouseover="this.style.color='var(--cor-destaque)'" onmouseout="this.style.color='#fff'">Início</a>
+            <a href="consumer.html" style="color: #fff; font-size: 0.9rem; text-decoration: none; font-weight: normal; transition: 0.3s;" onmouseover="this.style.color='var(--cor-destaque)'" onmouseout="this.style.color='#fff'">Eventos Privados</a>
+            <a href="corporate.html" style="color: var(--cor-destaque); font-size: 0.9rem; text-decoration: none; font-weight: bold; transition: 0.3s;" onmouseover="this.style.color='var(--cor-destaque)'" onmouseout="this.style.color='var(--cor-destaque)'">Corporate / B2B</a>
         </nav>
     </header>
 
@@ -370,29 +371,32 @@
         <span class="destaque-texto" style="color: #fff;">Operação Executiva</span>
         <h2 style="color: var(--cor-destaque); margin-bottom: 20px; font-size: 2.5rem;">Foco no seu Negócio</h2>
         <p style="max-width: 700px; margin: 0 auto; font-size: 1.1rem; color: #ccc;">
-            Sabemos que na organização de eventos corporativos, os fornecedores não devem ser uma preocupação.
+            Sabemos que na organização de eventos corporativos, os fornecedores não devem ser uma preocupação. Desenhámos a nossa operação para se integrar perfeitamente no seu espaço.
         </p>
     </section>
 
-<section class="grid-section" style="background-color: #121212;">
-        <div class="grid-img" style="background-image: url('images/Esquema_Corp2.png'); order: -1;"></div>
+    <!-- BLOCO 1: SILENCIOSO (Imagem Esquerda, Texto Direita) -->
+    <section class="grid-section" style="background-color: #121212;">
+        <div class="grid-img" style="background-image: url('images/b2b-silencio.jpg'); order: -1;"></div>
         <div class="grid-content">
             <div class="content-wrapper">
-                <span class="destaque-texto">02. Ambiente</span>
+                <span class="destaque-texto">Ambiente Imaculado</span>
                 <h2 style="color: #fff; margin-bottom: 15px;">Silencioso & Limpo</h2>
                 <p>Zero ruído de geradores a gasóleo. Zero fumos incomodativos para os seus convidados. Mantemos uma política de LNT (Leave No Trace) com gestão rigorosa de resíduos no final da operação.</p>
             </div>
         </div>
     </section>
-<section class="grid-section" style="background-color: #121212; border-bottom: 1px solid #222;">
-        <div class="grid-img" style="background-image: url('images/b2b-faturacao.jpg'); order: -1;"></div>
+
+    <!-- BLOCO 2: BUROCRACIA ZERO (Texto Esquerda, Imagem Direita) -->
+    <section class="grid-section" style="background-color: #0a0a0a; border-bottom: 1px solid #222;">
         <div class="grid-content">
             <div class="content-wrapper">
-                <span class="destaque-texto">04. Burocracia Zero</span>
+                <span class="destaque-texto">Agilidade e Simplicidade</span>
                 <h2 style="color: #fff; margin-bottom: 15px;">Processo Simplificado</h2>
                 <p>Trabalhamos em estrito cumprimento com as exigências empresariais. Documentação legal, seguros de responsabilidade civil, certificados HACCP e faturação eletrónica atempada para os seus departamentos financeiros.</p>
             </div>
         </div>
+        <div class="grid-img" style="background-image: url('images/b2b-faturacao.jpg');"></div>
     </section>
 
 <!-- FORMULÁRIO B2B -->
@@ -469,7 +473,7 @@
     </div>
 </footer>
 <div id="privacyModal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8);">
-    <div style="background-color: #fefefe; margin: 10% auto; padding: 30px; border: 1px solid #888; width: 80%; max-width: 800px; border-radius: 8px; position: relative; color: #333; font-family: sans-serif;">
+    <div style="background-color: #fefefe; margin: 10% auto; padding: 30px; border: 1px solid #888; width: 80%; max-width: 800px; border-radius: 8px; position: relative; color: #333; font-family: var(--fonte-texto);">
         <span onclick="closeModal()" style="color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
         
         <h2 style="color: #333;">Política de Privacidade e Tratamento de Dados</h2>
