@@ -304,29 +304,38 @@
 </head>
 <body>
 
-    <header>
-        <a href="index.html" class="logo" style="text-decoration: none; color: var(--cor-destaque);">AESTUS NÓMADA</a>
-        <nav style="display: flex; align-items: center; gap: 20px;">
-            <div style="font-size: 1.2rem; display: inline-flex; align-items: center; margin-right: 15px; vertical-align: middle;">
-                <a href="index.html" style="opacity: 1; margin-right: 8px; text-decoration: none; line-height: 1;" title="Português">🇵🇹</a>
-                <a href="en.html" style="opacity: 0.4; filter: grayscale(100%); text-decoration: none; line-height: 1;" title="English">🇬🇧</a>
-            </div>
-            <a href="index.html" style="color: var(--cor-destaque); font-size: 0.9rem; text-decoration: none; font-weight: bold; transition: 0.3s;" onmouseover="this.style.color='var(--cor-destaque)'" onmouseout="this.style.color='var(--cor-destaque)'">Início</a>
-            <a href="consumer.html" style="color: #fff; font-size: 0.9rem; text-decoration: none; font-weight: normal; transition: 0.3s;" onmouseover="this.style.color='var(--cor-destaque)'" onmouseout="this.style.color='#fff'">Eventos Privados</a>
-            <a href="corporate.html" style="color: #fff; font-size: 0.9rem; text-decoration: none; font-weight: normal; transition: 0.3s;" onmouseover="this.style.color='var(--cor-destaque)'" onmouseout="this.style.color='#fff'">Corporate / B2B</a>
-        </nav>
+<header>
+        <a href="#" class="logo" style="text-decoration: none; color: var(--cor-destaque);">AESTUS NÓMADA</a>
+        <nav>
+			<div style="font-size: 1.2rem; display: inline-flex; align-items: center; margin-right: 15px; vertical-align: middle;">
+		    	<a href="index.html" style="opacity: 1; margin-right: 8px; text-decoration: none; line-height: 1;" title="Português">🇵🇹</a>
+		    	<a href="en.html" style="opacity: 0.4; filter: grayscale(100%); text-decoration: none; line-height: 1;" title="English">🇬🇧</a>
+			</div>
+
+			<a href="#contacto" class="btn" style="border:none; padding: 0; margin:0; color: white; font-size: 0.8rem;">Reservar</a>
+			<a class="btn" style="border:none; padding: 0; margin:0; color: grey; font-size: 0.8rem;"> | </a>
+			<a href="corporate.html" style="color: #fff; font-size: 0.9rem; text-decoration: none; font-weight: bold; transition: 0.3s;" onmouseover="this.style.color='var(--cor-destaque)'" onmouseout="this.style.color='#fff'">Corporate / B2B</a>
+
+		</nav>
+
     </header>
 
-<section class="hero">
+    <section class="hero">
         <div class="hero-content">
             
             <div class="content-wrapper">
                 <h1>Artesanato Nómada</h1>
                 <p>Pizza de fermentação lenta & Café de especialidade<br>O fogo e a arte, onde quer que esteja</p>
-                <a href="#contacto" class="btn">Pedir Orçamento</a>
+                
+<div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
+    <a href="consumer.html" class="btn" style="margin-top: 0;">Eventos Privados</a>
+    <a href="corporate.html" class="btn" style="margin-top: 0; background-color: var(--cor-destaque); color: var(--cor-fundo); border-color: var(--cor-destaque);">Corporate / B2B</a>
+</div>
+
             </div>
         </div>
  </section>
+
 <section style="padding: 100px 20px; background-color: #000; color: #fff; text-align: center; font-family: var(--fonte-titulos);">
     <div style="max-width: 900px; margin: 0 auto;">
         <h2 style="color: #d4a373; letter-spacing: 4px; font-size: 1.5em; margin-bottom: 10px; font-weight: 300; text-transform: uppercase;">
@@ -369,7 +378,10 @@
         </div>
     </div>
 </section>
-<section class="grid-section">
+
+
+
+    <section class="grid-section">
         <div class="grid-content">
             <div class="content-wrapper">
                 <span class="destaque-texto">O Nosso Processo</span>
@@ -380,7 +392,8 @@
         </div>
         <div class="grid-img pizza-bg"></div>
     </section>
-<section class="grid-section">
+
+    <section class="grid-section">
         <div class="grid-img coffee-bg" style="order: -1;"></div>
         <div class="grid-content">
             <div class="content-wrapper">
@@ -391,9 +404,11 @@
             </div>
         </div>
     </section>
-<section class="vibe-section">
+
+    <section class="vibe-section">
         </section>
-<section class="grid-section" style="background-color: #1a1a1a;">
+
+    <section class="grid-section" style="background-color: #1a1a1a;">
         <div class="grid-content">
             <div class="content-wrapper">
                 <span class="destaque-texto">O Nosso Palco</span>
@@ -405,39 +420,33 @@
         <div class="grid-img setup-bg"></div>
     </section>
 
-    <section style="padding: 100px 20px 40px; background-color: var(--cor-fundo); text-align: center;">
-        <span class="destaque-texto" style="color: #fff;">Autonomia Total</span>
-        <h2 style="color: var(--cor-destaque); margin-bottom: 20px; font-size: 2.5rem;">Tranquilidade para a sua Organização</h2>
-        <p style="max-width: 700px; margin: 0 auto; font-size: 1.1rem; color: #ccc;">
-            Sabemos que na organização de um evento de excelência, os fornecedores não devem ser uma preocupação adicional. A nossa operação foi desenhada para a máxima eficiência e autonomia.
-        </p>
-    </section>
-
-    <!-- BLOCO 1: ENERGIA (Texto Esquerda, Imagem Direita) -->
-    <section class="grid-section" style="background-color: #0a0a0a; border-top: 1px solid #222;">
-        <div class="grid-content">
-            <div class="content-wrapper">
-                <span class="destaque-texto">Flexibilidade Energética</span>
-                <h2 style="color: #fff; margin-bottom: 15px;">Operação Inteligente</h2>
-                <p>Em eventos <em>outdoor</em>, somos 100% autónomos graças aos nossos fornos a gás e estações de energia portáteis de última geração. Para ativações <em>indoor</em>, utilizamos equipamento elétrico de alta eficiência e zero fumos, integrando-nos de forma segura e discreta na infraestrutura elétrica do seu edifício.</p>
-            </div>
+    <section class="services-section">
+		
+        <div class="content-wrapper">
+            <span class="destaque-texto">A sua experiência Aestus Nómada</span>
+            <h2>O Que Fazemos</h2>
+            <p>Levamos o nosso cenário móvel e gastronomia artesanal<br>para eventos que exigem distinção.</p>
         </div>
-        <div class="grid-img" style="background-image: url('images/Esquema_Eletrico_3.png');"></div>
-    </section>
-
-    <!-- BLOCO 3: ADAPTÁVEL (Texto Direita, Imagem Esquerda) - Let's alternate it since it's the second block here -->
-    <section class="grid-section" style="background-color: #121212;">
-        <div class="grid-img" style="background-image: url('images/b2b-adaptavel.jpg'); order: -1;"></div>
-        <div class="grid-content">
-            <div class="content-wrapper">
-                <span class="destaque-texto">Flexibilidade</span>
-                <h2 style="color: #fff; margin-bottom: 15px;">100% Adaptável</h2>
-                <p>O nosso setup modular permite-nos operar em locais onde carrinhas tradicionais não chegam. Encaixamos no parque de estacionamento da administração, no jardim da quinta ou num armazém industrial.</p>
+        <div class="services-grid">
+            <div class="service-item">
+                <div class="service-icon">🎉</div>
+                <h3>Eventos Privados</h3>
+                <p>Aniversários, casamentos,<br>batizados e festas particulares.<br>Levamos a pizzaria e a padaria artesanal<br>até ao seu jardim.<br>Eleve a sua celebração a outro nível.</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">🤝</div>
+                <h3>Team Building</h3>
+                <p>Mais do que uma experiência gastronómica, uma dinâmica de grupo. A equipa colabora para abrir a massa, escolher ingredientes e gerir o forno. O resultado? Cooperação real e uma recompensa deliciosa.</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">🚚</div>
+                <h3>Pop-ups Exclusivos</h3>
+                <p>Ativações de marca e eventos de nicho com<br>o nosso setup nómada e estética cuidada.<br>Associe o charme artesanal ao seu evento!</p>
             </div>
         </div>
     </section>
 
-<section class="menu-section">
+    <section class="menu-section">
 
         <div class="content-wrapper">
             <span class="destaque-texto">Menu de Eventos</span>
@@ -500,13 +509,60 @@
         </div>
 
     </section>
-<section class="menu-section" style="background-color: #161616; padding-top: 60px; padding-bottom: 60px; border-top: 1px solid #222;">
+
+    <section class="menu-section" style="background-color: #161616; padding-top: 60px; padding-bottom: 60px; border-top: 1px solid #222;">
 
 	<section>
         <div class="content-wrapper">
             <span class="destaque-texto"; margin-top: 5px>  </span>
 	</section>
-<section class="menu-section" style="background-color: #0f0f0f; border-top: 1px solid #333;">
+
+        <div class="content-wrapper">
+            <h3 class="menu-cat-title" style="margin-top: 0;">Fire & Ice <span style="font-size: 0.6em; display: block; color: #666; letter-spacing: 1px; margin-top: 5px;">O contraste final</span></h3>
+        </div>
+
+        <div class="menu-grid">
+            <div style="grid-column: span 1;">
+                <h4 style="color: var(--cor-destaque); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 30px; border-left: 3px solid var(--cor-destaque); padding-left: 15px;">
+                    🍦 Sorvetes "Aestus"<br><span style="color: #888; font-size: 0.7em; text-transform: none;">Fruta 100% natural, triturada na hora</span>
+                </h4>
+
+                <div class="menu-item">
+                    <h3>O Clássico (Limão & Manjericão)</h3>
+                    <p>A acidez vibrante do limão, a frescura do manjericão e um fio de <strong>Limoncello</strong>. O derradeiro limpa-palato.</p>
+                </div>
+                <div class="menu-item">
+                    <h3>O Lusitano (Pêra Rocha & Porto)</h3>
+                    <p>A doçura da Pêra Rocha do Oeste, um toque de canela e a alma do <strong>Vinho do Porto Branco</strong>.</p>
+                </div>
+                <div class="menu-item" style="border-bottom: none;">
+                    <h3>O Exótico (Abacaxi & Hortelã)</h3>
+                    <p>Abacaxi sumarento, hortelã fresca e um "cheirinho" de <strong>Rum Envelhecido</strong>. Tropical e sofisticado.</p>
+                </div>
+            </div>
+
+            <div style="grid-column: span 1;">
+                <h4 style="color: var(--cor-destaque); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 30px; border-left: 3px solid var(--cor-destaque); padding-left: 15px;">
+                    ☕ Biscoitos de Autor<br><span style="color: #888; font-size: 0.7em; text-transform: none;">Crocantes, rústicos & para mergulhar</span>
+                </h4>
+
+                <div class="menu-item">
+                    <h3>Cantuccini (Amêndoa & Laranja)</h3>
+                    <p>A receita tradicional da Toscânia. Secos, duros e perfumados com raspa de laranja.</p>
+                </div>
+                <div class="menu-item">
+                    <h3>O "Negro" (Chocolate & Flor de Sal)</h3>
+                    <p>Cacau intenso, pedaços de avelã torrada e o contraste salgado que realça o sabor.</p>
+                </div>
+                <div class="menu-item" style="border-bottom: none;">
+                    <h3>O "Rubi" (Pistáchio & Cranberry)</h3>
+                    <p>O verde do pistáchio e o vermelho dos arandos secos. Um biscoito que se come com os olhos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-section" style="background-color: #0f0f0f; border-top: 1px solid #333;">
         <div class="content-wrapper">
             <h3 class="menu-cat-title" style="margin-top: 0;">The Coffee Ritual <span style="font-size: 0.6em; display: block; color: #666; letter-spacing: 1px; margin-top: 5px;">Moagem fresca & Extração manual</span></h3>
             
@@ -540,20 +596,35 @@
         </div>
     </section>
 
-    <section style="padding: 100px 20px; background-color: #0a0a0a; text-align: center; border-top: 1px solid #222;">
-        <h2 style="color: var(--cor-destaque); margin-bottom: 20px; font-size: 2.5rem;">Eleve o Seu Evento a algo Extraordinário</h2>
-        <p style="max-width: 600px; margin: 0 auto 30px; font-size: 1.1rem; color: #ccc;">
-            Desenhamos experiências à medida<br>
-            que procuram fugir ao tradicional formato,<br>
-            garantindo sempre a excelência<br>
-            e a tranquilidade logística.
-        </p>
-        <p style="margin-bottom: 40px; font-size: 1rem; color: #fff; text-transform: uppercase; letter-spacing: 2px;">Obtenha a nossa proposta de valor:</p>
-        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-            <a href="consumer.html" class="btn" style="margin-top: 0;">Eventos Privados</a>
-            <a href="corporate.html" class="btn" style="margin-top: 0; background-color: var(--cor-destaque); color: var(--cor-fundo); border-color: var(--cor-destaque);">Corporate / B2B</a>
-        </div>
-    </section>
+<section id="contacto" style="padding: 120px 20px 20px 20px ; text-align: center; background-color: #2f3e30;">
+    <h2 style="font-family: var(--fonte-titulos); color: var(--cor-destaque); font-size: 2.5rem; margin-bottom: 20px;">
+        Solicite o Seu Orçamento
+    </h2>
+    <p style="font-family: var(--fonte-texto); max-width: 600px; margin: 0 auto 0px auto; font-size: 1.1rem; color: #b0b0b0; font-weight: 300;">
+        Conte-nos mais sobre o seu evento. A nossa equipa desenhará uma experiência gastronómica exclusiva para os seus convidados.
+    </p>
+
+	<div style="margin-top: 50px;">
+    	<iframe 
+		    data-tally-src="https://tally.so/embed/jaB0P4?transparentBackground=1&dynamicHeight=1&hideTitle=1" 
+		    loading="lazy" 
+		    width="100%" 
+		    height="1600" 
+		    frameborder="0" 
+		    marginheight="0" 
+		    marginwidth="0" 
+		    title="Aestus Nómada"
+		    style="background-color: transparent;">
+		</iframe>
+		<p style="text-align: center; font-size: 0.8em; margin-top: 10px; margin-bottom: 20px">
+    		<a href="#" onclick="openModal(); return false;" style="color: #d4a373; text-decoration: none;">Ler Política de Privacidade completa</a>
+		</p>
+	</div>
+
+    <script>
+        var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s)}
+    </script>
+</section>
 
 <footer style="background-color: var(--cor-fundo); color: #fff; padding: 60px 20px; font-family: var(--fonte-texto); border-top: 1px solid #222;">
     <div style="max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; text-align: center;">
@@ -597,8 +668,11 @@
         &copy; 2026 Aestus Nómada. Todos os direitos reservados.
     </div>
 </footer>
+
+
+
 <div id="privacyModal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8);">
-    <div style="background-color: #fefefe; margin: 10% auto; padding: 30px; border: 1px solid #888; width: 80%; max-width: 800px; border-radius: 8px; position: relative; color: #333; font-family: var(--fonte-texto);">
+    <div style="background-color: #fefefe; margin: 10% auto; padding: 30px; border: 1px solid #888; width: 80%; max-width: 800px; border-radius: 8px; position: relative; color: #333; font-family: sans-serif;">
         <span onclick="closeModal()" style="color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
         
         <h2 style="color: #333;">Política de Privacidade e Tratamento de Dados</h2>
@@ -654,5 +728,6 @@
         }
     }
 </script>
+
 </body>
 </html>
