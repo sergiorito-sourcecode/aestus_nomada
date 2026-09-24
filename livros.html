@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AESTUS LIVROS | Ficção Literária</title>
+    <meta name="description" content="Aestus Edições. Ficção literária com a mesma alma artesanal.">
+    <link rel="icon" type="image/png" href="images/selo-aestus 5cm220px.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- CONFIGURAÇÕES GERAIS (LIGHT MODE) --- */
+        :root {
+            --cor-fundo: #FAFAFA; /* Branco osso/creme suave */
+            --cor-fundo-secundario: #F0EBE1; /* Tom papel antigo para destaques */
+            --cor-texto: #2C2C2C; /* Quase preto para excelente leitura */
+            --cor-texto-claro: #555555;
+            --cor-destaque: #B5854A; /* Cobre ligeiramente ajustado para ler bem em fundo claro */
+            --fonte-titulos: 'Playfair Display', serif;
+            --fonte-texto: 'Inter', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            font-family: var(--fonte-texto);
+            line-height: 1.8;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--fonte-titulos);
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        p { color: var(--cor-texto-claro); }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        a:hover { color: var(--cor-destaque); }
+
+        .content-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- BOTÕES --- */
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border: 1px solid var(--cor-destaque);
+            color: var(--cor-destaque);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--cor-destaque);
+            color: var(--cor-fundo);
+        }
+
+        .btn-solid {
+            background-color: var(--cor-destaque);
+            color: #fff;
+        }
+        .btn-solid:hover {
+            background-color: #9a6f3b;
+        }
+
+        /* --- HEADER CLARO --- */
+        header {
+            position: fixed;
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(250, 250, 250, 0.95); /* Fundo claro translúcido */
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            z-index: 100;
+            box-sizing: border-box;
+            backdrop-filter: blur(5px);
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--cor-destaque);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* --- SEÇÃO DO LIVRO (SPLIT SCREEN) --- */
+        .book-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 100vh;
+            padding-top: 80px; /* Espaço para o header */
+        }
+
+        .book-image-container {
+            background-color: var(--cor-fundo-secundario);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .book-cover {
+            max-width: 80%;
+            max-height: 70vh;
+            box-shadow: 15px 20px 40px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .book-cover:hover {
+            transform: scale(1.02);
+        }
+
+        .book-info-container {
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .book-tag {
+            color: var(--cor-destaque);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .book-title {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 15px;
+            color: var(--cor-texto);
+        }
+
+        .book-author {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #777;
+            margin-bottom: 40px;
+            font-family: var(--fonte-titulos);
+        }
+
+        .book-synopsis {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        .book-price {
+            font-size: 2rem;
+            font-family: var(--fonte-titulos);
+            color: var(--cor-texto);
+            margin-bottom: 30px;
+        }
+
+        /* --- MANIFESTO --- */
+        .manifesto {
+            padding: 100px 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        /* --- MOBILE --- */
+        @media (max-width: 900px) {
+            .book-hero { grid-template-columns: 1fr; min-height: auto; }
+            header { padding: 15px 20px; }
+            .book-info-container { padding: 50px 20px; text-align: center; }
+            .book-title { font-size: 2.5rem; }
+            .book-image-container { padding: 60px 20px 40px; }
+            .book-cover { max-width: 60%; }
+        }
+        @media (max-width: 480px) {
+            .book-cover { max-width: 90%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <a href="index.html" class="logo">AESTUS</a>
+        <nav style="display: flex; align-items: center; gap: 15px;">
+            <a href="index.html" style="color: var(--cor-texto); font-size: 0.9rem; font-weight: normal;">Voltar a Catering</a>
+            <a href="#comprar" class="btn btn-solid" style="padding: 10px 20px; font-size: 0.8rem; margin: 0;">Comprar</a>
+        </nav>
+    </header>
+
+    <!-- HERO DO LIVRO -->
+    <section class="book-hero">
+        <div class="book-image-container">
+            <!-- SUBSTITUIR O SRC PELA IMAGEM DA CAPA DO SEU LIVRO NA PASTA IMAGES -->
+            <img src="images/capa-livro-placeholder.jpg" alt="Capa do Livro" class="book-cover" style="background-color: #ccc; width: 350px; height: 500px; object-fit: cover;">
+        </div>
+        
+        <div class="book-info-container">
+            <span class="book-tag">Novo Lançamento</span>
+            <h1 class="book-title">Título do Seu Livro Aqui</h1>
+            <div class="book-author">por Nome do Autor</div>
+            
+            <div class="book-synopsis">
+                <p>Aqui entra a sinopse cativante da obra. Um ou dois parágrafos que descrevam o tom da ficção literária, o conflito principal ou a viagem emocional da personagem.</p>
+                <p>O design minimalista e claro permite que o leitor respire e se foque unicamente nas palavras, preparando-o para a leitura.</p>
+            </div>
+            
+            <div class="book-price" id="comprar">18,00 €</div>
+            
+            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                <!-- Link para o seu sistema de pagamento (ex: Stripe, MBWay, email) -->
+                <a href="#" class="btn btn-solid">Adicionar ao Carrinho</a>
+                <a href="#excertos" class="btn">Ler Excerto</a>
+            </div>
+            
+            <div style="margin-top: 30px; font-size: 0.85rem; color: #888;">
+                <p>🚚 Portes grátis para Portugal Continental.<br>📖 Edição em capa mole | 240 páginas | ISBN: 978-X-XXXXX-XX-X</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECÇÃO MANIFESTO / SOBRE O PROJETO -->
+    <section class="manifesto">
+        <div class="content-wrapper">
+            <h2 style="color: var(--cor-destaque); font-size: 2rem; margin-bottom: 20px;">Aestus Edições</h2>
+            <p style="max-width: 700px; margin: 0 auto; font-size: 1.2rem; font-style: italic; color: var(--cor-texto);">
+                "A mesma dedicação que aplicamos à fermentação do pão e à extração do café, aplicamos agora à palavra."
+            </p>
+            <p style="max-width: 700px; margin: 30px auto 0; font-size: 1rem;">
+                A Aestus começou à volta do fogo, a alimentar o corpo. Mas acreditamos que uma experiência completa exige alimento para a mente. Este livro marca o início da nossa coleção de ficção literária — histórias escolhidas com curadoria, desenhadas para serem devoradas devagar, acompanhadas, de preferência, por um excelente café.
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER ADAPTADO (Light Theme) -->
+    <footer style="background-color: var(--cor-fundo-secundario); color: var(--cor-texto); padding: 60px 20px; text-align: center; border-top: 1px solid #e0e0e0;">
+        <div style="max-width: 600px; margin: 0 auto;">
+            <h3 style="color: var(--cor-destaque); font-family: var(--fonte-titulos); margin-bottom: 20px; letter-spacing: 2px; text-transform: uppercase;">Aestus Livros</h3>
+            <p style="font-size: 0.95em; color: var(--cor-texto-claro); margin-bottom: 30px;">
+                Caldas da Rainha, Portugal<br>
+                <a href="mailto:info@aestus.pt" style="color: var(--cor-destaque);">info@aestus.pt</a>
+            </p>
+            <div style="font-size: 0.85em; color: #888;">
+                &copy; 2026 Aestus. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
