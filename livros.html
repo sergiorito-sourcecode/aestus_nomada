@@ -242,6 +242,78 @@
                 height: 220px;
             }
         }
+
+        /* --- OPÇÕES DE COMPRA --- */
+        .purchase-options {
+            margin-top: 20px;
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .format-box {
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+
+        .format-title {
+            font-family: var(--fonte-titulos);
+            font-size: 1.2rem;
+            color: var(--cor-texto);
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .format-price {
+            font-weight: 600;
+            color: var(--cor-destaque);
+            font-size: 1.3rem;
+        }
+
+        .format-desc {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 15px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        /* Botão Secundário / Amazon */
+        .btn-outline {
+            display: inline-block;
+            padding: 12px 20px;
+            border: 1px solid #ccc;
+            color: var(--cor-texto-claro);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            background-color: transparent;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--cor-texto);
+            color: var(--cor-texto);
+        }
+        
+        .btn-solid {
+            padding: 12px 20px;
+            font-size: 0.8rem;
+            text-align: center;
+            flex-grow: 1;
+        }
     </style>
 </head>
 <body>
@@ -276,12 +348,46 @@
                 <p>A Geometria do Silêncio é o primeiro livro de uma saga em quatro partes sobre tudo o que perdemos quando escolhemos o silêncio — e a coragem de, finalmente, o quebrar.</p>
             </div>
             
-            <div class="book-price" id="comprar">18,00 €</div>
-            
-            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                <!-- Link para o seu sistema de pagamento (ex: Stripe, MBWay, email) -->
-                <a href="#" class="btn btn-solid">Adicionar ao Carrinho</a>
-                <a href="#excertos" class="btn">Ler Excerto</a>
+            <!-- OPÇÕES DE COMPRA -->
+            <div class="purchase-options">
+                
+                <!-- OPÇÃO: LIVRO FÍSICO -->
+                <div class="format-box">
+                    <div class="format-title">
+                        <span>Edição Física (Capa Mole)</span>
+                        <span class="format-price">18,00 €</span>
+                    </div>
+                    <div class="format-desc">
+                        Apoie o autor com a compra direta. Portes grátis para Portugal Continental.
+                    </div>
+                    <div class="button-group">
+                        <!-- O seu link de pagamento (Stripe/Email) -->
+                        <a href="#comprar-direto" class="btn btn-solid">Comprar (Portugal)</a>
+                        <!-- Link para a Amazon para quem está fora -->
+                        <a href="LINK_DA_AMAZON_AQUI" target="_blank" class="btn btn-outline">Amazon (Internacional)</a>
+                    </div>
+                </div>
+
+                <!-- OPÇÃO: LIVRO DIGITAL -->
+                <div class="format-box" style="background-color: transparent; border-style: dashed;">
+                    <div class="format-title">
+                        <span>Edição Digital (eBook)</span>
+                        <!-- Altere para o preço do seu eBook -->
+                        <span class="format-price">8,99 €</span> 
+                    </div>
+                    <div class="format-desc">
+                        Disponível instantaneamente para Kindle, tablets e smartphones.
+                    </div>
+                    <div class="button-group">
+                        <a href="LINK_DO_KINDLE_AQUI" target="_blank" class="btn btn-outline">Comprar eBook na Amazon</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Botão extra para ler o excerto de forma discreta abaixo das vendas -->
+            <div style="text-align: left;">
+                <a href="#excertos" style="font-size: 0.9rem; color: var(--cor-destaque); text-decoration: underline; text-underline-offset: 4px;">Ler um excerto do primeiro capítulo</a>
             </div>
             
             <div style="margin-top: 30px; font-size: 0.85rem; color: #888;">
