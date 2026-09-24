@@ -351,32 +351,55 @@
             <!-- OPÇÕES DE COMPRA -->
             <div class="purchase-options">
                 
-                <!-- OPÇÃO: LIVRO FÍSICO -->
-                <div class="format-box">
+                <!-- OPÇÃO 1: EDIÇÃO DE AUTOR (PORTUGAL) -->
+                <div class="format-box" style="border: 2px solid var(--cor-destaque); background-color: var(--cor-fundo-secundario);">
                     <div class="format-title">
-                        <span>Edição Física (Capa Mole)</span>
+                        <span>Edição de Autor (Exclusivo)</span>
                         <span class="format-price">18,00 €</span>
                     </div>
+                    
+                    <!-- Destaque para o que está incluído -->
+                    <div style="font-size: 0.9rem; color: var(--cor-texto); margin-bottom: 15px; margin-top: 10px;">
+                        <strong>Esta edição inclui:</strong>
+                        <ul style="margin-top: 5px; padding-left: 20px; color: var(--cor-texto-claro);">
+                            <li>Livro autografado com dedicatória personalizada</li>
+                            <li>Marcador de páginas oficial</li>
+                            <li>2 fotografias originais da personagem "Maria"</li>
+                            <li>A mensagem manuscrita de "Bárbara"</li>
+                        </ul>
+                    </div>
+
                     <div class="format-desc">
-                        Apoie o autor com a compra direta. Portes grátis para Portugal Continental.
+                        O pacote completo para mergulhar na história. Portes grátis para Portugal Continental.
                     </div>
                     <div class="button-group">
-                        <!-- O seu link de pagamento (Stripe/Email) -->
-                        <a href="#comprar-direto" class="btn btn-solid">Comprar (Portugal)</a>
-                        <!-- Link para a Amazon para quem está fora -->
-                        <a href="LINK_DA_AMAZON_AQUI" target="_blank" class="btn btn-outline">Amazon (Internacional)</a>
+                        <!-- O link do email já pede o nome para a dedicatória -->
+                        <a href="mailto:info@aestus.pt?subject=Encomenda%20Edição%20de%20Autor:%20A%20Geometria%20do%20Silêncio&body=Olá,%20gostaria%20de%20encomendar%20a%20Edição%20de%20Autor%20(18€)%20do%20livro%20'A%20Geometria%20do%20Silêncio'.%0A%0A- Quantidade:%201%0A- Nome para a dedicatória:%20(Escreva o nome aqui)%0A%0AAguardo indicações de pagamento." class="btn btn-solid" style="background-color: var(--cor-destaque); color: #fff;">Comprar Edição Especial</a>
                     </div>
                 </div>
 
-                <!-- OPÇÃO: LIVRO DIGITAL -->
-                <div class="format-box" style="background-color: transparent; border-style: dashed;">
+                <!-- OPÇÃO 2: AMAZON INTERNACIONAL -->
+                <div class="format-box">
                     <div class="format-title">
-                        <span>Edição Digital (eBook)</span>
-                        <!-- Altere para o preço do seu eBook -->
-                        <span class="format-price">8,99 €</span> 
+                        <span>Edição Simples (Amazon)</span>
+                        <span class="format-price">13,66 €</span>
                     </div>
                     <div class="format-desc">
-                        Disponível instantaneamente para Kindle, tablets e smartphones.
+                        Apenas o livro físico. Ideal para envios rápidos fora de Portugal.
+                    </div>
+                    <div class="button-group">
+                        <a href="LINK_DA_AMAZON_AQUI" target="_blank" class="btn btn-outline">Comprar na Amazon</a>
+                    </div>
+                </div>
+
+                <!-- OPÇÃO 3: EBOOK DIGITAL -->
+                <div class="format-box" style="background-color: transparent; border-style: dashed;">
+                    <div class="format-title">
+                        <span>Edição Digital (Kindle / eBook)</span>
+                        <span class="format-price">3,44 €</span> 
+                    </div>
+                    <div class="format-desc">
+                        Download imediato para leitor Kindle, tablet ou smartphone.
                     </div>
                     <div class="button-group">
                         <a href="LINK_DO_KINDLE_AQUI" target="_blank" class="btn btn-outline">Comprar eBook na Amazon</a>
@@ -384,7 +407,11 @@
                 </div>
 
             </div>
-
+            
+            <!-- FICHA TÉCNICA ATUALIZADA -->
+            <div style="margin-top: 25px; font-size: 0.85rem; color: #777; line-height: 1.6;">
+                <p>📖 Edição em Capa Mole | Formato A5 | 363 páginas</p>
+            </div>
             <!-- Botão extra para ler o excerto de forma discreta abaixo das vendas -->
             <div style="text-align: left;">
                 <a href="#excertos" style="font-size: 0.9rem; color: var(--cor-destaque); text-decoration: underline; text-underline-offset: 4px;">Ler um excerto do primeiro capítulo</a>
