@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AESTUS EDIÇÕES | A Geometria do Silêncio</title>
+    <meta name="description" content="A Geometria do Silêncio por Sérgio Rito. Romance de estreia da coleção O Labirinto das Emoções.">
+    <link rel="icon" type="image/png" href="images/selo-aestus 5cm220px.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- CONFIGURAÇÕES GERAIS (PALETA ROSA VELHO PASTEL) --- */
+        :root {
+            --cor-fundo: #FCF9F9; /* Creme / Rosa pastel ultra claro */
+            --cor-fundo-secundario: #F3EAEB; /* Rosa velho claro para caixas e destaques */
+            --cor-texto: #4A3F41; /* Grafite aquecido / Castanho escuro */
+            --cor-texto-claro: #736567;
+            --cor-destaque: #A36D75; /* Rosa velho / Terracota nobre */
+            --cor-destaque-hover: #86535B;
+            --fonte-titulos: 'Playfair Display', serif;
+            --fonte-texto: 'Inter', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            font-family: var(--fonte-texto);
+            line-height: 1.8;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--fonte-titulos);
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        p { color: var(--cor-texto-claro); }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        a:hover { color: var(--cor-destaque); }
+
+        .content-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- BOTÕES --- */
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border: 1px solid var(--cor-destaque);
+            color: var(--cor-destaque);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--cor-destaque);
+            color: #fff;
+        }
+
+        .btn-solid {
+            background-color: var(--cor-destaque);
+            color: #fff;
+        }
+        .btn-solid:hover {
+            background-color: var(--cor-destaque-hover);
+        }
+
+        /* --- HEADER --- */
+        header {
+            position: fixed;
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(252, 249, 249, 0.95);
+            border-bottom: 1px solid rgba(163, 109, 117, 0.15);
+            z-index: 100;
+            box-sizing: border-box;
+            backdrop-filter: blur(5px);
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--cor-destaque);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* --- CARROSSEL DE COLEÇÃO --- */
+        .carousel-section {
+            padding: 110px 20px 30px; /* Dá margem para o header fixo */
+            background-color: var(--cor-fundo-secundario);
+            border-bottom: 1px solid rgba(163, 109, 117, 0.1);
+        }
+
+        .carousel-header {
+            max-width: 1000px;
+            margin: 0 auto 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .carousel-collection-name {
+            font-family: var(--fonte-titulos);
+            color: var(--cor-destaque);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .carousel-container {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding-bottom: 10px;
+            scrollbar-width: thin;
+        }
+
+        .carousel-container::-webkit-scrollbar { height: 4px; }
+        .carousel-container::-webkit-scrollbar-thumb { background: var(--cor-destaque); border-radius: 2px; }
+
+        .carousel-item {
+            min-width: 110px;
+            text-align: center;
+            opacity: 0.55;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .carousel-item.active {
+            opacity: 1;
+            transform: translateY(-4px);
+        }
+
+        .carousel-item:hover { opacity: 1; }
+
+        .carousel-cover {
+            width: 110px;
+            height: 160px;
+            object-fit: cover;
+            box-shadow: 0 8px 20px rgba(74, 63, 65, 0.12);
+            margin-bottom: 8px;
+            border-radius: 3px;
+        }
+
+        /* --- SEÇÃO DO LIVRO (HERO) --- */
+        .book-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .book-image-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .book-cover {
+            max-width: 90%;
+            max-height: 58vh;
+            box-shadow: 15px 20px 40px rgba(74, 63, 65, 0.18);
+            transition: transform 0.3s ease;
+        }
+
+        .book-cover:hover { transform: scale(1.02); }
+
+        .book-info-container {
+            padding: 20px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .book-tag {
+            color: var(--cor-destaque);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .book-title {
+            font-size: 3.2rem;
+            line-height: 1.1;
+            margin-bottom: 10px;
+            color: var(--cor-texto);
+        }
+
+        .book-author {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--cor-texto-claro);
+            margin-bottom: 30px;
+            font-family: var(--fonte-titulos);
+        }
+
+        .book-synopsis {
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+        }
+
+        /* --- OPÇÕES DE COMPRA --- */
+        .purchase-options {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .format-box {
+            border: 1px solid rgba(163, 109, 117, 0.2);
+            padding: 20px;
+            border-radius: 6px;
+            background-color: #fff;
+        }
+
+        .format-title {
+            font-family: var(--fonte-titulos);
+            font-size: 1.2rem;
+            color: var(--cor-texto);
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .format-price {
+            font-weight: 600;
+            color: var(--cor-destaque);
+            font-size: 1.3rem;
+        }
+
+        .format-desc {
+            font-size: 0.85rem;
+            color: var(--cor-texto-claro);
+            margin-bottom: 15px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            padding: 12px 20px;
+            border: 1px solid #ccc;
+            color: var(--cor-texto-claro);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            background-color: transparent;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--cor-destaque);
+            color: var(--cor-destaque);
+        }
+        
+        .btn-solid {
+            padding: 12px 20px;
+            font-size: 0.8rem;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        /* --- MANIFESTO --- */
+        .manifesto {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: #fff;
+            border-top: 1px solid rgba(163, 109, 117, 0.1);
+            border-bottom: 1px solid rgba(163, 109, 117, 0.1);
+        }
+
+        /* --- SOBRE O AUTOR --- */
+        .author-section {
+            padding: 90px 20px;
+            background-color: var(--cor-fundo-secundario);
+            display: flex;
+            justify-content: center;
+        }
+
+        .author-container {
+            max-width: 1000px;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .author-photo-wrapper {
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .author-photo {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 15px 35px rgba(74, 63, 65, 0.12);
+            border: 6px solid var(--cor-fundo);
+        }
+
+        .author-info h2 {
+            font-size: 2.3rem;
+            margin-bottom: 20px;
+            color: var(--cor-texto);
+        }
+
+        .author-info p {
+            font-size: 1.05rem;
+            margin-bottom: 18px;
+            color: var(--cor-texto-claro);
+            line-height: 1.8;
+        }
+
+        /* --- RESPONSIVIDADE MOBILE --- */
+        @media (max-width: 900px) {
+            .book-hero { grid-template-columns: 1fr; }
+            header { padding: 15px 20px; }
+            .book-info-container { padding: 30px 10px; text-align: left; }
+            .book-title { font-size: 2.5rem; }
+            .book-image-container { padding: 20px 0; }
+            .book-cover { max-width: 70%; max-height: 50vh; }
+            .author-container { flex-direction: column; text-align: center; gap: 30px; }
+            .author-photo { width: 200px; height: 200px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <a href="index.html" class="logo">AESTUS EDIÇÕES</a>
+        <nav style="display: flex; align-items: center; gap: 15px;">
+            <a href="index.html" style="color: var(--cor-texto); font-size: 0.9rem; font-weight: normal;">Voltar a Catering</a>
+            <a href="#comprar" class="btn btn-solid" style="padding: 10px 20px; font-size: 0.8rem; margin: 0;">Comprar</a>
+        </nav>
+    </header>
+
+    <!-- CARROSSEL DE COLEÇÕES -->
+    <section class="carousel-section">
+        <div class="carousel-header">
+            <span class="carousel-collection-name">Coleção: O Labirinto das Emoções</span>
+            <span style="font-size: 0.8rem; color: var(--cor-texto-claro);">Vol. I de IV</span>
+        </div>
+        
+        <div class="carousel-container">
+            
+            <!-- VOL 1: A GEOMETRIA DO SILÊNCIO (ATIVO) -->
+            <a href="livro_OLdE_AGdS.html" class="carousel-item active">
+                <img src="images/Imagem_Capa_Smaller.jpg" alt="A Geometria do Silêncio" class="carousel-cover">
+                <div style="font-size: 0.8rem; font-weight: 600; color: var(--cor-texto); line-height: 1.2;">Vol I: A Geometria<br>do Silêncio</div>
+            </a>
+
+            <!-- VOL 2: O SENHOR DA POEIRA (EM BREVE) -->
+            <a href="#" class="carousel-item" style="cursor: default;">
+                <div class="carousel-cover" style="background-color: #E8DDDF; display:flex; align-items:center; justify-content:center; color: var(--cor-destaque); font-size: 0.75rem; font-family: var(--fonte-titulos); text-align: center; padding: 10px;">Em Breve</div>
+                <div style="font-size: 0.8rem; font-weight: 600; color: var(--cor-texto-claro); line-height: 1.2;">Vol II: O Senhor<br>da Poeira</div>
+            </a>
+
+            <!-- VOL 3: (EM BREVE) -->
+            <a href="#" class="carousel-item" style="cursor: default;">
+                <div class="carousel-cover" style="background-color: #E8DDDF; display:flex; align-items:center; justify-content:center; color: var(--cor-destaque); font-size: 0.75rem; font-family: var(--fonte-titulos); text-align: center; padding: 10px;">Em Breve</div>
+                <div style="font-size: 0.8rem; font-weight: 600; color: var(--cor-texto-claro); line-height: 1.2;">Vol III: Título a<br>Anunciar</div>
+            </a>
+
+            <!-- VOL 4: (EM BREVE) -->
+            <a href="#" class="carousel-item" style="cursor: default;">
+                <div class="carousel-cover" style="background-color: #E8DDDF; display:flex; align-items:center; justify-content:center; color: var(--cor-destaque); font-size: 0.75rem; font-family: var(--fonte-titulos); text-align: center; padding: 10px;">Em Breve</div>
+                <div style="font-size: 0.8rem; font-weight: 600; color: var(--cor-texto-claro); line-height: 1.2;">Vol IV: Título a<br>Anunciar</div>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- HERO DO LIVRO -->
+    <section class="book-hero" id="comprar">
+        <div class="book-image-container">
+            <img src="images/Imagem_Capa_Smaller.jpg" alt="Capa do Livro A Geometria do Silêncio" class="book-cover">
+        </div>
+        
+        <div class="book-info-container">
+            <span class="book-tag">Romance de Estreia</span>
+            <h1 class="book-title">A Geometria do Silêncio</h1>
+            <div class="book-author">por Sérgio Rito</div>
+            
+            <div class="book-synopsis">
+                <p>Maria passa os dias a ajudar os outros a habitar o próprio corpo. Há vinte anos que se esqueceu de habitar o seu.</p>
+                <p>A vida que construiu é uma geometria perfeita: um casamento com hora certa para tudo, incluindo o silêncio; uma clínica de sucesso; dois filhos que crescem debaixo do mesmo teto sem que ela realmente os veja — a mais velha com uma dor que ninguém sabe explicar. Direitas, ângulos retos, nada fora do lugar. Até que, numa manhã de março, em Lisboa, essa geometria começa a rachar.</p>
+                <p>Basta um rosto à porta de uma pastelaria. Bárbara — o amor que Maria abandonou numa estação de comboios, vinte anos antes, para caber na vida que os pais esperavam dela — está de volta. E com ela regressa tudo o que Maria silenciou para sobreviver: o desejo, a dúvida, a possibilidade de ser, finalmente, inteira.</p>
+                <p>Enquanto luta para arrancar a filha Sofia às mãos de um sistema médico que insiste em chamar «cabeça» a uma dor que a está a destruir por dentro, Maria é forçada a olhar de frente para a sua própria dor calada — vinte anos ao lado de Tobias, um homem que a protege de tudo menos da solidão.</p>
+                <p>Cada verdade que descobre sobre os corpos e os silêncios dos filhos traz consigo uma pergunta que já não consegue adiar: quanto de si própria ficou por viver, à espera de licença para existir?</p>
+                <p><em>A Geometria do Silêncio</em> é o primeiro livro de uma saga em quatro partes sobre tudo o que perdemos quando escolhemos o silêncio — e a coragem de, finalmente, o quebrar.</p>
+            </div>
+            
+            <!-- OPÇÕES DE COMPRA -->
+            <div class="purchase-options">
+                
+                <!-- OPÇÃO 1: EDIÇÃO DE AUTOR (PORTUGAL) -->
+                <div class="format-box" style="border: 2px solid var(--cor-destaque); background-color: var(--cor-fundo-secundario);">
+                    <div class="format-title">
+                        <span>Edição de Autor (Exclusivo)</span>
+                        <span class="format-price">18,00 €</span>
+                    </div>
+                    
+                    <div style="font-size: 0.9rem; color: var(--cor-texto); margin-bottom: 15px; margin-top: 10px;">
+                        <strong>Esta edição inclui:</strong>
+                        <ul style="margin-top: 5px; padding-left: 20px; color: var(--cor-texto-claro);">
+                            <li>Livro autografado com dedicatória personalizada</li>
+                            <li>Marcador de páginas oficial</li>
+                            <li>2 fotografias originais da personagem "Maria"</li>
+                            <li>A mensagem manuscrita de "Bárbara"</li>
+                        </ul>
+                    </div>
+
+                    <div class="format-desc">
+                        O pacote completo para mergulhar na história. Portes grátis para Portugal Continental.
+                    </div>
+                    <div class="button-group">
+                        <a href="mailto:info@aestus.pt?subject=Encomenda%20Edição%20de%20Autor:%20A%20Geometria%20do%20Silêncio&body=Olá,%20gostaria%20de%20encomendar%20a%20Edição%20de%20Autor%20(18€)%20do%20livro%20'A%20Geometria%20do%20Silêncio'.%0A%0A-%20Quantidade:%201%0A-%20Nome%20para%20a%20dedicatória:%20(Escreva o nome aqui)%0A%0AAguardo%20indicações%20de%20pagamento." class="btn btn-solid">Comprar Edição Especial</a>
+                    </div>
+                </div>
+
+                <!-- OPÇÃO 2: AMAZON INTERNACIONAL -->
+                <div class="format-box">
+                    <div class="format-title">
+                        <span>Edição Simples (Amazon)</span>
+                        <span class="format-price">13,66 €</span>
+                    </div>
+                    <div class="format-desc">
+                        Apenas o livro físico. Ideal para envios rápidos fora de Portugal.
+                    </div>
+                    <div class="button-group">
+                        <a href="LINK_DA_AMAZON_AQUI" target="_blank" class="btn btn-outline">Comprar na Amazon</a>
+                    </div>
+                </div>
+
+                <!-- OPÇÃO 3: EBOOK DIGITAL -->
+                <div class="format-box" style="background-color: transparent; border-style: dashed;">
+                    <div class="format-title">
+                        <span>Edição Digital (Kindle / eBook)</span>
+                        <span class="format-price">3,44 €</span> 
+                    </div>
+                    <div class="format-desc">
+                        Download imediato para leitor Kindle, tablet ou smartphone.
+                    </div>
+                    <div class="button-group">
+                        <a href="LINK_DO_KINDLE_AQUI" target="_blank" class="btn btn-outline">Comprar eBook na Amazon</a>
+                    </div>
+                </div>
+
+                <!-- OPÇÃO 4: BUNDLES E CLUBES DE LEITURA (NOVO) -->
+                <div class="format-box" style="background-color: #fff; border: 1px solid rgba(163, 109, 117, 0.3);">
+                    <div class="format-title">
+                        <span style="font-size: 1rem;">Encomendas em Quantidade / Clubes de Leitura</span>
+                    </div>
+                    <div class="format-desc" style="margin-bottom: 10px;">
+                        Preços especiais e condições dedicadas para compras de 3 ou mais exemplares (ideal para oferta ou grupos de leitura).
+                    </div>
+                    <a href="mailto:info@aestus.pt?subject=Consulta:%20Encomenda%20em%20Quantidade%20-%20A%20Geometria%20do%20Silêncio" style="font-size: 0.85rem; color: var(--cor-destaque); text-decoration: underline;">Consultar condições para grupos</a>
+                </div>
+
+            </div>
+            
+            <!-- FICHA TÉCNICA -->
+            <div style="margin-top: 15px; font-size: 0.85rem; color: var(--cor-texto-claro); line-height: 1.6;">
+                <p>🚚 Portes grátis para Portugal Continental.<br>📖 Edição em capa mole | Formato A5 | 361 páginas | ISBN: 979-8-17174-78-79</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECÇÃO MANIFESTO / SOBRE O PROJETO -->
+    <section class="manifesto">
+        <div class="content-wrapper">
+            <h2 style="color: var(--cor-destaque); font-size: 2rem; margin-bottom: 20px;">Aestus Edições</h2>
+            <p style="max-width: 700px; margin: 0 auto; font-size: 1.2rem; font-style: italic; color: var(--cor-texto);">
+                "A mesma dedicação que aplicamos à fermentação do pão e à extração do café, aplicamos agora à palavra."
+            </p>
+            <p style="max-width: 700px; margin: 30px auto 0; font-size: 1rem;">
+                A Aestus começou à volta do fogo, a alimentar o corpo. Mas acreditamos que uma experiência completa exige alimento para a mente. Este livro marca o início da nossa coleção de ficção literária — histórias escolhidas com curadoria, desenhadas para serem devoradas devagar, acompanhadas, de preferência, por um excelente café.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECÇÃO SOBRE O AUTOR -->
+    <section class="author-section">
+        <div class="author-container">
+            <div class="author-photo-wrapper">
+                <img src="images/Eu_Jun2023.jpg" alt="Retrato de Sérgio Rito" class="author-photo">
+            </div>
+            
+            <div class="author-info">
+                <span class="book-tag">Sobre o Autor</span>
+                <h2>Sérgio Rito</h2>
+                <p>Sérgio Rito nasceu em Lisboa.</p>
+                <p>É um observador implacável das dinâmicas humanas e um arquivista de silêncios. Apaixonado pelos processos artesanais que exigem tempo, atrito e fricção para ganhar forma — seja no labor do firecooking ou na construção de identidades —, encontrou na literatura o seu verdadeiro território de intervenção.</p>
+                <p>Acredita que as maiores prisões não são erguidas com grades de ferro, mas cimentadas por expectativas sociais, traumas normalizados e palavras que ficam por dizer. Na sua escrita, recusa a formatação do "felizes para sempre" em prol de uma honestidade crua, utilizando as palavras como um bisturi para dissecar a complexidade das relações modernas, o peso das heranças familiares e a vertigem da liberdade.</p>
+                <p><em>A Geometria do Silêncio</em> é o seu romance de estreia e a porta de entrada para uma saga de quatro volumes que explora tudo o que perdemos quando escolhemos o silêncio, e a revolução que nasce quando finalmente o quebramos.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FOOTER ADAPTADO -->
+    <footer style="background-color: var(--cor-fundo-secundario); color: var(--cor-texto); padding: 60px 20px; text-align: center; border-top: 1px solid rgba(163, 109, 117, 0.15);">
+        <div style="max-width: 600px; margin: 0 auto;">
+            <h3 style="color: var(--cor-destaque); font-family: var(--fonte-titulos); margin-bottom: 20px; letter-spacing: 2px; text-transform: uppercase;">Aestus Nómada</h3>
+            <p style="font-size: 0.95em; color: var(--cor-texto-claro); margin-bottom: 30px;">
+                Caldas da Rainha, Portugal<br>
+                <a href="mailto:info@aestus.pt" style="color: var(--cor-destaque);">info@aestus.pt</a>
+            </p>
+            <div style="font-size: 0.85em; color: var(--cor-texto-claro);">
+                &copy; 2026 Aestus. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
