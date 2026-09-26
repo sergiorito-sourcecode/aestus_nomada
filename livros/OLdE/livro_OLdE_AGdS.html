@@ -613,5 +613,40 @@
         </div>
     </footer>
 
+    <!-- POP-UP / MODAL EDIÇÃO DE AUTOR -->
+    <div id="authorModal" class="modal-overlay">
+        <div class="modal-card">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <span class="book-tag" style="font-size: 0.75rem;">Edição Especial</span>
+            <h3 style="font-family: var(--fonte-titulos); font-size: 1.8rem; color: var(--cor-texto); margin: 10px 0 15px;">Disponível Brevemente</h3>
+            <p style="font-size: 0.95rem; color: var(--cor-texto-claro); line-height: 1.6; margin-bottom: 20px;">
+                Estamos a preparar com todo o cuidado os elementos artesanais exclusivos desta edição (fotografias originais, a carta manuscrita e o marcador oficial).
+            </p>
+            <p style="font-size: 0.95rem; color: var(--cor-texto); font-weight: 600; margin-bottom: 25px;">
+                Entretanto, já pode adquirir o livro na versão impressa (Capa Mole ou Capa Rija) ou em formato eBook através da Amazon.
+            </p>
+            <button onclick="closeModal()" class="btn btn-solid" style="width: 100%; cursor: pointer;">Ver Opções Disponíveis</button>
+        </div>
+    </div>
+
+    <!-- SCRIPT DE CONTROLO DO MODAL -->
+    <script>
+        function openModal() {
+            document.getElementById('authorModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('authorModal').style.display = 'none';
+        }
+
+        // Fechar ao clicar fora da caixa do modal
+        window.onclick = function(event) {
+            var modal = document.getElementById('authorModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+
 </body>
 </html>
