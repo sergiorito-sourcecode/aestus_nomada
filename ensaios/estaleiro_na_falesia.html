@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estaleiro na Falésia</title>
     <style>
+                /* --- HEADER --- */
+        header {
+            position: fixed;
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(252, 249, 249, 0.95);
+            border-bottom: 1px solid rgba(163, 109, 117, 0.15);
+            z-index: 100;
+            box-sizing: border-box;
+            backdrop-filter: blur(5px);
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--cor-destaque);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
         body {
             font-family: 'Georgia', serif;
             line-height: 1.6;
