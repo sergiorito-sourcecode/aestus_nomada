@@ -1,1 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estaleiro na Falésia</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fcfcfc;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
 
+        article {
+            background: white;
+            padding: 40px 60px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 2.5em;
+            color: #222;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        p {
+            margin-bottom: 24px;
+            text-align: justify;
+            font-size: 1.1em;
+            text-indent: 1.5em; /* Traditional book indentation */
+        }
+        
+        /* Remove indent from dialogue lines */
+        p:has(> span.dialogue) {
+            text-indent: 0;
+            padding-left: 1.5em;
+        }
+        
+        .dialogue {
+            /* just a marker for structural targeting */
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #eee;
+            margin: 40px 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            text-decoration: none;
+            color: #666;
+            font-size: 0.9em;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #222;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 10px;
+            }
+            article {
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                text-indent: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <article>
+        <h1>Estaleiro na Falésia</h1>
+
+        <p>No cimo da falésia há uma casa que nunca está acabada. Ninguém questiona o motivo. Reconhecem-na com a naturalidade com que se reconhece o sol, e a quem pergunta encolhem os ombros: é uma casa que não se acaba.</p>
+        
+        <p>Quem passa mais perto ao fim da tarde vê andaimes, uma betoneira parada e sacos de cimento tapados com plástico. Lá no alto há uma antena que pisca a horas certas, como quem confirma que ainda há rede. Do outro lado está o mar e, muito ao longe, umas ilhas que só aparecem quando o ar está limpo. Hoje está.</p>
+        
+        <p>A casa chama-se Solitude. Foi o Arquiteto que lhe deu o nome, e o Arquiteto não dá nomes ao acaso. Ninguém questionou o nome. Foi assim, e é assim que fica.</p>
+        
+        <p>O Arquiteto está à mesa de obra, uma porta velha pousada sobre dois cavaletes, com as plantas abertas e presas com pedras. Tem a planta da casa para um, a da casa para dois e a da demolição, para o caso de ser preciso. Tem as três sempre à mão, enroladas por ordem de probabilidade. Ninguém lhe pediu as três. Mas o Arquiteto já viu casas caírem e, desde então, trabalha como quem conhece o terreno. Este terreno cede.</p>
+        
+        <p><span class="dialogue">— Mais uma parede na sala — diz, a medir com os dedos. — E uma janela mais pequena. As grandes deixam entrar muito.</span></p>
+        
+        <p><span class="dialogue">— Muito o quê? — pergunta o Especialista.</span></p>
+        
+        <p><span class="dialogue">— Muito.</span></p>
+        
+        <p>O Especialista está sentado num balde virado ao contrário, de óculos na ponta do nariz. Ao lado tem uma pilha de livros que foi crescendo ao longo dos anos como um muro de pedra seca. Tem um post-it para cada ocasião: Van der Kolk para o corpo, Maté para a fome, Perel para o desejo, Erickson para o transe, Frankl para o intervalo entre o estímulo e a resposta. O Buda fica para quando nenhum dos outros resulta. Conhece a dinâmica perseguidor-distanciador como um mecânico conhece um motor que já desmontou vinte vezes. Sabe exatamente porque é que a peça gripa. Isso nunca a impediu de gripar.</p>
+        
+        <p><span class="dialogue">— Tecnicamente — começa o Especialista —, o que estás a fazer é uma resposta de proteção a uma ameaça percebida de intimidade, que o teu sistema associa a…</span></p>
+        
+        <p><span class="dialogue">— Passa-me o nível.</span></p>
+        
+        <p><span class="dialogue">— …demolição. Associa a demolição. Era isso que eu ia dizer.</span></p>
+        
+        <p>Há mais alguém no estaleiro, mas não se vê logo.</p>
+        
+        <p>O Faminto está encostado ao muro do lado do mar, onde o sol bate mais. É o mais novo da equipa, ou pelo menos parece, porque tem cara de quem ainda acredita. Há uns dias passou um carro na estrada lá em baixo. O Arquiteto diz que foi só o vento, e o Especialista abriu logo um ficheiro sobre o assunto. O Faminto levantou a cabeça como um cão que ouve o nome e, desde então, não tira os olhos da estrada. Não pede nada, só olha. É isso que deixa o Arquiteto nervoso: os que pedem gerem-se, os que olham não se sabe.</p>
+        
+        <p><span class="dialogue">— Às nove e meia mando uma mensagem — diz o Faminto. — Uma coisa leve. Um pormenor do mundo.</span></p>
+        
+        <p><span class="dialogue">— Que pormenor?</span></p>
+        
+        <p><span class="dialogue">— Não sei. A luz de hoje.</span></p>
+        
+        <p><span class="dialogue">— A luz de hoje é uma armadilha — diz o Arquiteto. — Toda a gente manda a luz de hoje.</span></p>
+        
+        <p>O Especialista anota qualquer coisa. Depois risca. Depois volta a anotar.</p>
+        
+        <p><span class="dialogue">— Mando um coração.</span></p>
+        
+        <p>O Especialista para de anotar, paralisado pelo pensamento.</p>
+        
+        <p>O Arquiteto pega na planta da demolição.</p>
+        
+        <p><span class="dialogue">— Talvez não seja caso para tanto — Afirma o Especialista. — Tenho aqui um livro que fala d…</span></p>
+        
+        <p><span class="dialogue">— Estou só a arrumar — Interrompe o Arquiteto.</span></p>
+        
+        <p>Ouvem-se passos ritmados em aproximação. É o Corpo, que é quem carrega os sacos.</p>
+        
+        <p>O Corpo não fala. Nunca falou. Sorri na comunidade durante a manhã. Quando é preciso sorrir. Revê as provas do livro à tarde. Faz o treino do fim do dia. À noite leva para o cimo da falésia tudo o que os outros decidiram durante o dia. Os outros esquecem-se de que o cimento pesa. O Corpo não se esquece de nada. É a única coisa na obra que guarda registo de tudo: cada casa que caiu, cada "era para ser", cada recomeço feito com as mãos em carne viva. Guarda isso nos ombros, no maxilar e num sítio atrás do esterno que nenhum dos outros sabe nomear com precisão, o que irrita imenso o Especialista.</p>
+        
+        <p>Hoje o Corpo pousou um saco e não o voltou a levantar.</p>
+        
+        <p>Ficou de pé, com as mãos abertas. Depois sentou-se na terra, entre a betoneira e o muro.</p>
+        
+        <p><span class="dialogue">— Está tudo bem? — pergunta o Arquiteto, sem tirar os olhos da planta.</span></p>
+        
+        <p>O Corpo não responde. Começa a tremer-lhe o queixo.</p>
+        
+        <p><span class="dialogue">— Ah — diz o Especialista, com um certo alívio profissional, porque finalmente há ali uma coisa que conhece. — Isto é descompressão. O sistema límbico, depois de dias em alta pressão, procura…</span></p>
+        
+        <p><span class="dialogue">— Cala-te — diz o Arquiteto.</span></p>
+        
+        <p>É a primeira vez que o Arquiteto manda calar o Especialista, e os dois ficam surpreendidos.</p>
+        
+        <p>O Arquiteto calou-o porque ouviu uma coisa que o Especialista não ouviu: um barulho que vem lá de baixo, de dentro da casa, da cave.</p>
+        
+        <p>A cave da Solitude não está nas plantas. Foi a primeira coisa a ser construída e a primeira a ser esquecida, de propósito, fechada a sete chaves. O Arquiteto traz as sete no bolso e nunca as tira de lá. Lá em baixo vive a Criança, ou pelo menos o que a Criança guarda: uma caixa de coisas que ficaram por dizer, rejeições pequenas e grandes, despedidas mal feitas, abandonos e ausências, invisibilidades e um cansaço que não é deste mês nem deste ano. A Criança não tem idade. Tem todas as idades em que alguém lhe disse "espera". O Arquiteto construiu a casa inteira por cima dela, para a proteger ou para não a ouvir. Ao fim de tantos anos, já não sabe bem qual das duas.</p>
+        
+        <p>E a Criança está a chorar. Não é um choro de agora. Tem o eco de muitos andares.</p>
+        
+        <p><span class="dialogue">— Isto é desmesurado — diz o Arquiteto, baixinho. — Foi só um carro na estrada.</span></p>
+        
+        <p><span class="dialogue">— Não foi o carro — diz o Especialista, e pela primeira vez não tem um post-it na mão. — O carro só tocou à campainha. Quem está a chorar é quem já cá estava dentro.</span></p>
+        
+        <p>Ficam os dois a olhar para o chão. O Faminto também se vira e, finalmente, fica de costas para a estrada.</p>
+        
+        <p>Foi então que chegou o Homem.</p>
+        
+        <p>Vem pelo trilho, devagar, com as mãos nos bolsos. O Homem tem a aparência de quem já experimentou o mundo lá fora, é saudável e vem um bocado curvado do vento. Não é o dono da obra. Ninguém sabe ao certo quem é o dono da obra. Quem questiona recebe sempre um levantar de ombros indiferentes e um trejeito inexplicável. Mas, quando os outros o veem, endireitam-se como empregados quando entra alguém que não grita. Ele não costuma vir, costuma mandar recados. Hoje veio.</p>
+        
+        <p>Olha para a casa, para as três plantas presas com pedras, para o Corpo sentado na terra e para a porta da cave.</p>
+        
+        <p><span class="dialogue">— Dá-me as chaves — diz ao Arquiteto.</span></p>
+        
+        <p><span class="dialogue">— Se abrires isso, a casa cai.</span></p>
+        
+        <p><span class="dialogue">— Talvez. Já caiu outras vezes e cá estamos.</span></p>
+        
+        <p>O Arquiteto hesita. Depois tira as chaves do bolso, e o gesto custa-lhe tanto que o Especialista desvia o olhar, por pudor, coisa que nunca tinha feito.</p>
+        
+        <p>O Homem não desce logo. Primeiro senta-se ao lado do Corpo e põe-lhe a mão nas costas. Não fala de sistemas límbicos nem diz que está tudo bem. Diz só:</p>
+        
+        <p><span class="dialogue">— Eu sei. Pesa.</span></p>
+        
+        <p>E o Corpo, que nunca fala, deixa cair a cabeça e chora por fim com o peito todo. Chora sem forma e sem frase, como água que encontra o declive. Na cave, a Criança ouve. Não ouve as palavras, ouve que alguém parou. E o choro dela muda de tom: deixa de ser um pedido de socorro e passa a ser só choro, o que é muito diferente.</p>
+        
+        <p>O Especialista abre a boca. O Homem olha para ele.</p>
+        
+        <p><span class="dialogue">— Erickson diria…</span></p>
+        
+        <p><span class="dialogue">— Amanhã.</span></p>
+        
+        <p>O Especialista fecha o livro e pousa-o em cima da pilha. É possível que, pela primeira vez, se sinta aliviado por não ter de ter razão.</p>
+        
+        <p>O Faminto aproxima-se, um pouco envergonhado, como quem chega tarde a um funeral que afinal era o seu.</p>
+        
+        <p><span class="dialogue">— E a mensagem das nove e meia?</span></p>
+        
+        <p><span class="dialogue">— Se às nove e meia houver vontade e não houver fome, manda — diz o Homem. — Se houver fome, espera.</span></p>
+        
+        <p><span class="dialogue">— Como é que eu sei a diferença?</span></p>
+        
+        <p><span class="dialogue">— Não sabes. Por isso é que esperas.</span></p>
+        
+        <p>O Faminto senta-se também. Não se senta por resignação, senta-se para fazer companhia. E descobre, espantado, que estar sentado ao lado dos outros também lhe tira alguma fome.</p>
+        
+        <p>O Arquiteto continua de pé, sozinho, com as plantas a esvoaçar debaixo das pedras e a planta da demolição ainda por arrumar. Fica a olhar para elas um bocado. Depois acaba de enrolar a planta da demolição e mete-a debaixo do braço. Não a deita fora, porque é Arquiteto e não é parvo, mas também não a deixa em cima da mesa. Enrola também a da casa para dois. Fica só a da casa para um, e ele percebe, pela primeira vez, que essa também nunca esteve acabada. Percebe que a Solitude nunca foi uma casa. Foi um estaleiro em tréguas.</p>
+        
+        <p><span class="dialogue">— E agora construo o quê?</span></p>
+        
+        <p>O Homem pensa.</p>
+        
+        <p><span class="dialogue">— Uma porta. Só uma, que abra para os dois lados. Uma porta grande.</span></p>
+        
+        <p><span class="dialogue">— Isso é uma porta normal.</span></p>
+        
+        <p><span class="dialogue">— Pois, mas grande.</span></p>
+        
+        <p><span class="dialogue">— Grande?</span></p>
+        
+        <p><span class="dialogue">— Grande.</span></p>
+        
+        <p><span class="dialogue">— Mas… uma porta…</span></p>
+        
+        <p><span class="dialogue">— Pois.</span></p>
+        
+        <p>O Arquiteto olha para o Especialista. O Especialista anota tudo e guarda num novo ficheiro.</p>
+        
+        <p>O sol desce sobre a falésia, mesmo por cima da antena, e a luz atravessa as ervas secas como se fossem de vidro. As ilhas lá ao fundo continuam onde estavam, a rasgar o horizonte. Não se aproximaram nem se afastaram. Ninguém espera nada delas, e talvez seja por isso que são tão bonitas.</p>
+        
+        <p>Na cave, o choro da Criança vai abrandando, como a respiração de quem adormece depois de muito tempo acordado.</p>
+        
+        <p>O Homem não desce ainda. Fica sentado, com o Corpo de um lado, o Faminto do outro e as chaves na mão.</p>
+        
+        <p>Não há pressa. A casa não está acabada e nunca vai estar. Pela primeira vez, isso não parece uma ameaça. Parece só o sítio onde se vive.</p>
+
+        <a href="livros.html" class="back-link">← Voltar a Livros</a>
+    </article>
+
+</body>
+</html>
