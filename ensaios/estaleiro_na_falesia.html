@@ -27,26 +27,37 @@
             font-size: 2.5em;
             color: #222;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             font-weight: 300;
             letter-spacing: 1px;
+        }
+
+        /* Galeria de imagens */
+        .image-gallery {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+            justify-content: center;
+        }
+
+        .image-gallery img {
+            width: calc(50% - 10px);
+            height: 400px; /* Altura fixa para manter alinhamento */
+            object-fit: cover; /* Corta a imagem mantendo a proporção */
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         p {
             margin-bottom: 24px;
             text-align: justify;
             font-size: 1.1em;
-            text-indent: 1.5em; /* Traditional book indentation */
+            text-indent: 1.5em;
         }
         
-        /* Remove indent from dialogue lines */
         p:has(> span.dialogue) {
             text-indent: 0;
             padding-left: 1.5em;
-        }
-        
-        .dialogue {
-            /* just a marker for structural targeting */
         }
 
         hr {
@@ -70,6 +81,7 @@
             color: #222;
         }
 
+        /* Responsividade para telemóveis */
         @media (max-width: 600px) {
             body {
                 padding: 20px 10px;
@@ -79,6 +91,15 @@
             }
             h1 {
                 font-size: 2em;
+            }
+            .image-gallery {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .image-gallery img {
+                width: 100%;
+                height: auto;
+                max-height: 500px;
             }
             p {
                 text-indent: 1em;
@@ -90,6 +111,11 @@
 
     <article>
         <h1>Estaleiro na Falésia</h1>
+
+        <div class="image-gallery">
+            <img src="IMG_7364.jpg" alt="Estrada rumo ao mar com o sol a pôr-se no horizonte">
+            <img src="IMG_7352.jpg" alt="Vista da falésia para o mar com ilhas ao fundo sob o pôr do sol">
+        </div>
 
         <p>No cimo da falésia há uma casa que nunca está acabada. Ninguém questiona o motivo. Reconhecem-na com a naturalidade com que se reconhece o sol, e a quem pergunta encolhem os ombros: é uma casa que não se acaba.</p>
         
