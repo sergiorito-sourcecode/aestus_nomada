@@ -32,22 +32,22 @@
             letter-spacing: 1px;
         }
 
-        /* Galeria de imagens */
+        /* Galeria de imagens corrigida */
         .image-gallery {
             display: flex;
             gap: 20px;
             margin-bottom: 40px;
             justify-content: center;
+            align-items: flex-start; /* Garante que as imagens não esticam verticalmente */
         }
 
         .image-gallery img {
-            width: calc(120% - 10px);
-            height: 400px; /* Altura fixa para manter alinhamento */
-            object-fit: cover; /* Corta a imagem mantendo a proporção */
+            width: calc(50% - 10px);
+            height: auto; /* Mantém a proporção original da foto, sem cortes */
             border-radius: 4px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-
+        
         p {
             margin-bottom: 24px;
             text-align: justify;
