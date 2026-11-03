@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Beleza de uma Desarrumação</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* --- CONFIGURAÇÕES GERAIS (PALETA) --- */
+        :root {
+            --cor-fundo: #FCF9F9;
+            --cor-texto: #4A3F41;
+            --cor-texto-claro: #736567;
+            --cor-destaque: #A36D75;
+            --cor-destaque-hover: #86535B;
+            --fonte-titulos: 'Playfair Display', serif;
+            --fonte-texto: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--fonte-texto);
+            line-height: 1.6;
+            color: var(--cor-texto);
+            background-color: var(--cor-fundo);
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+        }
+
+        /* --- HEADER --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(252, 249, 249, 0.95);
+            border-bottom: 1px solid rgba(163, 109, 117, 0.15);
+            z-index: 100;
+            box-sizing: border-box;
+            backdrop-filter: blur(5px);
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--cor-destaque);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-family: var(--fonte-texto);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--cor-texto);
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--cor-destaque);
+        }
+
+        .btn-solid {
+            background-color: var(--cor-destaque);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 2px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+        
+        .btn-solid:hover {
+            background-color: var(--cor-destaque-hover);
+            color: #fff;
+        }
+
+        /* --- ESTRUTURA DO ENSAIO --- */
+        article {
+            background: white;
+            padding: 40px 60px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        h1 {
+            font-family: var(--fonte-titulos);
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 40px auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        p {
+            margin-bottom: 24px;
+            text-align: justify;
+            font-size: 1.1em;
+            text-indent: 1.5em;
+            color: var(--cor-texto-claro);
+        }
+        
+        p:has(> span.dialogue), p:has(> span.message) {
+            text-indent: 0;
+            padding-left: 1.5em;
+        }
+
+        /* Estilo para as mensagens de texto */
+        blockquote.message {
+            margin: 0 0 24px 1.5em;
+            padding-left: 1em;
+            border-left: 3px solid var(--cor-destaque);
+            font-style: italic;
+            color: var(--cor-texto);
+        }
+
+        blockquote.message p {
+            text-indent: 0;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            font-family: var(--fonte-texto);
+            text-decoration: none;
+            color: var(--cor-destaque);
+            font-size: 0.9em;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--cor-destaque-hover);
+        }
+
+        /* --- RESPONSIVIDADE --- */
+        @media (max-width: 600px) {
+            header {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+            body {
+                padding-top: 140px;
+            }
+            article {
+                padding: 30px 20px;
+                margin: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                text-indent: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <a href="../../livros.html" class="logo">AESTUS NÓMADA EDIÇÕES</a>
+        
+        <nav style="display: flex; align-items: center; gap: 15px;">
+            <a href="../../../index.html" style="font-size: 0.9rem; font-weight: normal;">Voltar ao Catering</a>
+            <a href="../../livros.html" style="font-size: 0.9rem; font-weight: 600;">Livros & Ensaios</a>
+            <a href="../../livros/OLdE/livro_OLdE_AGdS.html#comprar" class="btn-solid" style="margin: 0;">Comprar Livro</a>
+        </nav>
+    </header>
+
+    <article>
+        <h1>A Beleza de uma Desarrumação</h1>
+
+        <!-- Imagem única inserida aqui -->
+        <img src="imagens/a_beleza_de_uma_desarrumacao.jpg" alt="A Beleza de uma Desarrumação" class="featured-image">
+
+        <p>Enquanto escovava os dentes, parou a observar-se ao espelho. Ficou ali, imóvel, pouco menos de um minuto. Pousou a escova, ainda cheia de espuma, na borda do lavatório. O seu olhar desceu para a bancada de pedra. Estava organizada. Notava-se o desgaste do uso, um ou outro frasco pousado ao acaso, mas a ausência de caos trazia-lhe paz.</p>
+        
+        <p>Voltou a erguer o olhar, enfrentando a mulher refletida daquele outro lado imaginado. Apoiou as mãos na bancada, ladeando o lavatório, aproximou o rosto da superfície fria do vidro e observou cada detalhe. Não eram rugas o que via. Nem os fios brancos que lhe caíam pela face, ou a pele que cedia à inevitabilidade do tempo. Eram histórias cravadas em cada traço, em cada poro, em cada sombra. Era a topografia de uma vida densa, vivida até à última gota, que a levara exatamente àquele instante. Sorriu. E, num gesto raro e silencioso, agradeceu a si mesma.</p>
+        
+        <p>Limpou o resto da espuma dos lábios, encheu a boca de água, bochechou e cuspiu. Viu escorrer pelo ralo o que já não lhe servia. Sentiu-se subitamente mais leve e fresca.</p>
+        
+        <p>Caminhou até à sala, pegou no telemóvel que repousava sobre a mesa e deixou-se afundar no sofá. No ar, flutuava o saxofone de John Coltrane a desconstruir <em>My Favorite Things</em>.</p>
+        
+        <p>Abriu as mensagens e escreveu:</p>
+
+        <blockquote class="message">
+            <p>“Saudades dos pedaços de pão com manteiga de amendoim no balcão da casa de banho.”</p>
+        </blockquote>
+        
+        <p>Enviou. Encostou a cabeça para trás, aguardando com um sorriso nos lábios. A resposta não tardou a chegar.</p>
+        
+        <blockquote class="message">
+            <p>“K?”</p>
+        </blockquote>
+        
+        <p>O sorriso dela alargou-se, alimentado por um misto de saudade e pela graça de imaginar a confusão óbvia do outro lado do ecrã. Os dedos teclararam, ágeis:</p>
+        
+        <blockquote class="message">
+            <p>“Restos de sandes na casa de banho, que eu encontrava sempre que lá ia arrumar alguma coisa. Eras pequena. Talvez já não te lembres. Costumavas deixá-los lá esquecidos quando te distraías antes de ires para a escola.”</p>
+        </blockquote>
+        
+        <p>O ecrã mergulhou no silêncio. De repente, três pontinhos brancos começaram a saltar, a anunciar uma resposta. Pararam. O balão de texto desapareceu. Voltaram a saltar. A ansiedade pela resposta aumentava. Pararam. O balão de texto voltou a desaparecer.</p>
+        
+        <p>Silêncio.</p>
+        
+        <p>Subitamente, surgiu apenas um emoji a sorrir.</p>
+        
+        <p>Esperava algo mais, mas a memória, por si só, já lhe era suficiente para aquecer a manhã. Pousou o telemóvel no colo e deixou-se ficar, embalada por aquela recordação com mais de trinta anos. Como o tempo se esvaíra depressa, pensou.</p>
+        
+        <p>Passados uns minutos, o ecrã voltou a iluminar-se com uma notificação vibrante.</p>
+        
+        <p>Abriu. Era uma fotografia.</p>
+        
+        <p>Num primeiro olhar, não percebeu o que via, até focar a atenção nos pequenos detalhes. Depois, leu a mensagem que acompanhava a imagem e desatou a rir à gargalhada.</p>
+        
+        <blockquote class="message">
+            <p>“Mãe, quem sai aos seus não degenera. A tua neta faz exatamente o mesmo. Primeiro irritava-me. Mas agora acho-lhe graça. Obrigada pela doce memória, mãe. Um beijo :*”</p>
+        </blockquote>
+
+        <a href="../../livros.html" class="back-link">← Voltar a Livros & Ensaios</a>
+    </article>
+
+</body>
+</html>
