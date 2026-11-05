@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Velório dos Peixinhos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* --- CONFIGURAÇÕES GERAIS (PALETA) --- */
+        :root {
+            --cor-fundo: #FCF9F9;
+            --cor-texto: #4A3F41;
+            --cor-texto-claro: #736567;
+            --cor-destaque: #A36D75;
+            --cor-destaque-hover: #86535B;
+            --fonte-titulos: 'Playfair Display', serif;
+            --fonte-texto: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--fonte-texto);
+            line-height: 1.6;
+            color: var(--cor-texto);
+            background-color: var(--cor-fundo);
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+        }
+
+        /* --- HEADER --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(252, 249, 249, 0.95);
+            border-bottom: 1px solid rgba(163, 109, 117, 0.15);
+            z-index: 100;
+            box-sizing: border-box;
+            backdrop-filter: blur(5px);
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--cor-destaque);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-family: var(--fonte-texto);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--cor-texto);
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--cor-destaque);
+        }
+
+        .btn-solid {
+            background-color: var(--cor-destaque);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 2px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+        
+        .btn-solid:hover {
+            background-color: var(--cor-destaque-hover);
+            color: #fff;
+        }
+
+        /* --- ESTRUTURA DO ENSAIO --- */
+        article {
+            background: white;
+            padding: 40px 60px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        h1 {
+            font-family: var(--fonte-titulos);
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 40px auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        p {
+            margin-bottom: 24px;
+            text-align: justify;
+            font-size: 1.1em;
+            text-indent: 1.5em;
+            color: var(--cor-texto-claro);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            font-family: var(--fonte-texto);
+            text-decoration: none;
+            color: var(--cor-destaque);
+            font-size: 0.9em;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--cor-destaque-hover);
+        }
+
+        /* --- RESPONSIVIDADE --- */
+        @media (max-width: 600px) {
+            header {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+            body {
+                padding-top: 140px;
+            }
+            article {
+                padding: 30px 20px;
+                margin: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                text-indent: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <a href="../../livros.html" class="logo">AESTUS NÓMADA EDIÇÕES</a>
+        
+        <nav style="display: flex; align-items: center; gap: 15px;">
+            <a href="../../../index.html" style="font-size: 0.9rem; font-weight: normal;">Voltar ao Catering</a>
+            <a href="../../livros.html" style="font-size: 0.9rem; font-weight: 600;">Livros & Ensaios</a>
+            <a href="../../livros/OLdE/livro_OLdE_AGdS.html#comprar" class="btn-solid" style="margin: 0;">Comprar Livro</a>
+        </nav>
+    </header>
+
+    <article>
+        <h1>O Velório dos Peixinhos</h1>
+
+        <img src="imagens/o_velorio_dos_peixinhos.jpg" alt="Boca de incêndio em calçada portuguesa com flores" class="featured-image">
+
+        <p>Era uma rua como as outras. Era uma rua que não vem nos guias turísticos.</p>
+        
+        <p>A vizinhança mal se conhecia. Os poucos que metiam conversa eram tão poucos que se diria viverem na mesma casa. Na rua não brincavam crianças, e só de vez em quando passava alguém a passear o seu quatro patas, com voz de despacho, porque o tempo era escasso. A regra era cada qual meter-se na sua vida.</p>
+        
+        <p>Só a certas horas a rua se enchia. De manhã, passava toda a gente de leste para oeste, a correr a caminho do emprego. Ao fim da tarde, de oeste para leste, a caminho de casa e um pouco mais cansada. A rua dava acesso a uma zona de transportes públicos, e os passeios gastos eram a única prova dessa passagem diária, indiferente às vidas que ali moravam.</p>
+        
+        <p>Mas a vida naquela rua estava prestes a mudar, e tudo começou com uma falha estrutural. A calçada à volta de uma antiga boca de incêndio cedeu. E o motivo foi simples. Desde há uns anos que a boca tinha uma folga. E por essa folga saía água. A água escorria por baixo da calçada, levando consigo a terra que a suportava. Grão a grão, o chão por baixo da calçada foi cedendo, até que se formou um buraco à volta da boca de incêndio.</p>
+        
+        <p>Não foi de um momento para o outro. Foi uma mudança gradual. A mesma que não notamos nas nossas caras por nos vermos diariamente ao espelho, mas que uma amiga que já não vemos há um ano de repente exclama simpaticamente “Olha! Estás igual…” enquanto a sua expressão facial nos indica exatamente o contrário.</p>
+        
+        <p>Os anos passaram e ninguém dava conta do buraco. Só quem ali passasse pela primeira vez o poderia notar. A junta de freguesia pouco se importava com o desperdício de água. A EPAL não tinha mãos a medir. E a câmara municipal, ocupada com coisas maiores, decidiu ignorar.</p>
+        
+        <p>O buraco ficou lá meses, anos, uma década. Uma cicatriz suja no chão da cidade.</p>
+        
+        <p>Um dia, não se sabe exatamente quem foi, alguém decidiu que a água estagnada precisava de um propósito e atirou para lá um pequeno peixe vermelho. Talvez não soubesse o que fazer com ele. Talvez lhe quisesse dar liberdade. Talvez fosse irresponsabilidade. Mas alguém o fez. A natureza teria precisado de uns milhares de milhões de anos para pôr ali um peixe. À rua bastou de uma noite.</p>
+        
+        <p>No dia seguinte, havia dois.</p>
+        
+        <p>Depois, um vizinho trouxe musgo. Outro colocou pedrinhas coloridas e um pequeno castelo de plástico submerso. E sem qualquer planeamento urbano, comissão de moradores ou orçamento de estado, a comunidade da rua transformou a fratura do sistema num ecossistema.</p>
+        
+        <p>Formou-se um aquário à volta de uma boca de incêndio, no chão, rodeada das sobras de pedras da calçada e enfeitada de cores e pequenas estruturas coloridas.</p>
+        
+        <p>As pessoas começaram a parar. Traziam os filhos para ver os peixes a contornar o ferro enferrujado da boca de incêndio.</p>
+        
+        <p>Subitamente, aquele aquário tornou-se um famoso ponto de encontro. As crianças brincavam à sua volta. Os passeantes já não apressavam os seus quatro patas. Os vizinhos começaram a conhecer-se e até a marcar encontros em casa uns dos outros para festas, tertúlias ou simples convívios. Nas redes sociais, era alvo de elogios. Os turistas partilhavam fotografias e selfies à volta do aquário. Os turistas deixavam sempre um pouco da sua cultura, que dava conversas e brincadeiras nos convívios, e levavam um pouco da alma da rua para os seus países. A rua ganhou vida, e a comunidade ganhou força.</p>
+        
+        <p>Às oito da manhã, a senhora do terceiro esquerdo da porta cinco, que vivia sozinha, dava de comer aos peixinhos. Não falava com ninguém, mas aos poucos começou a falar com as pessoas curiosas que paravam para ver o aquário. E passados uns dias já participava nalguns dos convívios da comunidade, e começou a levar bolo de laranja.</p>
+        
+        <p>O Julinho do rés do chão direito da porta três nomeou todos os peixinhos e conseguia identificá-los como ninguém. Sabia dos seus hábitos e manias, e sabia o que mais gostavam de comer. Foi eleito pela comunidade como o guia oficial do aquário para quem quisesse saber.</p>
+        
+        <p>O senhor do primeiro direito da porta cinco era do contra, passava sempre a barafustar junto ao aquário. Considerava que era uma porcaria e um foco de mosquitos. Mas todas as manhãs e finais de tarde ficava à janela, a ver as pessoas e as crianças alegres à volta do aquário, e sorria timidamente.</p>
+        
+        <p>Um blogue de viagens incluiu-o nas dez coisas a não perder na cidade. A câmara, que em dez anos não tinha dado pelo buraco, deu pelo aquário não licenciado em três dias. Uma manhã, a carrinha da câmara chegou. Vieram resolver a "irregularidade".</p>
+        
+        <p>Um responsável leu o auto em voz alta, virado para o buraco. Demorou pouco mais de um minuto. Retiraram toda a decoração do aquário improvisado para caixas não identificadas. Os peixes foram levados num balde, para destino não especificado. Aspiraram toda a água, colocaram terra e fizeram um monte de pedras de calcário ao lado. A EPAL reparou a junta da boca de incêndio e vedou a perda de água. O calceteiro colocou as pedras, uma a uma, desajeitadamente, preenchendo o espaço à volta da boca de incêndio. A reparação estava feita em definitivo em menos de duas horas. Sem avisos. Sem explicações.</p>
+        
+        <p>Os peixes desapareceram. O musgo foi asfixiado. Onde havia água e comunidade, passou a haver apenas calçada desalinhada, mal nivelada, muda e morta.</p>
+        
+        <p>A comunidade, em resposta, organizou um velório à volta da boca de incêndio. Velas, flores e palavras de luto.</p>
+        
+        <p>O Julinho disse, lentamente e com pausas solenes, o nome de cada peixe e das suas respetivas características. No final, deixou escorrer uma lágrima e correu para o abraço da mãe.</p>
+        
+        <p>A senhora do terceiro esquerdo da porta cinco aproximou-se da boca de incêndio, agora sem aquário, e largou no chão um pedaço da comida que costumava dar aos peixinhos. Não chorou, mas quando se voltou olhou cada vizinho nos olhos, um a um, devagar, como se quisesse gravar na sua memória aquele último encontro.</p>
+        
+        <p>O senhor do primeiro direito foi o único adulto que falou. Aproximou-se da boca de incêndio, virou-se para toda a comunidade, e falou dos benefícios da ausência dos mosquitos e da rua que agora já parecia limpa. O senhor depois olhou o chão atrás dele, onde antes se encontrava o aquário, e disse, quase para si: “Foram-se também os sorrisos”. Fechou as duas mãos num aperto intenso, e juntou-se à comunidade a passos lentos e cabeça baixa.</p>
+        
+        <p>No final, alguém sugeriu um minuto de silêncio. Todos obedeceram, menos os quatro patas que reclamaram o seu direito a um último discurso.</p>
+        
+        <p>O presidente da junta de freguesia apareceu quase no final com a promessa de que nada estava perdido, e que em breve, teriam ótimas notícias. Que aquele cortejo fúnebre era perfeitamente evitável e um sinónimo de má civilidade. Quando chegaram uns turistas à procura do aquário, pediu à polícia que convidasse os moradores a dispersar, para não incomodarem os visitantes. Os turistas fotografaram a calçada e foram-se embora.</p>
+        
+        <p>À saída para a sua viatura, o presidente tropeçou numa pedra da calçada mal colocada e caiu junto à porta do carro. Ninguém se riu, exceto o Julinho que apontou o dedo em troça.</p>
+        
+        <p>Num pequeno museu da câmara municipal, colocaram uma velha boca de incêndio dentro de um aquário, com peixes coloridos e algumas pedras coloridas. À sua volta não havia crianças a brincar. Não passeavam quatro patas com os seus donos a conversar. Não se organizavam festas, jantares ou simples convívios. Era apenas um aquário igual aos outros, com peixes iguais aos outros, com uma torre anormalmente grande feita boca de incêndio. Não se sabe se eram os mesmos peixes. Não se sabe quem teve a ideia de que, dentro de água, seria necessária uma boca de incêndio. Ao lado, uma placa: “Uma homenagem ao engenho humano de tornar o obsoleto numa obra de arte”.</p>
+        
+        <p>Tinha de se pagar para entrar no museu.</p>
+
+        <a href="../../livros.html" class="back-link">← Voltar a Livros & Ensaios</a>
+    </article>
+
+</body>
+</html>
