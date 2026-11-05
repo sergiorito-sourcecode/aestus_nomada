@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventário para o Fim do Mundo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* --- CONFIGURAÇÕES GERAIS (PALETA) --- */
+        :root {
+            --cor-fundo: #FCF9F9;
+            --cor-texto: #4A3F41;
+            --cor-texto-claro: #736567;
+            --cor-destaque: #A36D75;
+            --cor-destaque-hover: #86535B;
+            --fonte-titulos: 'Playfair Display', serif;
+            --fonte-texto: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--fonte-texto);
+            line-height: 1.6;
+            color: var(--cor-texto);
+            background-color: var(--cor-fundo);
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+        }
+
+        /* --- HEADER --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(252, 249, 249, 0.95);
+            border-bottom: 1px solid rgba(163, 109, 117, 0.15);
+            z-index: 100;
+            box-sizing: border-box;
+            backdrop-filter: blur(5px);
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--cor-destaque);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-family: var(--fonte-texto);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--cor-texto);
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--cor-destaque);
+        }
+
+        .btn-solid {
+            background-color: var(--cor-destaque);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 2px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+        
+        .btn-solid:hover {
+            background-color: var(--cor-destaque-hover);
+            color: #fff;
+        }
+
+        /* --- ESTRUTURA DO ENSAIO --- */
+        article {
+            background: white;
+            padding: 40px 60px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        h1 {
+            font-family: var(--fonte-titulos);
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+        
+        h2 {
+            font-family: var(--fonte-titulos);
+            font-size: 1.5em;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--cor-destaque);
+        }
+
+        .featured-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 40px auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        p {
+            margin-bottom: 24px;
+            text-align: justify;
+            font-size: 1.1em;
+            text-indent: 1.5em;
+            color: var(--cor-texto-claro);
+        }
+        
+        p:has(> span.dialogue) {
+            text-indent: 0;
+            padding-left: 1.5em;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            font-family: var(--fonte-texto);
+            text-decoration: none;
+            color: var(--cor-destaque);
+            font-size: 0.9em;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--cor-destaque-hover);
+        }
+
+        /* --- RESPONSIVIDADE --- */
+        @media (max-width: 600px) {
+            header {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+            body {
+                padding-top: 140px;
+            }
+            article {
+                padding: 30px 20px;
+                margin: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                text-indent: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <a href="../../livros.html" class="logo">AESTUS NÓMADA EDIÇÕES</a>
+        
+        <nav style="display: flex; align-items: center; gap: 15px;">
+            <a href="../../../index.html" style="font-size: 0.9rem; font-weight: normal;">Voltar ao Catering</a>
+            <a href="../../livros.html" style="font-size: 0.9rem; font-weight: 600;">Livros & Ensaios</a>
+            <a href="../../livros/OLdE/livro_OLdE_AGdS.html#comprar" class="btn-solid" style="margin: 0;">Comprar Livro</a>
+        </nav>
+    </header>
+
+    <article>
+        <h1>Inventário para o Fim do Mundo</h1>
+
+        <!-- A imagem gerada pela parceira ilustradora deverá ter este nome exato: -->
+        <img src="imagens/inventario_fim_do_mundo.jpg" alt="Ilustração a preto e branco: Inventário para o Fim do Mundo" class="featured-image">
+
+        <h2>I</h2>
+        <p>Ninguém soube ao certo como se soube. Na terça-feira à noite o mundo ainda não tinha data para acabar e na quarta-feira de manhã toda a gente sabia que acabava no sábado, às cinco e quarenta e dois da tarde, com a mesma naturalidade com que se sabe que vai chover ou que o padeiro foi à terra.</p>
+        <p>Não houve televisão, nem sirene, nem anjo com trombeta. A notícia estava nas pessoas como o frio está em novembro: não chega, instala-se. </p>
+        <p>Ao pequeno-almoço tentei lembrar-me de quem ma tinha dado e não consegui. Não era coisa que eu tivesse ouvido; era coisa que eu sabia, arrumada algures entre o número de contribuinte e o nome da minha professora da primária.</p>
+        <p>Ninguém duvidou. Tenho pensado muito nisso e acho que foi a parte mais inquietante de tudo. Não se perguntou porquê, nem como, nem por ordem de quem. Se era guerra, se era uma pedra vinda do céu, se era castigo ou simples cansaço, ninguém sabia, e não saber não parecia incomodar ninguém. A única dúvida que a vila levantou, e levantou-a com fervor, foi se as cinco e quarenta e dois eram na hora nova ou na hora antiga. Os relógios tinham atrasado no domingo anterior e metade das cozinhas ainda tinha o micro-ondas a viver no horário de verão.</p>
+        <p>Às nove e meia a Junta de Freguesia afixou um edital na vitrina ao lado da farmácia. Fui lá como toda a gente, de casaco por cima do pijama, que é como se vai às coisas importantes nas vilas pequenas. O papel tinha o brasão da freguesia, um carimbo ligeiramente torto e a assinatura do Sr. Amândio, presidente da Junta há vinte e dois anos, sem que alguém se lembrasse de ter votado nele.</p>
+        <p style="font-style: italic; text-align: center;">Para os devidos efeitos se torna público que o fim do mundo terá lugar no próximo sábado, pelas 17h42. Os serviços da Junta encerram nesse dia às 12h30, conforme o horário habitual. Não serão emitidos atestados de residência a partir de quinta-feira.</p>
+        <p>Formou-se diante da vitrina aquele ajuntamento que em Portugal se forma diante de qualquer papel pregado numa parede. O Sr. Moreira, que tinha sido vereador da oposição em 1989 e nunca deixou de o ser, protestou que o assunto não tinha passado pela Assembleia de Freguesia. A professora Glória, reformada, apontou um erro de concordância na segunda linha, e ninguém percebeu qual. Uma senhora que eu não conhecia quis saber se precisava ainda assim do atestado para o abono, e a pergunta pareceu a todos perfeitamente razoável.</p>
+        <p>Quando o Sr. Amândio saiu à porta, de óculos na testa, perguntaram-lhe pela hora.</p>
+        <p><span class="dialogue">— É a hora oficial — disse ele, com a autoridade de quem nunca soube nada mas sempre o disse bem.</span></p>
+        <p>A multidão dispersou satisfeita. Ninguém sabia qual era a hora oficial, mas sabia-se agora que existia uma, e isso bastava.</p>
+
+        <h2>II</h2>
+        <p>Voltei para casa e decidi fazer uma mochila.</p>
+        <p>Não foi uma decisão heroica. Não me imaginei a atravessar desertos nem a resistir nas ruínas. Pensei apenas que, se o mundo ia acabar, havia talvez uma hipótese, uma só, de que não acabasse inteiramente, ou de que acabasse noutro sítio, ou de que acabasse e alguma coisa continuasse a seguir. E uma hipótese é coisa pequena. Não precisa de mala de porão. Cabe numa mochila.</p>
+        <p>Fui buscar a mochila azul ao fundo do roupeiro, a das caminhadas que fiz duas vezes em quinze anos. Sacudi-a. Caiu de lá de dentro um bilhete de estacionamento de 2011, que deitei fora com uma sensação de dever cumprido, como se tivesse finalmente arrumado uma parte da vida.</p>
+        <p>Estabeleci uma regra: a mochila não podia pesar mais do que eu conseguisse levar a correr. Como não sabia quanto conseguia levar a correr, nem corria desde o liceu, decidi pesar tudo na balança da cozinha. A balança é a da farinha e só vai até aos cinco quilos, de modo que tive de pesar as coisas aos bocados e ir somando num papel. Usei as costas da fatura da luz, que vencia na segunda-feira, o que me deu uma satisfação mesquinha que não sei explicar e de que não me orgulho.</p>
+        <p>Comecei a lista. Uma lanterna. Um canivete. Uma garrafa de água. Um casaco daqueles que se dobram para dentro do próprio bolso. O cartão de cidadão, porque nunca se sabe quem nos pede documentos do outro lado.</p>
+        <p>O resto da lista não o escrevo aqui. Não é segredo, ou não é só isso. Há coisas que perdem o peso quando se dizem, e eu precisava delas pesadas.</p>
+        <p>Da janela da cozinha via-se a varanda da D. Ermelinda. Tinha montado a tábua de engomar virada para a rua, como um altar, e passava a ferro. Primeiro as camisas do falecido, que guardava há onze anos no roupeiro do corredor. Depois os lençóis de linho do enxoval, ainda com a dobra da loja, que nunca tinham ido a uma cama porque eram bons demais para se dormir neles. Passava-os com uma lentidão de missa. O vapor subia-lhe à volta da cara e ela parecia uma santa de procissão.</p>
+        <p><span class="dialogue">— Então, vizinho? — disse, quando me viu à janela com a mochila na mão. — Vai para onde?</span></p>
+        <p><span class="dialogue">— Não sei.</span></p>
+        <p><span class="dialogue">— Então para que é a mochila?</span></p>
+        <p><span class="dialogue">— Por isso mesmo.</span></p>
+        <p>Abanou a cabeça com aquela pena que se tem de um homem que aparece num funeral de ténis.</p>
+        <p><span class="dialogue">— Na nossa idade já não se foge, vizinho. Encerra-se.</span></p>
+        <p>E dobrou um guardanapo num triângulo perfeito, para que o mundo, ao chegar, não tivesse nada a apontar-lhe.</p>
+
+        <h2>III</h2>
+        <p>Ao meio-dia desci ao Café Central, menos por fome do que para ver como a vila estava a acabar.</p>
+        <p>O Sr. Albano tinha aberto às sete, como em todos os dias dos últimos trinta e um anos. No quadro de ardósia à porta tinha escrito a giz: Prato do dia: feijoada. Sábado: cozido à portuguesa. Aquele cozido de sábado era um desafio ao universo, posto ali com letra redonda e caprichada.</p>
+        <p>O Sr. Albano não acreditava no fim do mundo. Dizia-o a quem entrava, com o pano de limpar o balcão ao ombro: aquilo eram coisas que se diziam, como da outra vez com o ano dois mil. E, no entanto, passou a manhã com o caderno do fiado aberto, a percorrer as mesas uma a uma.</p>
+        <p><span class="dialogue">— Ó Zé, são quarenta e sete e trinta. Não é por nada. É para ficar tudo arrumado.</span></p>
+        <p>O Zé Carteiro pousou a bica com cuidado.</p>
+        <p><span class="dialogue">— Se o mundo acaba, a dívida acaba.</span></p>
+        <p><span class="dialogue">— O mundo não acaba nada — disse o Sr. Albano. — E se acabar, acaba com as contas certas.</span></p>
+        <p>Abriu-se ali, entre o balcão e a máquina do tabaco, uma discussão teológica sobre se as dívidas sobrevivem ao apocalipse. O Sr. Moreira sustentou que sim, por analogia com as heranças. Alguém lembrou que no céu não há fiado. O Zé acabou por pagar vinte euros, a título de sinal. O Sr. Albano riscou a dívida com uma régua e escreveu ao lado, com a mesma letra redonda do cozido: Resto no sábado. Era a única pessoa da vila que não acreditava no fim do mundo e a única que se preparava para ele com rigor contabilístico.</p>
+        <p>Ao canto, junto à janela, estava o Sr. Teodoro. Levantou-se quando me viu e veio ter comigo de olhos muito abertos.</p>
+        <p><span class="dialogue">— Achas que desliguei o gás?</span></p>
+        <p><span class="dialogue">— Não sei, Sr. Teodoro.</span></p>
+        <p><span class="dialogue">— Desliguei. Desliguei, de certeza.</span></p>
+        <p>E saiu. Voltou dez minutos depois, um pouco ofegante.</p>
+        <p><span class="dialogue">— Desliguei. Mas a porta. Achas que fechei a porta?</span></p>
+        <p>O Sr. Teodoro não gritava, nem chorava, nem corria pelas ruas a anunciar coisas. O pânico dele era de outra espécie, mais educado e mais terrível: uma volta que não acabava. Tinha uma lista de coisas a verificar, e a lista crescia à medida que as verificava, porque cada verificação lhe lembrava outra. Ao fim da tarde, disseram-me, já verificava se tinha verificado.</p>
+        <p>Na mesa ao lado, a D. Lurdes tinha o telemóvel encostado à orelha desde as nove da manhã. Estava em espera na operadora. Queria saber se, acabando o mundo antes dos vinte e quatro meses de fidelização, lhe cobravam a penalização. A música de espera era uma versão em flauta de uma canção de que ninguém se lembrava do nome, e ouvia-se do outro lado do café, fina e eterna. De vez em quando uma voz gravada dizia-lhe que a chamada era muito importante. A D. Lurdes acenava que sim, agradecida, e continuava à espera.</p>
+        <p><span class="dialogue">— Se não me atenderem até sábado — disse-me, muito pálida —, fico a dever.</span></p>
+        <p>Não era piada. Percebi isso pela forma como segurava o telemóvel, com as duas mãos, como quem segura uma coisa que pode fugir.</p>
+        <p><span class="dialogue">— E o senhor? — perguntou-me o Sr. Albano, a olhar para a mochila que eu trazia ao ombro, ainda vazia, como se quisesse que ela se fosse habituando a mim. — Vai fugir para onde?</span></p>
+        <p><span class="dialogue">— Não vou fugir. Vou só levar umas coisas.</span></p>
+        <p><span class="dialogue">— Levar para onde?</span></p>
+        <p>Não respondi. O café inteiro olhou para mim com aquela mistura de desconfiança e piedade que as vilas reservam a quem faz coisas sem as explicar. Para eles o fim do mundo era uma derrota já aceite, e um homem com uma mochila era uma espécie de falta de educação: estava a recusar o luto que os outros já tinham começado.</p>
+
+        <h2>IV</h2>
+        <p>Em casa, comecei a procurar.</p>
+        <p>Não encontrava o canivete. Sabia que o tinha, um canivete de cabo vermelho, comprado numa feira, que nunca tinha servido para nada mas que me dava a sensação de servir. Procurei na gaveta das coisas, que todas as casas têm e onde vivem as pilhas gastas, os elásticos e as chaves de portas que já não sabemos quais são. Não estava. Procurei na gaveta de baixo da cómoda.</p>
+        <p>Foi aí que encontrei a caixa.</p>
+        <p>É uma caixinha de madeira, do tamanho de uma mão fechada, com uma tampa que corre numa calha e que nunca correu bem. Lá dentro estão pinhões. Pinhões com casca, escuros e lisos, como pequenas pedras de rio.</p>
+        <p>Tinha doze anos quando os apanhei. Era um setembro no pinhal atrás da casa da minha avó, e passávamos tardes inteiras de cócoras a partir pinhas com uma pedra e a abrir os pinhões com outra, até termos os dedos pretos e a boca a saber a resina. Comíamos quase todos. Aqueles guardei-os. Lembro-me de ter pensado, com a gravidade que só os miúdos de doze anos têm, que eram para depois.</p>
+        <p>Tenho cinquenta e cinco anos e o depois nunca chegou. Os pinhões continuam com casca, à espera. Durante quarenta e três anos mudaram de casa comigo quatro vezes, sempre na mesma caixa e sempre fechados, como se eu não quisesse estragar a promessa abrindo-a.</p>
+        <p>Abanei a caixa. Fez o barulho de chuva miúda num telhado de zinco. Sentei-me no chão do quarto, de costas para a cama, e fiquei a abaná-la devagar. Não pensei em nada de concreto. Pensei no cheiro do pinhal, na voz da minha avó a chamar para o lanche e na sensação, que nunca mais tive inteira, de que a tarde não acabava.</p>
+        <p>Quando me levantei estava escuro e eu não tinha o canivete.</p>
+        <p>Ouvi rodas na calçada. Fui à janela.</p>
+        <p>Era a Josefina, a do número catorze. Puxava uma mala de rodinhas que fazia na calçada um barulho de trovoada pequena e trazia os dois filhos pela mão: o mais velho de mochila da escola às costas, o mais novo de pijama, com o casaco por cima, abraçado a um coelho de pano. Caminhava depressa mas não corria. Tinha o queixo levantado.</p>
+        <p>À janela do catorze, em camisola interior, o marido olhava. Não gritou. Disse só, numa voz que se ouviu na rua toda:</p>
+        <p><span class="dialogue">— Ó Josefina, e o jantar?</span></p>
+        <p>Ela não se voltou. O miúdo mais novo voltou-se, por cima do ombro, e o pai acenou-lhe, sem perceber bem o que estava a fazer.</p>
+        <p>Em menos de meia hora a vila inteira sabia. Com o mundo a três dias de acabar, aquilo foi um escândalo. Falou-se mais da Josefina nessa noite do que do fim de tudo. Ninguém lhe chamou coragem. Eu também não, na altura. Chamo-lhe agora.</p>
+        <p>Na quinta-feira procurei a lanterna. Sabia que estava no sótão, numa caixa de cartão onde se lia Diversos, que é a palavra que usamos para as coisas que não temos coragem de deitar fora nem de olhar.</p>
+        <p>A lanterna não estava lá. Estava o caderno.</p>
+        <p>É um caderno de capa verde, de linhas, dos que se compravam na papelaria do largo com a tabuada nas costas. Não tem uma palavra escrita. Tem desenhos. Casas sem portas. Um sol pintado a lápis de carvão, preto, com os raios muito bem feitos. Um homem que parecia um um homem enorme, de ombros caídos, preso por correntes a bolas de chumbo enormes. Um calhaus empilhados no topo de uma falésia, a fazer de pirâmide, com uma entrada pequena e escura. Um cão que nunca tive, sempre o mesmo, em todas as páginas, sentado ao lado de um boneco pequeno e encolhido.</p>
+        <p>Quem os visse diria que eram desenhos de criança. Eram. Essa é a parte difícil.</p>
+        <p>Os desenhos são de um ano de que não vou falar. Só eu sei o que querem dizer, e durante muito tempo achei que isso era um peso. Sentado no sótão, com o caderno nos joelhos e a luz amarela da lâmpada a balançar, percebi que talvez fosse outra coisa: um segredo que o miúdo me tinha confiado a mim, e a mais ninguém, à espera de que eu crescesse o suficiente para o guardar sem me magoar.</p>
+        <p>Não virei a última página. Sei o que lá está. Passei a mão pela capa como se passa a mão pela cabeça de uma criança que adormeceu no sofá, e tive vontade de lhe dizer que tinha corrido tudo mais ou menos bem. Mais ou menos é muito, para quem desenhava casas sem portas.</p>
+        <p>Desci do sótão sem a lanterna.</p>
+        <p>No muro em frente estava sentado o Paulo, o filho dos Ramalhos, dezasseis anos, um rapaz alto que ainda não sabia o que fazer aos braços. Tinha uma folha na mão e mexia os lábios. Estava a ensaiar.</p>
+        <p><span class="dialogue">— Posso perguntar-lhe uma coisa? — disse quando me viu.</span></p>
+        <p>Sentei-me ao lado dele no muro, que estava frio.</p>
+        <p><span class="dialogue">— O senhor acha que se deve dizer as coisas mesmo sem saber a resposta?</span></p>
+        <p>Percebi logo de que coisas falava. Percebi também, pela folha amarrotada e pela cor das orelhas, que não estava a falar de uma rapariga. Disse-me o nome, Tiago, muito depressa, como quem atira uma pedra a um lago para não ter de ver os círculos.</p>
+        <p>Podia ter-lhe dito muitas coisas. Que a vila ia falar. Que o Tiago podia não sentir o mesmo. Que havia tempo. Mas não havia tempo, e isso, pela primeira vez em muitos anos, era uma vantagem.</p>
+        <p><span class="dialogue">— Acho que a resposta é a parte menos importante — disse-lhe. — A pergunta é que é tua.</span></p>
+        <p>Olhou para mim como se eu tivesse dito uma coisa muito profunda ou muito estúpida, e aos dezasseis anos é difícil distinguir. Depois dobrou a folha em quatro, guardou-a no bolso das calças e foi-se embora a direito, sem olhar para trás, como a Josefina.</p>
+        <p>Não sei o que o Tiago respondeu. Na sexta-feira à tarde vi-os sentados no muro da escola, a dois palmos um do outro, sem falar. Há idades em que dois palmos é uma distância enorme e outras em que não é nenhuma. Pareceu-me que, naquele muro, eram as duas coisas ao mesmo tempo.</p>
+        <p>À noite o Sr. Teodoro bateu-me à porta.</p>
+        <p><span class="dialogue">— Achas que fechei a porta?</span></p>
+        <p><span class="dialogue">— Qual porta, Sr. Teodoro?</span></p>
+        <p>Olhou para mim com um desamparo infinito. Já não sabia.</p>
+
+        <h2>V</h2>
+        <p>Na sexta-feira a vila teve a sua terceira grande questão, depois da hora e da Josefina: as flores da igreja.</p>
+        <p>O Padre Anselmo anunciou, depois de consultar com visível esforço o Código de Direito Canónico, que a missa de domingo se mantinha, "salvo indicação em contrário". Não especificou de quem viria a indicação. As senhoras da Confraria das Almas perceberam logo o que estava realmente em jogo: o arranjo de sábado seria o último arranjo de flores da história da humanidade.</p>
+        <p>A D. Adelaide tinha a escala desde março e o turno era dela. A D. Celeste lembrou que a D. Adelaide tinha trocado com ela em agosto, por causa das férias em Benidorm, e que a troca nunca tinha sido devolvida. Discutiram no adro durante quarenta e sete minutos, com um rigor jurídico que o Sr. Moreira ouviu de chapéu na mão e com evidente inveja. O padre propôs um arranjo conjunto. Ambas recusaram, porque um arranjo a meias seria um arranjo sem autora, e ninguém quer chegar ao fim do mundo sem assinar a sua obra.</p>
+        <p>Acabaram por fazer dois arranjos, um de cada lado do altar, cada um maior do que o outro. Ao fim da tarde a igreja parecia uma florista em liquidação. A agência funerária do largo, que não quis ficar de fora, colou na montra um papel: Campanha Fim do Mundo — 30% de desconto. Pagamento a 60 dias. Ninguém riu. Duas pessoas pediram orçamento.</p>
+        <p>Eu continuava sem o canivete, sem a lanterna e sem as pilhas, e a mochila continuava a encher-se por dentro sem que eu soubesse bem de quê. Tinha coisas lá dentro, sim. Coisas certas, pesadas na balança da farinha e anotadas nas costas da fatura da luz. Mas cada vez que a fechava sentia que faltava qualquer coisa. Não uma coisa grande. Uma coisa precisa.</p>
+        <p>Foi à procura das pilhas que dei com o livro.</p>
+        <p>Estava na estante da sala, na segunda prateleira, onde estão os livros que já não leio mas a quem não consigo deixar de dar casa. É um livro fino, de capa mole, com as esquinas comidas e um anel de café na contracapa. Li-o pela primeira vez com vinte e poucos anos, num verão em que tudo me pesava e eu não sabia porquê. Conta a história de alguém que aprende a viver com pouco e que, à força de viver com pouco, descobre que pesa menos, e que pesar menos não é uma perda: é uma maneira de não se afogar.</p>
+        <p>Abri-o ao acaso. Caiu areia de dentro, areia de uma praia de há trinta anos, que eu nunca tinha sacudido. Li uma página de pé, encostado à estante. Ri-me sozinho na sala de uma frase que já sabia de cor e que me apanhou outra vez desprevenido, como nos apanham as pessoas que conhecemos bem.</p>
+        <p>Foi o único momento daquela semana em que o fim do mundo me pareceu assunto de outros.</p>
+        <p>Pousei o livro. Ou não o pousei. Já não me lembro bem, e talvez isso também faça parte do que não se diz.</p>
+
+        <h2>VI</h2>
+        <p>No sábado de manhã o Sr. Albano escreveu no quadro de ardósia, por baixo de Sábado: cozido à portuguesa, a palavra Confirmado.</p>
+        <p>A D. Ermelinda acabou de passar a ferro às onze. Arrumou a tábua, vestiu o vestido azul-escuro dos casamentos e sentou-se na varanda, de mãos no colo, com a casa atrás de si dobrada em triângulos perfeitos. A D. Lurdes continuava em espera. Às três da tarde, disseram-me, a música de flauta parou de repente e uma voz humana perguntou-lhe em que podia ajudar. A D. Lurdes desligou, por puro susto.</p>
+        <p>O Sr. Teodoro estava parado à porta de casa, de chave na mão. Não entrava nem saía.</p>
+        <p>Às quatro e meia a vila dividiu-se, sem alarido, entre os que tinham posto o relógio na hora nova e os que o tinham deixado na antiga. Os primeiros olhavam para os segundos com a superioridade discreta de quem vai acabar a horas.</p>
+        <p>A mochila estava em cima da cama. Tinha quase tudo. As coisas que se dizem e as que não se dizem. Pesava quatro quilos e trezentos e vinte e dois gramas, pesados aos bocados na balança da farinha e somados nas costas de uma fatura que eu, afinal, nunca ia pagar.</p>
+        <p>Faltava uma coisa.</p>
+        <p>Revi a lista. Abri outra vez a gaveta das coisas, a cómoda, o sótão, o armário da casa de banho, os bolsos dos casacos de inverno onde vivem lenços de papel de outros anos. Não estava. Sabia o que era, e também não o digo. Sei apenas que não estava em nenhuma gaveta da casa, e que talvez nunca tivesse estado.</p>
+        <p>Durante algum tempo fiquei sentado na cama ao lado da mochila, como se ela fosse uma pessoa com quem tinha combinado uma viagem e que esperava, educadamente, que eu me decidisse.</p>
+        <p>Depois levantei-me e pu-la às costas.</p>
+        <p>Pesava menos do que eu tinha calculado. Ou eu pesava menos do que era costume. As duas hipóteses pareceram-me igualmente razoáveis, e nenhuma me pareceu triste.</p>
+        <p>Fechei a porta de casa. Abri-a outra vez, para ver se a tinha fechado: o Sr. Teodoro tinha-me pegado aquilo. Fechei-a de novo e deixei a chave debaixo do vaso, como se alguém fosse precisar dela.</p>
+        <p>Na rua, a D. Ermelinda viu-me passar da varanda e não disse nada. Levantou a mão devagar, não sei se para se despedir ou para me abençoar. O Sr. Albano estava à porta do café, de pano ao ombro, a olhar para o céu com ar de quem desconfia de um fornecedor.</p>
+        <p>Eram cinco e vinte e nove. Ou quatro e vinte e nove, conforme a hora.</p>
+        <p>Faltava uma coisa. Faltaria sempre, imagino. Ajeitei as alças e comecei a andar.</p>
+
+        <a href="../../livros.html" class="back-link">← Voltar a Livros & Ensaios</a>
+    </article>
+
+</body>
+</html>
+
+```
