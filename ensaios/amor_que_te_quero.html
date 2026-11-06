@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amor, que te quero</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* --- CONFIGURAÇÕES GERAIS (PALETA) --- */
+        :root {
+            --cor-fundo: #FCF9F9;
+            --cor-texto: #4A3F41;
+            --cor-texto-claro: #736567;
+            --cor-destaque: #A36D75;
+            --cor-destaque-hover: #86535B;
+            --fonte-titulos: 'Playfair Display', serif;
+            --fonte-texto: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--fonte-texto);
+            line-height: 1.6;
+            color: var(--cor-texto);
+            background-color: var(--cor-fundo);
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+        }
+
+        /* --- HEADER --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(252, 249, 249, 0.95);
+            border-bottom: 1px solid rgba(163, 109, 117, 0.15);
+            z-index: 100;
+            box-sizing: border-box;
+            backdrop-filter: blur(5px);
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--cor-destaque);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-family: var(--fonte-texto);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--cor-texto);
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--cor-destaque);
+        }
+
+        .btn-solid {
+            background-color: var(--cor-destaque);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 2px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+        
+        .btn-solid:hover {
+            background-color: var(--cor-destaque-hover);
+            color: #fff;
+        }
+
+        /* --- ESTRUTURA DO ENSAIO --- */
+        article {
+            background: white;
+            padding: 40px 60px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        h1 {
+            font-family: var(--fonte-titulos);
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-family: var(--fonte-titulos);
+            font-size: 1.5em;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--cor-destaque);
+        }
+
+        .featured-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 40px auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        p {
+            margin-bottom: 24px;
+            text-align: justify;
+            font-size: 1.1em;
+            text-indent: 1.5em;
+            color: var(--cor-texto-claro);
+        }
+        
+        p:has(> span.dialogue) {
+            text-indent: 0;
+            padding-left: 1.5em;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            font-family: var(--fonte-texto);
+            text-decoration: none;
+            color: var(--cor-destaque);
+            font-size: 0.9em;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--cor-destaque-hover);
+        }
+
+        /* --- RESPONSIVIDADE --- */
+        @media (max-width: 600px) {
+            header {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+            body {
+                padding-top: 140px;
+            }
+            article {
+                padding: 30px 20px;
+                margin: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                text-indent: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <a href="../../livros.html" class="logo">AESTUS NÓMADA EDIÇÕES</a>
+        
+        <nav style="display: flex; align-items: center; gap: 15px;">
+            <a href="../../../index.html" style="font-size: 0.9rem; font-weight: normal;">Voltar ao Catering</a>
+            <a href="../../livros.html" style="font-size: 0.9rem; font-weight: 600;">Livros & Ensaios</a>
+            <a href="../../livros/OLdE/livro_OLdE_AGdS.html#comprar" class="btn-solid" style="margin: 0;">Comprar Livro</a>
+        </nav>
+    </header>
+
+    <article>
+        <h1>Amor, que te quero</h1>
+
+        <img src="imagens/amor_que_te_quero.jpg" alt="Duas pessoas envelhecidas partilham momento íntimo ao sol na esplanada" class="featured-image">
+
+        <h2>Cena I</h2>
+        <p>Antes de entrar no turno, a Teresa foi ao café do costume, naquela esquina ensolarada do bairro. Ali, gostava de desfrutar do seu café com um delicioso pastel de nata enquanto os raios do sol da manhã banhavam apenas a sua face. Cada pedaço de pastel de nata demorava-se na sua boca até se desfazer completamente. E quando deixava de sentir a intensidade dos sabores e aromas, deixava-o ir, seguido de um gole de café para contrastar o doce do pastel. Teresa gostava de contrastes. Sentada à sombra do toldo do café, com a sua face exposta ao sol, uma camisola de manga comprida e chinelos nos pés.</p>
+
+        <p>Numa mesa à sua frente sentou-se um casal. Teriam uns setenta anos. Eram amorosos um com o outro. Os seus olhos brilhavam quando se entreolhavam e os gestos não escondiam a intimidade dos corpos. Claramente vinham de uma manhã de sexo, pensou Teresa com um sorriso a roçar a malícia.</p>
+
+        <p>Não era comum ver um casal daquela idade como se fossem adolescentes perdidamente apaixonados. Falavam com serenidade, mas riam-se com frequência e brincavam com os corpos um do outro com pequenas cócegas ou um simulado afastamento com uma mão, como quem empurra dizendo fica aqui comigo, e faziam festas um ao outro. Tantas festas, pensou Teresa. Quando se calavam, ficavam de mãos dadas com os dedos entrelaçados, olhando as suas mãos a representarem o que lhes passava na alma. Noutras vezes a mão dele pousava delicadamente na mão dela como se a protegesse, ou a mão dela fazia-lhe festas na perna dele como se o acalmasse. Existia uma cola invisível entre eles que Teresa não conseguia bem descrever.</p>
+
+        <p>Teresa deixou de se focar no saboroso pastel de nata, contrastando com o café, e ficou ali a sonhar enquanto observava aquele casal septuagenário, inspirada pelo amor que havia entre eles.</p>
+
+        <p>Um dia, queria uma relação assim até ficarem bem velhinhos, pensou.</p>
+
+        <p>Passado algum tempo, o casal pagou a conta e foi-se embora, abraçados um ao outro em passos leves e ágeis, como se tivessem quinze anos.</p>
+
+        <p>O amor é lindo, pensou.</p>
+
+        <h2>Cena II</h2>
+        <p>O João acordou cedo. Levantou-se daquela cama de hotel e foi até à janela. Observou a rua lá fora onde os primeiros raios de sol começavam a acordar a cidade. Olhou com ternura para o corpo feminino que ainda se encontrava estendido na cama. Os lençóis desfeitos, uma almofada no chão e a roupa espalhada pelo quarto. A garrafa de espumante estava deitada no chão, por baixo da mesa, um copo na mesa de cabeceira do lado dela e o outro na mesa de centro. Ambos vazios.</p>
+
+        <p>Foi à casa de banho. Tomou um duche rápido para despertar. Tinham-se deitado tarde. Quer dizer: deitaram-se cedo, adormecer é que foi quase de manhã. Sorriu. Olhou-se ao espelho, e o sorriso não aguentou. Aquela noite tinha sido extraordinária, e não só pelo sexo. Era a conexão, a paixão, uma vida que já tinha tido e que se lhe perdera entre rotinas, responsabilidades e fatalidades. Enfim, é a vida. Caiu-lhe uma lágrima, e não soube dizer de quê. Baixou os olhos para o lavatório, como quem esconde a vergonha de si mesmo. Pensou na tarde que o esperava. Respirou fundo. Isto ainda não acabou, pensou. E depois, mais baixo, como quem pede licença: eu mereço. Levantou os olhos. Cara cansada, olheiras pesadas. Não tenho mais vinte anos, admitiu. Endireitou os ombros. Caramba, ainda estou vivo. E os lábios, sem lhe pedirem autorização, desenharam-lhe outro sorriso.</p>
+
+        <p>Saiu da casa de banho e, chegado ao quarto, olhou para a sua amada ainda a dormir. Sentiu-lhe o ritmo da respiração com o olhar. Absorveu a serenidade da face enquanto ainda dormia. Seguiu as linhas do seu corpo encantado. Sentiu um aconchego no peito. O coração batia mais rápido. Abriu um sorriso. Ajoelhou-se ao lado da cama, a olhar diretamente na face dela. Ela abriu os olhos devagar. Os olhos brilharam. Sorriu. <span class="dialogue">Bom dia, meu anjo</span>, disse ela. <span class="dialogue">Bom dia, caramelo salgado</span>, respondeu ele. Beijaram-se.</p>
+
+        <p>O João sugeriu que tomassem o pequeno-almoço no café da esquina lá em baixo, que tinha visto pela janela. Parecia ter bom ar. Ela aceitou. Prepararam-se para sair entre brincadeiras e provocações e voltaram à cama. Desfizeram tudo o que ainda faltava desfazer da cama com a pressa de mil desejos contidos, e voltaram ao duche. E por fim, saíram do quarto.</p>
+
+        <h2>Cena III</h2>
+        <p>Sofia olhava a rua pela janela da sua sala. O Mário tinha saído mais cedo que o costume, numa pressa que já não a surpreendia, despedindo-se com um até amanhã que mostrava cuidado, mas não mais que isso. Questionava-se muitas vezes porque é que continuava ali, e a resposta acabava sempre na amizade. Uma amizade rara, das que não se encontram duas vezes na vida. Cuidavam um do outro. A cama era apenas isso, um espaço partilhado. Não havia intimidade física. Ele não precisava. Mas a amizade não tinha uma fissura. Quando a mãe dela morreu, foi o Mário quem tratou de tudo, sem que ela tivesse de pedir nada. Para ele, amizade e lealdade não eram palavras para dizer, eram coisas para fazer, todos os dias. Conheciam as sombras um do outro, as fraquezas e as forças, e desse conhecimento tinham feito uma aliança. Com ele, nunca tinha tido medo de nada. Muitos admiravam-nos como casal. Mas e a sensualidade? Onde fica a volúpia? Onde ficam os prazeres dos corpos? Onde ficam as provocações da língua a deslizar coxa acima até aos lábios?</p>
+
+        <p>Ali, sentada à janela enquanto as pessoas passavam na rua nas suas tarefas diárias alheias aos seus sentimentos e dilemas, Sofia suspirava.</p>
+
+        <p>O telefone tocou. Era ele. Antes de atender deixou-se ficar meros segundos a olhar o ecrã onde aparecia o seu nome a chamar por ela. Sentiu um calor no peito. Sorriu, ao mesmo tempo que sentia um calafrio percorrer-lhe o corpo.</p>
+
+        <p>Atendeu e toda a sua postura mudou. Em vez de olhar a rua, olhava o céu. No lugar de se questionar, afirmou. E no vácuo do prazer, colocou ar.</p>
+
+        <p>Combinaram encontrar-se no Hotel Pica Terrace antes de almoço para poderem petiscar juntos e darem uma volta durante a tarde.</p>
+
+        <p>O seu coração disparou de alegria. Levantou-se, deixou a janela para trás e foi buscar a mala pequena de viagem. Tinha a promessa de um dia estimulante pela frente.</p>
+
+        <h2>Cena IV</h2>
+        <p>Teresa terminou o pastel com o café. Levantou-se e despediu-se do Sr. Alberto, que lhe sorria sempre com um aceno de avô. Teresa adorava aquele café. Não era tanto pelo café, que era tão aromático e de sabor único. Era o envolvimento desprendido do Sr. Alberto, sempre respeitador e com frases que a faziam pensar na vida com leveza e esperança.</p>
+
+        <p>Entrou no edifício em frente e preparou-se no vestiário com a farda limpa e devidamente engomada para mais um dia de trabalho. Aprumou o sorriso ao espelho e desviou o olhar para o crachá ao peito:</p>
+        <p style="text-align: center; font-weight: 600;">Teresa<br>Pica Terrace</p>
+
+        <p>Riu-se. Achava sempre piada sem perceber porquê.</p>
+
+        <p>Deslocou-se à receção para iniciar o turno. Reviu todos os assuntos pendentes e começou a preparar os check-ins do dia, assim como os check-outs esperados para essa manhã.</p>
+
+        <p>Nisto, chegou um casal com as suas pequenas malas de viagem. Teresa reconheceu-os com agrado: o casal da esplanada.</p>
+
+        <p><span class="dialogue">— Olá, muito bom dia. Em que vos posso ajudar?</span></p>
+
+        <p><span class="dialogue">— Bom dia, menina — respondeu ele, com um sorriso simpático. Abraçou a Sofia. — Queríamos fazer o check-out. — E entregou o cartão a Teresa.</span></p>
+
+        <p><span class="dialogue">— Muito bem… — disse Teresa pegando no cartão. — Tiveram uma estada agradável?</span></p>
+
+        <p>Ele olhou para a Sofia, que sorria abertamente, beijaram-se com a ternura de adolescentes, e antes que ele respondesse, a Sofia estendeu a mão à de Teresa e disse:</p>
+
+        <p><span class="dialogue">— Foi... extraordinariamente satisfatório, menina Teresa — apertando-lhe a mão delicadamente e piscando-lhe o olho.</span></p>
+
+        <p>Ele fez um ar envergonhado sem esconder o bem que isso lhe fazia ao ego.</p>
+
+        <p>Teresa desviou o olhar atrapalhadamente sem esconder um sorriso de satisfação e um leve rubor na face.</p>
+
+        <p>Entregou-lhes a documentação do check-out e desejou-lhes a continuação de um dia maravilhoso e o desejo de os voltar a ver.</p>
+
+        <p>Eles despediram-se com amabilidade e saíram abraçados. </p>
+
+        <p>Teresa suspirou enquanto eles saíam, hipnotizada pelas fantasias românticas que se desenhavam na sua imaginação e a questionar-se sobre qual seria o segredo para aquela intensa paixão ao fim de tantas décadas. Gostava de contrastes. Daquele, não fazia ideia.</p>
+
+        <h2>Cena V</h2>
+        <p>Sofia parou passados uns metros. Olhou para ele, ainda abraçados, e beijou-o na face. Deram um longo abraço com muito amor. Os dois corpos a sentirem a respiração um do outro em sintonia. Sem apertos. Sem espaço. Como um só. Totalmente presentes.</p>
+
+        <p>Desataram o abraço.</p>
+
+        <p>Sofia olhou-o profundamente.</p>
+
+        <p><span class="dialogue">— Vais à unidade?</span></p>
+
+        <p><span class="dialogue">— Vou. Vou continuar a ler-lhe A Geometria do Silêncio — respondeu, e desenhou um sorriso nostálgico nos lábios. — Ela adorava romances. Os médicos dizem que ela não ouve. — Encolheu os ombros. — Eu leio na mesma.</span></p>
+
+        <p>Sofia fez-lhe uma festa na face.</p>
+
+        <p><span class="dialogue">— Eu sei — disse-lhe com afeto. — Admiro essa tua dedicação ao fim de tantos anos. E os teus filhos?</span></p>
+
+        <p><span class="dialogue">— Continuam à espera…</span></p>
+
+        <p>João fechou os olhos e apertou os lábios.</p>
+
+        <p><span class="dialogue">— Desculpa, Sofia. Não sei explicar isto e…</span></p>
+
+        <p><span class="dialogue">— Não te justifiques, João. Não precisas.</span></p>
+
+        <p>Sofia abraçou-o demoradamente com ternura. Afastaram-se sem se largarem.</p>
+
+        <p><span class="dialogue">— E o Mário? — perguntou João.</span></p>
+
+        <p>Sofia respirou fundo.</p>
+
+        <p><span class="dialogue">— Acho que vou ter de lhe dizer.</span></p>
+
+        <p>O João abraçou a Sofia como quem quer fugir da realidade.</p>
+
+        <p><span class="dialogue">— Não te posso prometer nada, Sofia.</span></p>
+
+        <p><span class="dialogue">— Eu sei, João. E conhecemo-nos há tão pouco tempo… também, não te posso prom…</span></p>
+
+        <p><span class="dialogue">— Mas prometo-te ser verdadeiro — interrompeu João.</span></p>
+
+        <p>Os dois ficaram ali, parados, naquele passeio a cem metros do hotel onde a cama ainda guardava os cheiros dos seus corpos juntos.</p>
+
+        <p><span class="dialogue">— Eu amo-te — disse ele. — E todos os dias que te amar, vou-te dizer que te amo. E quando não te puder dizer, envio-te um “A” por mensagem.</span></p>
+
+        <p>Sofia olhou aquele homem dividido entre um amor que já não podia viver e outro que cabia numa noite de hotel. Sorriu, ao mesmo tempo que sentia um medo atroz de dar um salto no escuro.</p>
+
+        <p><span class="dialogue">— Eu amo-te, João. E prometo ser-te verdadeira.</span></p>
+
+        <p>O TVDE de Sofia chegou primeiro. Ela entrou e, antes de fechar a porta, parou a olhar para o João de pé com aquela expressão de amor e saudade antecipada, a segurar a porta com aquela pequena mala de viagem ao seu lado. Ambos a guardarem na memória a imagem um do outro.</p>
+
+        <p><span class="dialogue">— Combinamos outro dia — disse Sofia.</span></p>
+
+        <p><span class="dialogue">— Combinamos outro dia — respondeu João.</span></p>
+
+        <a href="../../livros.html" class="back-link">← Voltar a Livros & Ensaios</a>
+    </article>
+
+</body>
+</html>
