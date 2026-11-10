@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentes falta de amar ou de seres precisa?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* --- CONFIGURAÇÕES GERAIS (PALETA) --- */
+        :root {
+            --cor-fundo: #FCF9F9;
+            --cor-texto: #4A3F41;
+            --cor-texto-claro: #736567;
+            --cor-destaque: #A36D75;
+            --cor-destaque-hover: #86535B;
+            --fonte-titulos: 'Playfair Display', serif;
+            --fonte-texto: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--fonte-texto);
+            line-height: 1.6;
+            color: var(--cor-texto);
+            background-color: var(--cor-fundo);
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+        }
+
+        /* --- HEADER --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(252, 249, 249, 0.95);
+            border-bottom: 1px solid rgba(163, 109, 117, 0.15);
+            z-index: 100;
+            box-sizing: border-box;
+            backdrop-filter: blur(5px);
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--cor-destaque);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-family: var(--fonte-texto);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--cor-texto);
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--cor-destaque);
+        }
+
+        .btn-solid {
+            background-color: var(--cor-destaque);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 2px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+        
+        .btn-solid:hover {
+            background-color: var(--cor-destaque-hover);
+            color: #fff;
+        }
+
+        /* --- ESTRUTURA DO ENSAIO --- */
+        article {
+            background: white;
+            padding: 40px 60px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        h1 {
+            font-family: var(--fonte-titulos);
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 40px auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        p {
+            margin-bottom: 24px;
+            text-align: justify;
+            font-size: 1.1em;
+            text-indent: 1.5em;
+            color: var(--cor-texto-claro);
+        }
+        
+        p:has(> span.dialogue) {
+            text-indent: 0;
+            padding-left: 1.5em;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            font-family: var(--fonte-texto);
+            text-decoration: none;
+            color: var(--cor-destaque);
+            font-size: 0.9em;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--cor-destaque-hover);
+        }
+
+        /* --- RESPONSIVIDADE --- */
+        @media (max-width: 600px) {
+            header {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+            body {
+                padding-top: 140px;
+            }
+            article {
+                padding: 30px 20px;
+                margin: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                text-indent: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <a href="../../livros.html" class="logo">AESTUS NÓMADA EDIÇÕES</a>
+        
+        <nav style="display: flex; align-items: center; gap: 15px;">
+            <a href="../../../index.html" style="font-size: 0.9rem; font-weight: normal;">Voltar ao Catering</a>
+            <a href="../../livros.html" style="font-size: 0.9rem; font-weight: 600;">Livros & Ensaios</a>
+            <a href="../../livros/OLdE/livro_OLdE_AGdS.html#comprar" class="btn-solid" style="margin: 0;">Comprar Livro</a>
+        </nav>
+    </header>
+
+    <article>
+        <h1>Sentes falta de amar<br>ou de seres precisa?</h1>
+
+        <img src="imagens/sentes_falta_de_amar_ou.jpg" alt="Duas mulheres conversam intimamente sentadas em almofadas baixas" class="featured-image">
+
+        <p>O círculo tinha-se desfeito há meia hora. Os outros tinham ido para o refeitório, e o salão de madeira cheirava a lenha e a chá de cidreira esquecido nas canecas. Maria ficou sentada na almofada, de joelhos puxados contra o peito.</p>
+        
+        <p>Laura não lhe perguntou se estava bem. Arrastou a sua almofada para perto, sentou-se de lado e esperou.</p>
+        
+        <p><span class="dialogue">— Sinto falta de amar — disse Maria, por fim. Não olhou para ela. Olhou para a janela, onde os sobreiros começavam a perder a luz. — Sinto falta de pôr este amor no cuidado de alguém. No conforto de alguém. Dos pequenos toques, sabes? Dos gestos que são porto de abrigo. Dos olhares cúmplices. Das conversas sobre nada. — Engoliu em seco. — E sinto falta de ser amada. Estar sozinha não me chega.</span></p>
+        
+        <p>Disse a última frase depressa, como quem confessa um defeito.</p>
+        
+        <p>Laura deixou o silêncio assentar. Lá fora, um cão ladrou duas vezes e calou-se.</p>
+        
+        <p><span class="dialogue">— Disseste isso como se pedisses desculpa.</span></p>
+        
+        <p><span class="dialogue">— E não devia?</span></p>
+        
+        <p><span class="dialogue">— Não. — Laura inclinou a cabeça. — Não fomos feitas para nos acalmarmos sozinhas a vida inteira, Maria. O corpo sabe isso antes de nós. Precisa de outro corpo por perto, de um olhar que lhe diga estás aqui, estás segura. Estar sozinha pode ser bom. Pode ser um sítio onde se descansa, onde se deixa de usar os outros como penso para as feridas. Mas não substitui isso. Ninguém se basta. Quem diz que sim está a mentir, ou ainda não percebeu.</span></p>
+        
+        <p>Maria soltou um riso curto, molhado.</p>
+        
+        <p><span class="dialogue">— Passei anos a achar que era isso que tinha de conseguir. Bastar-me.</span></p>
+        
+        <p><span class="dialogue">— Eu sei. — Laura sorriu. — O que estás a sentir não é falha. É saúde.</span></p>
+        
+        <p>Maria limpou os olhos à manga da camisola. Laura esperou que ela voltasse.</p>
+        
+        <p><span class="dialogue">— Posso fazer-te uma pergunta desconfortável?</span></p>
+        
+        <p>Maria assentiu.</p>
+        
+        <p><span class="dialogue">— Disseste “pôr este amor no cuidado de alguém”. Ouvi a beleza disso. Mas também ouvi outra coisa. — Laura falou devagar, sem pressa de chegar. — A Sofia vai-se embora. O Pedro não tarda. Durante dezoito anos houve sempre alguém de quem cuidar. E agora…</span></p>
+        
+        <p>Maria fechou os olhos.</p>
+        
+        <p><span class="dialogue">— Sentes falta de amar — continuou Laura, baixinho — ou sentes falta de seres precisa?</span></p>
+        
+        <p>A pergunta ficou entre as duas como uma pedra pousada numa mesa.</p>
+        
+        <p><span class="dialogue">— Não sei — disse Maria, por fim. — Das duas coisas. — Pausa. — Não as sei separar.</span></p>
+        
+        <p><span class="dialogue">— Quase ninguém sabe. Sobretudo as mães. — Laura puxou também os joelhos, ficando à altura dela. — Não estou a dizer que o teu amor é falso. Estou a dizer que talvez o desafio não seja encontrar alguém de quem cuidar. Isso tu fazes de olhos fechados. Talvez seja encontrar alguém com quem possas não servir para nada. Estar quieta. Cansada. Inútil. E ser amada na mesma.</span></p>
+        
+        <p>Maria olhou para ela pela primeira vez.</p>
+        
+        <p><span class="dialogue">— Isso assusta-me mais.</span></p>
+        
+        <p><span class="dialogue">— Pois. — Laura sorriu. — Normalmente é sinal de que é por aí.</span></p>
+        
+        <p>O sino do refeitório tocou ao longe. Nenhuma das duas se mexeu.</p>
+        
+        <p><span class="dialogue">— Falaste das conversas sobre nada — disse Laura. — Dos olhares cúmplices.</span></p>
+        
+        <p><span class="dialogue">— Parece tão pouco, dito assim.</span></p>
+        
+        <p><span class="dialogue">— Não é pouco. É quase tudo. O amor não vive nas grandes declarações. Vive no café que alguém te faz sem perguntar como gostas, porque já sabe. No olhar de esguelha num jantar, quando alguém diz uma parvoíce e só vocês os dois percebem. Na mão que te passa pelo ombro no corredor. — Fez uma pausa. — Tu já tiveste isso.</span></p>
+        
+        <p><span class="dialogue">— Tive. — A voz falhou-lhe. — Eu e o Tobias tínhamos voltado a ter isso. Há poucas semanas. — Fez um silêncio e escondeu o olhar nas mãos. — E com a Bárbara. Mas não posso…</span></p>
+        
+        <p>Não acabou a frase.</p>
+        
+        <p>Laura não pestanejou ao ouvir o segundo nome. Esperou.</p>
+        
+        <p><span class="dialogue">— Dói-me tanto ficar sem eles.</span></p>
+        
+        <p><span class="dialogue">— Então o que sentes também é luto. Não só dele, e dela. Do “nós”. Daquele corredor. É legítimo chorá-lo, mesmo que a decisão de o deixar seja tua.</span></p>
+        
+        <p>Maria chorou, então, sem se esconder. Laura não lhe tocou logo. Deixou o choro ter espaço, e só depois pousou a mão nas costas dela, aberta e quieta, sem a afagar.</p>
+        
+        <p>Quando o choro amainou, Laura falou ainda mais baixo.</p>
+        
+        <p><span class="dialogue">— Queria pedir-te uma coisa. Não transformes isto numa emergência.</span></p>
+        
+        <p><span class="dialogue">— Como assim?</span></p>
+        
+        <p><span class="dialogue">— Quando dói assim, a vontade é tapar o buraco depressa. Com alguém, com trabalho, com o que estiver à mão. Não corras. Este vazio não te está a pedir que o mobiles já. Está só a apontar para aquilo de que precisas. É um farol, não uma sentença.</span></p>
+        
+        <p>Maria respirou fundo, devagar. O peito doía-lhe, mas de outra maneira.</p>
+        
+        <p><span class="dialogue">— E entretanto?</span></p>
+        
+        <p><span class="dialogue">— Entretanto, ficas com ela. Com essa parte de ti que só queria uma cabeça no ombro enquanto vê televisão. E dizes-lhe: eu sei. Eu também sinto falta. É duro. Mas nós aguentamos este silêncio.</span></p>
+        
+        <p>Maria riu-se no meio das lágrimas.</p>
+        
+        <p><span class="dialogue">— Pareces a minha avó.</span></p>
+        
+        <p><span class="dialogue">— A tua avó era uma mulher sensata. — Laura tirou a mão das costas dela. — Tiraste a armadura, Maria. O ar frio na pele dói, claro que dói. Mas é sinal de que estás pronta para um amor a sério. Não para uma fuga.</span></p>
+        
+        <p>Ficaram caladas. A luz lá fora tinha passado de laranja a cinzento, e o salão começava a arrefecer.</p>
+        
+        <p><span class="dialogue">— Como é que o teu corpo está a receber isto? — perguntou Laura. — Ouvir que o que sentes não é um defeito?</span></p>
+        
+        <p>Maria pensou antes de responder. Pousou a mão no esterno, como quem procura o sítio exato.</p>
+        
+        <p><span class="dialogue">— Mais leve — disse. — E com medo.</span></p>
+        
+        <p><span class="dialogue">— As duas coisas cabem — disse Laura, levantando-se. — Anda jantar.</span></p>
+
+        <a href="../../livros.html" class="back-link">← Voltar a Livros & Ensaios</a>
+    </article>
+
+</body>
+</html>
