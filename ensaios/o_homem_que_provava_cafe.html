@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Homem que Provava Café</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* --- CONFIGURAÇÕES GERAIS (PALETA) --- */
+        :root {
+            --cor-fundo: #FCF9F9;
+            --cor-texto: #4A3F41;
+            --cor-texto-claro: #736567;
+            --cor-destaque: #A36D75;
+            --cor-destaque-hover: #86535B;
+            --fonte-titulos: 'Playfair Display', serif;
+            --fonte-texto: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--fonte-texto);
+            line-height: 1.6;
+            color: var(--cor-texto);
+            background-color: var(--cor-fundo);
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+        }
+
+        /* --- HEADER --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(252, 249, 249, 0.95);
+            border-bottom: 1px solid rgba(163, 109, 117, 0.15);
+            z-index: 100;
+            box-sizing: border-box;
+            backdrop-filter: blur(5px);
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--cor-destaque);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-family: var(--fonte-texto);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--cor-texto);
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--cor-destaque);
+        }
+
+        .btn-solid {
+            background-color: var(--cor-destaque);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 2px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+        
+        .btn-solid:hover {
+            background-color: var(--cor-destaque-hover);
+            color: #fff;
+        }
+
+        /* --- ESTRUTURA DO ENSAIO --- */
+        article {
+            background: white;
+            padding: 40px 60px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        h1 {
+            font-family: var(--fonte-titulos);
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-family: var(--fonte-titulos);
+            font-size: 1.2em;
+            text-align: center;
+            color: var(--cor-destaque);
+            margin-top: -20px;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 40px auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        p {
+            margin-bottom: 24px;
+            text-align: justify;
+            font-size: 1.1em;
+            text-indent: 1.5em;
+            color: var(--cor-texto-claro);
+        }
+        
+        p:has(> span.dialogue) {
+            text-indent: 0;
+            padding-left: 1.5em;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            font-family: var(--fonte-texto);
+            text-decoration: none;
+            color: var(--cor-destaque);
+            font-size: 0.9em;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--cor-destaque-hover);
+        }
+
+        /* --- RESPONSIVIDADE --- */
+        @media (max-width: 600px) {
+            header {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+            body {
+                padding-top: 140px;
+            }
+            article {
+                padding: 30px 20px;
+                margin: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                text-indent: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <a href="../../livros.html" class="logo">AESTUS NÓMADA EDIÇÕES</a>
+        
+        <nav style="display: flex; align-items: center; gap: 15px;">
+            <a href="../../../index.html" style="font-size: 0.9rem; font-weight: normal;">Voltar ao Catering</a>
+            <a href="../../livros.html" style="font-size: 0.9rem; font-weight: 600;">Livros & Ensaios</a>
+            <a href="../../livros/OLdE/livro_OLdE_AGdS.html#comprar" class="btn-solid" style="margin: 0;">Comprar Livro</a>
+        </nav>
+    </header>
+
+    <article>
+        <h1>O Homem que Provava Café</h1>
+        <div class="subtitle">e Não Abria a Carta</div>
+
+        <img src="imagens/o_homem_que_provava_cafe.jpg" alt="Café gelado num copo de vidro e um jarro de café de filtro sobre uma mesa de mármore" class="featured-image">
+
+        <p>O café chegou aromático, como era costume.</p>
+        
+        <p>Há um ritual associado à sua toma.</p>
+        
+        <p>Primeiro cheiro profundamente, para sentir os aromas delicados daquela fermentação e torras de especialidade. Esta inspiração repete-se normalmente uma ou duas vezes, conforme os aromas identificados e a pressa de sentir aquele líquido de cor castanho-rubi a ativar as papilas gustativas.</p>
+        
+        <p>Depois, uma inspiração mais curta, como se quisesse apenas validar as primeiras. É desnecessária, mas os aromas costumam ser tão ricos que só se tem a ganhar.</p>
+        
+        <p>Por fim, um pequeno gole. Lento. Demorado na boca. E deixo finalmente escorrer.</p>
+        
+        <p>Os goles seguintes são normalmente menos cuidados, mas por vezes continua a surgir uma inspiração antes de um e outro gole. Sabe mesmo bem inspirar estes cafés perfumados com notas de chocolate, jasmim ou citrinos, ou outros aromas tão leves e subtis.</p>
+        
+        <p>Mantenho sempre este ritual associado a esta deliciosa toma de café, que gosto tanto de executar.</p>
+        
+        <p>Naquele dia, estava eu a deliciar-me com um novo lote. Peguei novamente naquela caneca de café, filtrado com mestria, e preparei-me para mais um gole. Aproximei a caneca dos lábios já a sentir os primeiros aromas.</p>
+        
+        <p><span class="dialogue">— Delicioso! — disse baixinho para ninguém me ouvir.</span></p>
+        
+        <p>Quando os lábios se encontravam a escassos milímetros daquele santo Graal, eis que oiço um comentário.</p>
+        
+        <p><span class="dialogue">— Horrível! — exclamou um cliente na esplanada a plenos pulmões, com um envelope na mão.</span></p>
+        
+        <p>Horrível?, pensei. O que é tão horrível que todo o bairro tem de ouvir?</p>
+        
+        <p>Não bebi o santo gole. Pousei a caneca na mesa, com vagar, e olhei lá para fora. Era um homem de uns quarenta anos, acabado de se levantar da cadeira, a olhar para dentro do café como quem pede justificações.</p>
+        
+        <p>As pessoas olharam. O staff olhou. Mas ninguém percebeu ao certo ao que aquele homem se referia.</p>
+        
+        <p>Ele entrou no café e dirigiu-se ao balcão, determinado.</p>
+        
+        <p><span class="dialogue">— Isto está horrível, menina! — disse agora num tom mais baixo.</span></p>
+        
+        <p><span class="dialogue">— O café? — perguntou ela.</span></p>
+        
+        <p><span class="dialogue">— Sim, que mais havia de ser?</span></p>
+        
+        <p>Ela não pediu desculpa, mas com o seu ar empático e paciente começou a perguntar-lhe o que sentira, ao certo.</p>
+        
+        <p><span class="dialogue">— Está horrível. Só isso.</span></p>
+        
+        <p><span class="dialogue">— Está bem… — respondeu ela pensativamente.</span></p>
+        
+        <p>Olhou para o cliente e fez-lhe sinal para aguardar, apontando para o banco ao balcão. Ele sentou-se, na expectativa, e colocou o envelope que tinha na mão em cima do balcão. O movimento no café estava lento àquela hora do dia.</p>
+        
+        <p>A barista moeu uma nova dose de café, do mesmo lote, e filtrou-o com a mesma mestria de sempre. Serviu em duas pequenas taças, enquanto o homem observava curioso. Serviu uma para o cliente e outra para ela, para beberem os dois ao mesmo tempo. Ela cheirou primeiro e ele, ao observá-la, quase cuspiu o seu primeiro gole para a taça para cheirar também.</p>
+        
+        <p><span class="dialogue">— Não nota? Está horrível.</span></p>
+        
+        <p>Voltou a cheirar, analisou os aromas, bebeu um novo gole e saboreou com a atenção de uma provadora experiente.</p>
+        
+        <p><span class="dialogue">— A mim sabe-me exatamente ao que deve saber: um bom café bem fermentado e de torra leve. Tem notas de jasmim, lavanda e… flor de laranjeira, parece-me. Foi bem filtrado, na temperatura certa — e sorriu, com algum orgulho — para manter os aromas, e tem o corpo que deve ter, típico deste lote de café.</span></p>
+        
+        <p>O homem olhou-a desconfiado. Depois olhou para o envelope em cima do balcão.</p>
+        
+        <p><span class="dialogue">— O que estava à espera de sentir? — perguntou ela.</span></p>
+        
+        <p><span class="dialogue">— Bem… na verdade… não sei bem, mas que fosse… saboroso?</span></p>
+        
+        <p>Ela semicerrou os olhos e franziu a testa.</p>
+        
+        <p><span class="dialogue">— Não sabe…</span></p>
+        
+        <p><span class="dialogue">— Não. Nunca bebi café antes — admitiu finalmente o homem.</span></p>
+        
+        <p>Ela arregalou os olhos. Ficou uns segundos em silêncio.</p>
+        
+        <p>E eu observava curioso toda a cena a partir do meu lugar mesmo em frente a eles, sem voltar a pegar no meu café. Toda a linguagem não verbal de cada um. As frases. O ar perdido e confuso daquele homem que contrastava com a confiança serena que ela emanava, e que fez com que ele se rendesse pouco a pouco à prova daquela barista.</p>
+        
+        <p><span class="dialogue">— Ok… vamos por partes, então… — disse ela. — Quer fazer uma degustação de cafés?</span></p>
+        
+        <p>O homem assentiu, claramente a medo.</p>
+        
+        <p>Ajeitou o envelope cuidadosamente, colocando-o perfeitamente alinhado com o bordo do balcão de carvalho.</p>
+        
+        <p>O que se seguiu foi uma conversa sobre café, as diferentes origens, fermentações e torras, além das formas distintas de os extrair. Provaram algumas extrações diferentes e o homem foi-se habituando aos aromas e aos sabores.</p>
+        
+        <p><span class="dialogue">— Isto sabe a… chocolate? — perguntou ele, desconfiado, como quem acha que o estão a enganar.</span></p>
+        
+        <p>As provas foram continuando com a barista a perguntar pelas sensações do cliente. Ele acertava numas e falhava noutras, o que era expectável em alguém pouco treinado para aquelas subtilezas. E a cada descoberta, olhava para aquele envelope, com o sorriso de uma criança que descobre uma nova faculdade.</p>
+        
+        <p>E eu ia ouvindo cada detalhe, deliciado, tentado a sentar-me ao lado daquele homem cada vez mais direito e atento, para provar também aqueles cafés. Na verdade, já os tinha provado quase todos, mas era diferente com as explicações de quem sabe.</p>
+        
+        <p>Por fim, o homem perguntou:</p>
+        
+        <p><span class="dialogue">— E isto não se pode tomar com açúcar?</span></p>
+        
+        <p>Ela riu-se e disse que sim, embora já se tratasse de uma transformação de café noutra coisa qualquer.</p>
+        
+        <p><span class="dialogue">— Uma sobremesa, talvez? — desafiou ela.</span></p>
+        
+        <p>Então começou a falar dos affogatos e de outras tantas misturas, incluindo alcoólicas. Não faltavam opções doces, e não experimentaram nenhuma. Toda esta introdução ficou-se apenas pela teoria.</p>
+        
+        <p>No fim, pagou a conta, agradeceu e foi embora.</p>
+        
+        <p>Nos dias seguintes notei que estava na esplanada a beber café. A cada vez que o via estava focado naquele líquido ora quente, ora gelado quando se tratava de uma cold brew, flash brew ou americano numa versão com gelo.</p>
+        
+        <p>Lá dentro, meti conversa com a barista como era costume, antes de me sentar numa das mesas para apreciar o café enquanto trabalhava. E perguntei sobre o homem lá fora. Ela explicou-me que o homem se tinha dedicado a experimentar os diferentes tipos de café e extrações, e que com o passar do tempo, fazia menos caretas. No final, agradecia sempre.</p>
+        
+        <p>Um dia, estava eu sentado na minha cadeira a degustar o meu café e de portátil aberto, vejo-o chegar ao balcão e sentar-se num banco alto. Pediu um café apontando para o lote que queria e dizendo apenas: «V60.»</p>
+        
+        <p>Aguardou como de costume, que uma boa filtragem leva o seu tempo. Durante esse tempo, tirou o envelope do bolso do casaco, e percorreu com o seu olhar por todos os cantos. Tinha um logótipo no canto superior esquerdo. Parecia oficial. Colocou o envelope em cima do balcão e ficou a olhar para ele enquanto aguardava pelo café.</p>
+        
+        <p>O V60 chegou. O envelope permaneceu.</p>
+        
+        <p>Quando pegou na caneca, observei-o a levantá-la à altura dos lábios, mas sem lhe tocar.</p>
+        
+        <p>Inspirou fundo enquanto fechava os olhos.</p>
+        
+        <p>Expirou.</p>
+        
+        <p>Abriu os olhos.</p>
+        
+        <p>Voltou a inspirar de olhos fechados.</p>
+        
+        <p>Guardou o ar uns dois ou três segundos.</p>
+        
+        <p>Expirou.</p>
+        
+        <p>Inspirou ligeiramente e bebeu um gole.</p>
+        
+        <p>Deixou os aromas e os sabores assentarem com tranquilidade.</p>
+        
+        <p>Não disse nada.</p>
+        
+        <p>Bebeu mais um gole e pousou a caneca.</p>
+        
+        <p><span class="dialogue">— Delicioso — comentou o homem com a barista.</span></p>
+        
+        <p>Ela agradeceu.</p>
+        
+        <p><span class="dialogue">— Agora já entendo esta mania toda à volta do café.</span></p>
+        
+        <p>Enquanto bebia, olhava de vez em quando para o envelope, sem lhe tocar.</p>
+        
+        <p>Quando terminou, o que levou uns bons dez minutos, guardou o envelope no bolso do casaco, levantou-se para se dirigir à caixa, pagou, agradeceu pelo café, e foi-se embora.</p>
+        
+        <p>Passaram-se algumas semanas e aquele homem parecia cada vez mais calmo e em sintonia com os seus cafés. E à sua frente, o mesmo envelope.</p>
+        
+        <p>Por curiosidade, perguntei à barista se sabia do que se tratava. Ela disse-me que tinha sentido a mesma curiosidade, por ser tão estranho estar com um envelope igual, fechado, sempre que bebia café. Tirava-o do bolso, olhava-o de todos os lados, e pousava-o ao lado do seu café. Por vezes parecia colocá-lo contra a luz como se quisesse ver o seu interior sem o abrir.</p>
+        
+        <p><span class="dialogue">— Um dia perguntei-lhe — contou-me. — Disse-lhe que a forma mais fácil de saber o que lá estava era abri-lo. Ficou apavorado. O olhar ia do envelope para mim, de mim para o envelope. «É só um envelope», disse eu. Senti-me intrusiva e pedi desculpa. Ele não disse nada. Acabou o café, pagou e agradeceu, como sempre.</span></p>
+        
+        <p>No dia seguinte optei por ficar no balcão. Estava sem vontade de trabalhar e aproveitei para ficar um pouco na conversa. Eis que chega o homem e se senta também ao balcão, a menos de dois metros de mim.</p>
+        
+        <p>Pediu o seu café.</p>
+        
+        <p>Pegou no envelope, olhou-o a toda a volta com ar meditativo.</p>
+        
+        <p>Deixou-o pousado no balcão.</p>
+        
+        <p>Não pude deixar passar a oportunidade.</p>
+        
+        <p><span class="dialogue">— Desculpe, bom dia — disse-lhe eu.</span></p>
+        
+        <p><span class="dialogue">— Hummm? Ah, bom dia. Desculpe, estava distraído.</span></p>
+        
+        <p><span class="dialogue">— Que tal está o seu café?</span></p>
+        
+        <p><span class="dialogue">— Ótimo. Bastante aromático. Mas aprecio mais aquele ruandês que ali está naquele canto. Tem umas notas de laranja e frutos vermelhos, talvez um toque de jasmim — acrescentou com ar analítico — e um fim doce que demora a ir-se embora, como certas visitas de que tanto gostamos.</span></p>
+        
+        <p>Achei poético. Aquele homem, que três semanas antes gritava «horrível» na esplanada, provava agora melhor do que eu. Nunca me tinha ocorrido comparar um final de prova a uma visita.</p>
+        
+        <p><span class="dialogue">— Tenho-o observado desde o primeiro dia, quando exclamou lá fora que o café era horrível.</span></p>
+        
+        <p><span class="dialogue">— Aha… sim. Peço desculpa. Era ignorância minha. Talvez tenha exagerado.</span></p>
+        
+        <p><span class="dialogue">— De todo… achei engraçado, na verdade. E tenho apreciado bastante a abertura que demonstrou e a coragem de experimentar algo novo com o empenho com que o fez.</span></p>
+        
+        <p>O homem fez um ar acanhado, onde se notou uma ligeira vermelhidão na face.</p>
+        
+        <p><span class="dialogue">— Mas… correndo o risco de ser inadequado… — fiz uma pausa como que a pedir licença para prosseguir.</span></p>
+        
+        <p><span class="dialogue">— Diga, diga.</span></p>
+        
+        <p><span class="dialogue">— Tenho reparado que tem sempre esse envelope fechado ao seu lado, e nunca o abre. Observa-o com atenção, e leva-o sempre consigo no bolso. Qual o motivo desse ritual que observo desde há três semanas?</span></p>
+        
+        <p>O homem baixou os olhos na direção do envelope, que se encontrava ao lado do seu café. A sua expressão mudou como se tivesse ganho um peso difícil de aguentar.</p>
+        
+        <p><span class="dialogue">— Peço desculpa. Deixe estar, eu… — disse eu fazendo um sinal com a mão para o homem deixar ir a minha pergunta.</span></p>
+        
+        <p><span class="dialogue">— Este envelope pode mudar a minha vida para sempre — interrompeu o homem focando o seu olhar no meu.</span></p>
+        
+        <p>A gravidade da sua voz surpreendeu-me. Devia ser algo mesmo muito importante. Não comentei. Fiquei apenas calado, a olhar para ele.</p>
+        
+        <p>Ele pegou no envelope, delicadamente como se fosse uma peça muito frágil, levantando-o ao nível dos olhos.</p>
+        
+        <p><span class="dialogue">— Este envelope pode mudar a minha vida por completo — reforçou, olhando agora para o envelope como se fosse algo mágico. — Para melhor, ou para pior. E eu não sei.</span></p>
+        
+        <p><span class="dialogue">— Então… — disse eu enquanto ainda avaliava o sentir daquele homem misterioso —, enquanto não o abrir, tudo permanece igual? Nada muda?</span></p>
+        
+        <p><span class="dialogue">— Pois.</span></p>
+        
+        <p>O homem ficou calado. Acabou o seu café e dirigiu-se à caixa. Pagou. Agradeceu. Ao ir-se embora passou por mim. Parou.</p>
+        
+        <p><span class="dialogue">— E mudar é bom? — perguntou-me ele.</span></p>
+        
+        <p><span class="dialogue">— E ficar no mesmo sítio? — devolvi-lhe a pergunta.</span></p>
+        
+        <p>O homem acenou com a cabeça e saiu.</p>
+        
+        <p>No dia seguinte lá estava ele na esplanada, a degustar o seu café com o envelope ao seu lado e a contemplar o céu. Cumprimentei-o de longe. Ele viu-me e cumprimentou-me de volta com um aceno de mão e um sorriso simpático. Eu sentei-me lá dentro, a cumprir os meus rituais.</p>
+        
+        <p>Passados uns minutos ele entrou com o seu envelope na mão. Desta vez não o guardou no bolso do casaco. Pagou a conta e agradeceu pelo café. Antes de sair, virou-se para a sala, e agradeceu a toda a gente. Saiu.</p>
+        
+        <p>Aquele homem nunca mais apareceu no café, nem ninguém o viu na localidade.</p>
+        
+        <p>Dois meses depois, ao balcão, perguntei à barista:</p>
+        
+        <p><span class="dialogue">— Aquele homem… nunca chegámos a saber o nome dele, pois não?</span></p>
+        
+        <p><span class="dialogue">— Não. Nunca soube. E nunca mais o vi.</span></p>
+        
+        <p>Às vezes, quando o café chega e eu o cheiro duas vezes antes do primeiro gole, lembro-me dele. E do envelope. E pergunto-me se já terá provado o que estava lá dentro.</p>
+
+        <a href="../../livros.html" class="back-link">← Voltar a Livros & Ensaios</a>
+    </article>
+
+</body>
+</html>
