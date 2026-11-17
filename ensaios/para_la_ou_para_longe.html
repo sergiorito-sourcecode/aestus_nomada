@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para lá ou para longe?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* --- CONFIGURAÇÕES GERAIS (PALETA) --- */
+        :root {
+            --cor-fundo: #FCF9F9;
+            --cor-texto: #4A3F41;
+            --cor-texto-claro: #736567;
+            --cor-destaque: #A36D75;
+            --cor-destaque-hover: #86535B;
+            --fonte-titulos: 'Playfair Display', serif;
+            --fonte-texto: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--fonte-texto);
+            line-height: 1.6;
+            color: var(--cor-texto);
+            background-color: var(--cor-fundo);
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+        }
+
+        /* --- HEADER --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(252, 249, 249, 0.95);
+            border-bottom: 1px solid rgba(163, 109, 117, 0.15);
+            z-index: 100;
+            box-sizing: border-box;
+            backdrop-filter: blur(5px);
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--cor-destaque);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-family: var(--fonte-texto);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--cor-texto);
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--cor-destaque);
+        }
+
+        .btn-solid {
+            background-color: var(--cor-destaque);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 2px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+        
+        .btn-solid:hover {
+            background-color: var(--cor-destaque-hover);
+            color: #fff;
+        }
+
+        /* --- ESTRUTURA DO ENSAIO --- */
+        article {
+            background: white;
+            padding: 40px 60px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        h1 {
+            font-family: var(--fonte-titulos);
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 40px auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        p {
+            margin-bottom: 24px;
+            text-align: justify;
+            font-size: 1.1em;
+            text-indent: 1.5em;
+            color: var(--cor-texto-claro);
+        }
+        
+        p:has(> span.dialogue) {
+            text-indent: 0;
+            padding-left: 1.5em;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            font-family: var(--fonte-texto);
+            text-decoration: none;
+            color: var(--cor-destaque);
+            font-size: 0.9em;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--cor-destaque-hover);
+        }
+
+        /* --- RESPONSIVIDADE --- */
+        @media (max-width: 600px) {
+            header {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+            body {
+                padding-top: 140px;
+            }
+            article {
+                padding: 30px 20px;
+                margin: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                text-indent: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <a href="../../livros.html" class="logo">AESTUS NÓMADA EDIÇÕES</a>
+        
+        <nav style="display: flex; align-items: center; gap: 15px;">
+            <a href="../../../index.html" style="font-size: 0.9rem; font-weight: normal;">Voltar ao Catering</a>
+            <a href="../../livros.html" style="font-size: 0.9rem; font-weight: 600;">Livros & Ensaios</a>
+            <a href="../../livros/OLdE/livro_OLdE_AGdS.html#comprar" class="btn-solid" style="margin: 0;">Comprar Livro</a>
+        </nav>
+    </header>
+
+    <article>
+        <h1>Para lá ou para longe?</h1>
+
+        <img src="imagens/para_la_ou_para_longe.jpg" alt="Simão, desgastado pelo tempo, e Laura sentados num muro à noite" class="featured-image">
+
+        <p>Simão afastara-se do grupo depois do jantar. Estava sentado no muro baixo do tanque, de costas para as luzes da casa, a enrolar um cigarro que não acendia. Laura, a orientadora do retiro, veio pelo carreiro de terra sem lanterna, sentou-se no mesmo muro, a dois metros dele, e ficou a olhar para o mesmo escuro.</p>
+        
+        <p><span class="dialogue">— Não o acendes? — perguntou ela, ao fim de um tempo.</span></p>
+        
+        <p><span class="dialogue">— Estou a decidir. Na minha idade, cada cigarro é uma decisão de investimento.</span></p>
+        
+        <p>Laura sorriu e não disse nada. Um sapo qualquer começou a cantar no tanque e calou-se.</p>
+        
+        <p><span class="dialogue">— Tu percebes de pessoas — disse ele.</span></p>
+        
+        <p><span class="dialogue">— De algumas.</span></p>
+        
+        <p><span class="dialogue">— Como é que se chega a alguém que não nos quer por perto?</span></p>
+        
+        <p><span class="dialogue">— Alguém?</span></p>
+        
+        <p>Simão rodou o cigarro entre os dedos.</p>
+        
+        <p><span class="dialogue">— O meu filho.</span></p>
+        
+        <p>Laura esperou.</p>
+        
+        <p><span class="dialogue">— Soube que existia há uns meses. Tem quase quarenta anos. Fui a Creta no verão. Ele disse o que tinha a dizer e foi-se embora. — Pausa. — Tinha razão em quase tudo.</span></p>
+        
+        <p><span class="dialogue">— Quase?</span></p>
+        
+        <p><span class="dialogue">— Disse que eu tinha ido lá à procura de absolvição. Para poder morrer em paz.</span></p>
+        
+        <p><span class="dialogue">— E foste?</span></p>
+        
+        <p>Simão acendeu finalmente o cigarro. A chama mostrou-lhe a cara por um segundo e apagou-a outra vez.</p>
+        
+        <p><span class="dialogue">— É possível.</span></p>
+        
+        <p><span class="dialogue">— Então o que queres agora? Chegar a ele, ou que ele te absolva?</span></p>
+        
+        <p><span class="dialogue">— Faz diferença?</span></p>
+        
+        <p><span class="dialogue">— Diz-me tu.</span></p>
+        
+        <p>Ele não disse. Fumou. O fumo ficou parado no ar frio, sem vento que o levasse.</p>
+        
+        <p><span class="dialogue">— Ele tem mulher. E uma miúda, pequena. — A voz baixou meio tom. — Nem sei como se chamam.</span></p>
+        
+        <p><span class="dialogue">— Gostavas de saber?</span></p>
+        
+        <p><span class="dialogue">— Gostava de ter direito a saber.</span></p>
+        
+        <p>Laura deixou a frase assentar. Não a corrigiu.</p>
+        
+        <p><span class="dialogue">— E se tivesses esse direito, o que fazias com ele?</span></p>
+        
+        <p>Simão abriu a boca e voltou a fechá-la. Passou a mão pela cara, devagar, de cima para baixo, como quem limpa pó.</p>
+        
+        <p><span class="dialogue">— Não sei, Laura. Estou cansado.</span></p>
+        
+        <p><span class="dialogue">— Cansado de quê?</span></p>
+        
+        <p><span class="dialogue">— De recomeçar. Passei a vida a começar do zero noutro sítio. Era o meu único talento. — Soltou um riso curto, sem graça. — Agora chego ao zero e já não tenho com que começar.</span></p>
+        
+        <p>Ficaram calados. Ao longe, alguém riu-se no refeitório.</p>
+        
+        <p><span class="dialogue">— Vi coisas que pouca gente viu — continuou ele. — Montanhas onde o ar não chega para respirar. O fim do mundo, literalmente, com placa e tudo. A vida é espantosa. E ao mesmo tempo é uma merda. E eu não consigo pôr as duas coisas na mesma sala.</span></p>
+        
+        <p><span class="dialogue">— Tens de pôr?</span></p>
+        
+        <p>Simão olhou para ela pela primeira vez.</p>
+        
+        <p><span class="dialogue">— Parece que sim.</span></p>
+        
+        <p><span class="dialogue">— Parece a quem?</span></p>
+        
+        <p>Ele não respondeu. Voltou ao escuro.</p>
+        
+        <p><span class="dialogue">— O que te apetecia agora, se pudesses? — perguntou Laura.</span></p>
+        
+        <p><span class="dialogue">— Desaparecer. — Bateu a cinza no muro. — Uns tempos. Dormir uma semana inteira.</span></p>
+        
+        <p><span class="dialogue">— Desaparecer como?</span></p>
+        
+        <p>Simão virou a cabeça para ela. Demorou.</p>
+        
+        <p><span class="dialogue">— Não é isso que estás a pensar.</span></p>
+        
+        <p><span class="dialogue">— Não estou a pensar nada. Estou a perguntar.</span></p>
+        
+        <p>O cigarro ardeu-lhe entre os dedos sem que ele o levasse à boca.</p>
+        
+        <p><span class="dialogue">— Não é isso — disse por fim. — Já houve alturas em que era. Agora não.</span></p>
+        
+        <p><span class="dialogue">— Está bem. — Laura não desviou o olhar. — Se passar a ser, dizes-me.</span></p>
+        
+        <p><span class="dialogue">— Digo.</span></p>
+        
+        <p>Ela assentiu, uma vez, e só então voltou a olhar para o tanque.</p>
+        
+        <p><span class="dialogue">— Já desapareci tantas vezes que devia ter diploma — disse Simão.</span></p>
+        
+        <p><span class="dialogue">— E resultou?</span></p>
+        
+        <p><span class="dialogue">— Funcionava. Durante uns tempos.</span></p>
+        
+        <p><span class="dialogue">— E depois?</span></p>
+        
+        <p>Ele pensou.</p>
+        
+        <p><span class="dialogue">— Depois chegava eu também.</span></p>
+        
+        <p>Laura sorriu, mas não era um sorriso de troça.</p>
+        
+        <p><span class="dialogue">— O meu erro — disse Simão — foi achar que tinha nascido para lobo solitário.</span></p>
+        
+        <p><span class="dialogue">— Quantos anos de experiência?</span></p>
+        
+        <p><span class="dialogue">— Quarenta. Mais.</span></p>
+        
+        <p><span class="dialogue">— E o resultado?</span></p>
+        
+        <p>Simão riu-se, desta vez a sério, um riso rouco que acabou em tosse.</p>
+        
+        <p><span class="dialogue">— Estás a olhar para ele.</span></p>
+        
+        <p>O sapo voltou a cantar. Simão esmagou o cigarro no muro e guardou a beata no bolso do casaco, com o cuidado de quem não deixa rasto.</p>
+        
+        <p><span class="dialogue">— Podia ficar aqui uns dias — disse ele, mais para si do que para ela. — Sem resolver nada. Fazer o que me apetecer, quando me apetecer. Já vivi assim.</span></p>
+        
+        <p><span class="dialogue">— E como foi?</span></p>
+        
+        <p><span class="dialogue">— Livre. — Pausa. — E morto. — Esfregou as mãos uma na outra. — Conheci um homem, na Índia, que guardava o pó da montanha em potes. Arrumadinhos, com etiqueta. Passei a vida a fazer o mesmo. A guardar tudo e a não mexer em nada.</span></p>
+        
+        <p>Laura não disse nada.</p>
+        
+        <p><span class="dialogue">— Não quero parar — disse Simão. — Preciso de fazer alguma coisa. Preciso de sentir que isto ainda mexe.</span></p>
+        
+        <p><span class="dialogue">— Fazer o quê?</span></p>
+        
+        <p><span class="dialogue">— Não sei. Ir. Mexer-me.</span></p>
+        
+        <p>Laura levantou-se e sacudiu as calças.</p>
+        
+        <p><span class="dialogue">— Ir para onde, Simão? — perguntou, sem pressa. — Para lá ou para longe?</span></p>
+        
+        <p>Ele ficou a olhar para ela.</p>
+        
+        <p><span class="dialogue">— Lado nenhum. Já fui a todos. Nenhum ficou.</span></p>
+        
+        <p>Simão baixou os olhos para as botas.</p>
+        
+        <p><span class="dialogue">— E Creta?</span></p>
+        
+        <p>Simão suspirou. Levantou a cabeça e olhou para Laura.</p>
+        
+        <p><span class="dialogue">— Não preciso de fazer nada. — A mão direita subiu-lhe ao peito e três dedos entraram pela abertura da camisa, sobre a tatuagem. — Preciso d…</span></p>
+        
+        <p>A voz subiu-lhe de tom e quebrou-se a meio da palavra. Simão encheu os pulmões de ar, como se não respirasse há muito tempo. Há quarenta anos. Mais. </p>
+        
+        <p>Laura ficou imóvel, de olhos ternos e uma expressão pacífica. Acompanhou-lhe a respiração e abrandou a sua, devagar, até ele a seguir.</p>
+        
+        <p><span class="dialogue">— Não precisas de responder… agora — disse ela.</span></p>
+        
+        <p><span class="dialogue">— Ainda bem.</span></p>
+        
+        <p>Laura virou-se na direção do carreiro, deu dois passos, parou e voltou-se para Simão. </p>
+        
+        <p>Sorriu.</p>
+        
+        <p>Simão olhou-a, as mãos pousadas nas coxas, as palmas ligeiramente viradas para cima.</p>
+        
+        <p>Laura aproximou-se e pousou-lhe a mão no ombro. Olhou-o nos olhos durante uns segundos. Depois voltou-se e seguiu pelo carreiro, sem lanterna, e a escuridão engoliu-a antes de chegar à casa.</p>
+        
+        <p>Simão ficou. Ao fim de um tempo tirou do bolso do casaco um papel dobrado e a caneta de traço fino. Alisou o papel no joelho e ficou muito tempo a olhar para ele.</p>
+        
+        <p>“Geada, ”</p>
+        
+        <p>Parou de escrever. Amachucou o papel numa pequena bola e guardou-o no bolso de fora do casaco. Pegou no telemóvel. Procurou o contacto.</p>
+        
+        <p><span class="dialogue">— Simão?</span></p>
+        
+        <p><span class="dialogue">— Geada — disse Simão, com a voz trémula.</span></p>
+        
+        <p>Ficaram em silêncio, apenas com o som de ambas as respirações ao telefone.</p>
+        
+        <p><span class="dialogue">— Obrigado — disse Simão.</span></p>
+        
+        <p><span class="dialogue">— Eu sei. Demoraste.</span></p>
+        
+        <p>Passados mais uns segundos, desligaram a chamada.</p>
+        
+        <p>Simão retirou a pequena bola de papel do bolso do casaco. Desfez a bola. Pegou na caneta. Ficou a olhar para o nome lá escrito, «Geada».</p>
+        
+        <p>Parou uns momentos. Olhou para cima, e lá estava ela, de pé à sua frente. A Morte. Como sempre. A mão estendida com o indicador apontado ao seu peito, para a tatuagem: um coração e, preso a ele por um cordão umbilical, um bebé enrolado sobre si mesmo.</p>
+        
+        <p>Simão suspirou.</p>
+        
+        <p><span class="dialogue">— Sim… eu sei… amor.</span></p>
+        
+        <p>A Morte baixou a mão. Aproximou o rosto do de Simão. Agora, no lugar de frio, Simão sentia o acalento da presença familiar. A Morte pousou-lhe as mãos nos ombros e esfumou-se de seguida.</p>
+        
+        <p>Simão olhou para o espaço vazio por baixo de «Geada» e começou a escrever:</p>
+        
+        <p>“Quero.”</p>
+
+        <a href="../../livros.html" class="back-link">← Voltar a Livros & Ensaios</a>
+    </article>
+
+</body>
+</html>
