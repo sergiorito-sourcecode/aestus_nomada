@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Em queda livre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* --- CONFIGURAÇÕES GERAIS (PALETA) --- */
+        :root {
+            --cor-fundo: #FCF9F9;
+            --cor-texto: #4A3F41;
+            --cor-texto-claro: #736567;
+            --cor-destaque: #A36D75;
+            --cor-destaque-hover: #86535B;
+            --fonte-titulos: 'Playfair Display', serif;
+            --fonte-texto: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--fonte-texto);
+            line-height: 1.6;
+            color: var(--cor-texto);
+            background-color: var(--cor-fundo);
+            margin: 0;
+            padding: 0;
+            padding-top: 100px;
+        }
+
+        /* --- HEADER --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(252, 249, 249, 0.95);
+            border-bottom: 1px solid rgba(163, 109, 117, 0.15);
+            z-index: 100;
+            box-sizing: border-box;
+            backdrop-filter: blur(5px);
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--cor-destaque);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-family: var(--fonte-texto);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--cor-texto);
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--cor-destaque);
+        }
+
+        .btn-solid {
+            background-color: var(--cor-destaque);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 2px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+        
+        .btn-solid:hover {
+            background-color: var(--cor-destaque-hover);
+            color: #fff;
+        }
+
+        /* --- ESTRUTURA DO ENSAIO --- */
+        article {
+            background: white;
+            padding: 40px 60px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        h1 {
+            font-family: var(--fonte-titulos);
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 40px auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        p {
+            margin-bottom: 24px;
+            text-align: justify;
+            font-size: 1.1em;
+            text-indent: 1.5em;
+            color: var(--cor-texto-claro);
+        }
+        
+        p:has(> span.dialogue) {
+            text-indent: 0;
+            padding-left: 1.5em;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            font-family: var(--fonte-texto);
+            text-decoration: none;
+            color: var(--cor-destaque);
+            font-size: 0.9em;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--cor-destaque-hover);
+        }
+
+        /* --- RESPONSIVIDADE --- */
+        @media (max-width: 600px) {
+            header {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+            body {
+                padding-top: 140px;
+            }
+            article {
+                padding: 30px 20px;
+                margin: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                text-indent: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <a href="../../livros.html" class="logo">AESTUS NÓMADA EDIÇÕES</a>
+        
+        <nav style="display: flex; align-items: center; gap: 15px;">
+            <a href="../../../index.html" style="font-size: 0.9rem; font-weight: normal;">Voltar ao Catering</a>
+            <a href="../../livros.html" style="font-size: 0.9rem; font-weight: 600;">Livros & Ensaios</a>
+            <a href="../../livros/OLdE/livro_OLdE_AGdS.html#comprar" class="btn-solid" style="margin: 0;">Comprar Livro</a>
+        </nav>
+    </header>
+
+    <article>
+        <h1>Em queda livre</h1>
+
+        <!-- Podes colocar aqui a imagem final baseada no prompt surreal/cartoon que combinámos -->
+        <img src="imagens/em_queda_livre.jpg" alt="Cartoon surreal de um homem a cair relaxadamente de um arranha-céus, enquanto funcionárias o carimbam e lhe passam papéis" class="featured-image">
+
+        <p>No rebordo daquele pequeno muro, observo o horizonte. Não é retilíneo como quando contemplamos o mar num final de tarde e o sol se esconde para lá do limite da curvatura da terra, dourado, queimado, cansado. Este horizonte é recortado por prédios e um fumo denso de poluição. De sons que se misturam num ruído único como se fosse um ar condicionado num escritório qualquer do mundo corporativo, onde já só damos por ele quando o desligam, dando lugar à paz daquele novo silêncio que nos anuncia que estamos para lá da hora e ainda assim permanecemos, com aquele ar condicionado que recicla um ar doentio disfarçado de refresco para a pele, secando-nos a respiração numa estranha metáfora implacável da secura da nossa própria identidade.</p>
+        
+        <p>É um recorte frio.</p>
+        
+        <p>É um horizonte plastificado, cimentado por ilusões com décadas de promessas de riqueza e progresso.</p>
+        
+        <p>É um recorte inanimado, de movimentos de marionetas.</p>
+        
+        <p>Olho para baixo e vejo o movimento corrido de pessoas pequeninas alucinadas pela fome daquilo que nunca terão como se observasse formigas a colher reservas para um inverno permanente na esperança de uma primavera que não passa de uma falácia social.</p>
+        
+        <p>Permito-me rir, porque não sei chorar.</p>
+        
+        <p>Deixo-me ir.</p>
+        
+        <p>Entrego-me à leveza da gravidade. </p>
+        
+        <p>Abandono a prisão daquele pequeno muro.</p>
+        
+        <p>Passo pelo ar como um falcão na direção da sua presa. Mas não na mesma determinação. Não na mesma pressa. Passo pelo ar como a água passa desde a sua nascente até ao mar. Não a vi nascer. Não a vejo desaguar. Apenas testemunho a sua passagem. E talvez alguém testemunhe também a minha passagem. Alguém que não me viu nascer. Alguém que não me vai ver esborrachar-me num cimento qualquer. Testemunham apenas a minha passagem, talvez, se tiver essa sorte, com a mesma indiferença com que olhamos cada gota de água de um rio que passa.</p>
+        
+        <p>É só um rio igual aos outros.</p>
+        
+        <p>Foi só algo que passou.</p>
+        
+        <p>Há mais de onde veio.</p>
+        
+        <p>Há muito mais para onde vai.</p>
+        
+        <p>Sinto-me leve. </p>
+        
+        <p>As mãos passeiam-se livremente. As pernas esticam-se sem tensão. O corpo ondula naturalmente, numa lenta dança pelo ar que passa por mim como as margens de um rio.</p>
+        
+        <p>Eu sou o rio.</p>
+        
+        <p>Um rio poluído por décadas de promessas de riqueza e progresso.</p>
+        
+        <p>Não sinto o peso do corpo. Não sinto o peso da carne nos ossos massacrados por uma vida de tensão e esforço para coisa nenhuma.</p>
+        
+        <p>Fecho os olhos.</p>
+        
+        <p>Solto a mente.</p>
+        
+        <p>Desfruto das sensações.</p>
+        
+        <p>Não há muro.</p>
+        
+        <p>Não há horizonte.</p>
+        
+        <p>Não há chão.</p>
+        
+        <p>Não há corpo.</p>
+        
+        <p>Voo em queda livre. Passo em queda livre.</p>
+        
+        <p>Como um rio.</p>
+        
+        <p>Sigo, livre.</p>
+        
+        <p>O tempo já não é tempo. Os relógios de ponto, os prazos, as promessas ficaram lá atrás, nas margens. Resta um sopro. Uma vontade sem nome, leve como o ar que me atravessa.</p>
+        
+        <p>Abro os olhos.</p>
+        
+        <p>Sorrio.</p>
+        
+        <p>Contemplo.</p>
+        
+        <p>Observo o espaço à minha volta. Observo a claridade e as cores. Aspiro os seus aromas. Sinto-lhes as texturas. </p>
+        
+        <p>Leves. </p>
+        
+        <p>Suaves. </p>
+        
+        <p>Vejo o décimo quarto andar.</p>
+        
+        <p>À sua janela, um homem de mangas de alpaca levanta a cabeça de um processo e olha para mim com a irritação de quem foi interrompido.</p>
+        
+        <p><span class="dialogue">— Tem requerimento?</span></p>
+        
+        <p>Não percebo a pergunta. Só a percebo quando já estou a passar o décimo primeiro andar.</p>
+        
+        <p>No décimo andar, uma senhora estica o braço pela janela e cola-me um papel no peito. Diz «Queda — Pedido de Autorização», em letra de máquina de escrever antiga, das que usavam fita borrada a tinta e a tecla “r” já se encontrava descentrada da linha de escrita. É uma notificação em triplicado com papel químico. Não tenho caneta para assinar a receção. Ninguém cai com caneta.</p>
+        
+        <p>No oitavo andar informam-me de que a primeira via fica no serviço, a segunda segue para o arquivo e a terceira é minha, para efeitos de prova.</p>
+        
+        <p><span class="dialogue">— Prova de quê? — pergunto.</span></p>
+        
+        <p><span class="dialogue">— De que caiu — responde o funcionário. E carimba.</span></p>
+        
+        <p>O carimbo atrasa-me. Pesa-me. Sinto-o. Cada carimbo custa um pouco mais do que o ar.</p>
+        
+        <p>No sétimo andar já caio devagar, quase de pé, como quem desce uma escada que não existe. Explicam-me que a queda livre foi descontinuada há muitos anos, por falta de enquadramento legal, e que o que estou a fazer é, tecnicamente, uma deslocação vertical não programada.</p>
+        
+        <p><span class="dialogue">— Irreverente, diz uma jovem funcionária de tatuagem no braço com rosas entrelaçadas e um piercing no nariz. </span></p>
+        
+        <p>O chefe do departamento, de bigode penteado em cornucopia, levanta os olhos por cima dos seus pequenos óculos redondos de tartaruga na minha direção, enrugando com elevação simétrica das asas nasais e do sulco labial.</p>
+        
+        <p><span class="dialogue">— Delinquente — corrige, entre dentes.</span></p>
+        
+        <p><span class="dialogue">— Está sujeita a taxa — acrescenta alguém, de dentro sem levantar a cabeça.</span></p>
+        
+        <p>No primeiro andar já não caio. Pouso.</p>
+        
+        <p>O chão não é de cimento. É de linóleo. Há cadeiras de plástico presas umas às outras e um ecrã vermelho que muda de número com um apito.</p>
+        
+        <p>Na mão, a terceira via. Presa a ela, uma senha: B-71529.</p>
+        
+        <p>No ecrã: B-08014.</p>
+        
+        <p>À minha volta estão as formigas de há pouco, também de senha na mão, também com o cabelo ainda despenteado pelo vento. Ninguém fala da queda. Ninguém pergunta de onde caímos. Há muito mais de onde viemos.</p>
+        
+        <p>Por cima de nós, o ar condicionado a zumbir, a reciclar o mesmo ar doentio disfarçado de refresco. Parece silêncio. Não é. Mas só daremos por isso quando o desligarem. </p>
+        
+        <p>Eu agora sei.</p>
+        
+        <p>Sento-me.</p>
+        
+        <p>Espero.</p>
+        
+        <p>De vez em quando o ecrã apita, alguém se levanta, entrega a terceira via ao balcão e sai por uma porta que dá para umas escadas.</p>
+        
+        <p>As escadas sobem.</p>
+        
+        <p>Ainda não sei até onde.</p>
+        
+        <p>Quando chamarem o meu número, pergunto.</p>
+
+        <a href="../../livros.html" class="back-link">← Voltar a Livros & Ensaios</a>
+    </article>
+
+</body>
+</html>
